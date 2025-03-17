@@ -1,1 +1,23 @@
-{"parsed":{"_path":"/2010s/danger-falling-ice","_dir":"2010s","_draft":false,"_partial":false,"_locale":"","title":"被大块落冰砸中的话——","description":"放学路上遇到这种事情，也许就会当场重伤失去意识了吧。好在“第六感”救了我和朋友。","date":"2018-01-04T13:25:54.000Z","updated":"2024-05-03T16:07:39.000Z","type":"story","categories":["生活"],"tags":["初中","朋友","危险"],"readingTime":{"text":"1 min read","minutes":0.885,"time":53100,"words":177},"body":{"type":"root","children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"应该是在前一天下了很大的雪，部分道路由于结冰无法通行。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我和阿清念初二，当时已经有了晚自习，20:20 才放学。我俩下了公交车，步行通过剩下一段冰封道路。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"走了几步，我忽然拉住了阿清，“等一下——”。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这时——也许是在一瞬间——有块西瓜大小的冰从高空砸下、碎裂、绽放在我和阿清的脚前。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"也许没有我莫名其妙的反应（或者说是第六感）的话，我俩已经重伤失去意识了吧。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"后来，我们似乎什么也没说，只是径直往前走，最终安全回家了。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"怪哉。"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[]}},"_type":"markdown","_id":"content:posts:2010s:danger-falling-ice.md","_source":"content","_file":"posts/2010s/danger-falling-ice.md","_stem":"posts/2010s/danger-falling-ice","_extension":"md","_original_dir":"/posts"},"hash":"aBiAtX3lHZ"}
+---
+title: 被大块落冰砸中的话——
+description: 放学路上遇到这种事情，也许就会当场重伤失去意识了吧。好在“第六感”救了我和朋友。
+date: 2018-01-04 21:25:54
+updated: 2024-05-04 00:07:39
+type: story
+categories: [生活]
+tags: [初中, 朋友, 危险]
+---
+
+应该是在前一天下了很大的雪，部分道路由于结冰无法通行。
+
+我和阿清念初二，当时已经有了晚自习，20:20 才放学。我俩下了公交车，步行通过剩下一段冰封道路。
+
+走了几步，我忽然拉住了阿清，“等一下——”。
+
+这时——也许是在一瞬间——有块西瓜大小的冰从高空砸下、碎裂、绽放在我和阿清的脚前。
+
+也许没有我莫名其妙的反应（或者说是第六感）的话，我俩已经重伤失去意识了吧。
+
+后来，我们似乎什么也没说，只是径直往前走，最终安全回家了。
+
+怪哉。

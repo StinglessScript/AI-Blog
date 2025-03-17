@@ -1,1 +1,24 @@
-{"parsed":{"_path":"/2000s/letter-in-kindergarton","_dir":"2000s","_draft":false,"_partial":false,"_locale":"","title":"不想去幼儿园","description":"2009年的夏天不想上幼儿园，在幼儿园给妈妈写了封信。三个月后是六岁生日，礼物是一本相册，这封信随之装入其中。","date":"2009-06-22T23:00:00.000Z","updated":"2009-09-21T23:00:00.000Z","type":"story","categories":["生活"],"tags":["幼儿园","信"],"readingTime":{"text":"0 min read","minutes":0,"time":0,"words":0},"body":{"type":"root","children":[{"type":"element","tag":"pic","props":{":zoom":"true","caption":"历经十几年，这封信依旧保存完好。","src":"https://7.isyangs.cn/24/668ba60f3d8f9-24.jpg","width":"360px"},"children":[]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[]}},"_type":"markdown","_id":"content:posts:2000s:letter-in-kindergarton.md","_source":"content","_file":"posts/2000s/letter-in-kindergarton.md","_stem":"posts/2000s/letter-in-kindergarton","_extension":"md","_original_dir":"/posts"},"hash":"nJh7CFQ3E7"}
+---
+title: 不想去幼儿园
+description: 2009年的夏天不想上幼儿园，在幼儿园给妈妈写了封信。三个月后是六岁生日，礼物是一本相册，这封信随之装入其中。
+date: 2009-06-23
+updated: 2009-09-22
+type: story
+categories: [生活]
+tags: [幼儿园, 信]
+---
+
+::pic
+---
+src: https://7.isyangs.cn/24/668ba60f3d8f9-24.jpg
+caption: 历经十几年，这封信依旧保存完好。
+width: 360px
+zoom: true
+---
+::
+
+<!-- ::folding{title="文字稿"}
+“妈”０６月２３日(妈收)
+
+妈：我上幼儿园时候，你走了。我很想你，你都不知道亲我一下。我都流泿泪了；我爱你，请你亲我一下；我还有心里话要说呢！……早上你知不知道过来看看我，亲亲我。
+:: -->

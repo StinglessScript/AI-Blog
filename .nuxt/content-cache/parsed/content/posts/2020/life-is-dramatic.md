@@ -1,1 +1,211 @@
-{"parsed":{"_path":"/2020/life-is-dramatic","_dir":"2020","_draft":false,"_partial":false,"_locale":"","title":"生活就是魔幻现实主义","description":"集合了多位高中生在2020年国庆假期期间的心情感悟和生活琐事，内容涵盖学业压力、考试成绩、生活态度、社交互动等方面，展示了他们在面对成长挑战、情绪起伏和梦想追求时表现出的真实、幽默与迷茫，体现出浓厚的魔幻现实主义色彩。","date":"2020-10-03T05:18:00.000Z","updated":"2021-02-11T13:28:00.000Z","type":"story","categories":["生活"],"tags":["高中","说说","校园"],"readingTime":{"text":"7 min read","minutes":6.725,"time":403500,"words":1345},"body":{"type":"root","children":[{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"高二发表的空间说说，记录了高中生的精神状态，遂摘之。"}]}]},{"type":"element","tag":"h2","props":{"id":"说说-长图模式"},"children":[{"type":"text","value":"说说 (长图模式)"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"若不想出现可联系我删除"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"感谢你们发布的素材"}]},{"type":"element","tag":"timeline","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Tommy 2020年10月3日 12:41}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我觉得整个假期发生的事都在和我开玩笑"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{纸鹿本鹿 2020年10月3日 10:25}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"生活就是内卷"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n但我懒得绕圈"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{纸鹿本鹿 2020年9月30日 20:35}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我爱这个魔幻的世界"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n只有童话才会讲道理"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{时若 2020年10月3日 11:25}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这个世界真是无聊啊，未来是由过去给定的，世上没有自由意志可言"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{魘. 2020年9月30日 22:56}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"3+7＝8≈3"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n整挺好🙂"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{落俗无可避免 2020年10月1日 03:58}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"天要亮了吧，真好"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{阿米诺斯 2020年10月1日 14:12}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"说实在的，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n国庆就应该去人少的地方"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n比如进山"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n@纸鹿本鹿"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n梦开始的地方！"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"[图片:长图模式]"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Sh2-261 2020年10月1日 18:13}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"就我一个国庆中秋晚自己过？"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{TYT. 2020年10月1日 18:33}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"持续无聊两小时🤔"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{家和 2020年10月1日 18:33}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"今天重置头像和签名，是我回归实际的表现。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{小单 2020年10月1日 20:06}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"将进酒，杯莫停。与君歌一曲，请君为我听。钟鼓玉帛不足贵，但愿长醉不愿醒。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{hongshizha 2020年10月1日 21:09}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"像个假的中秋节"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n连续阴天，感觉消沉"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n白天见不到太阳"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n晚上见不到月亮"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n没什么"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n只是希望这样的氛围早点过"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n在新的一切中焕发生气"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n“彼此”向上"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"[查看全文]"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Sei. 2020年10月1日 22:05}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"过于真实"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n转发微博: 干以畅闲情"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n早晨起床时，那种困顿，那种悔恨，生不如死的感觉，都让我想杀了昨晚熬夜的自己。可是每天凌晨，那种自信，那种嚣张，那种精神抖擞，我甚至不记得自己是谁。"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\nnienienielina: 姐们你这太搞笑了哈哈哈哈 我能截图发朋友圈吗hhhh"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n毛仔大大: 哈哈哈哈哈哈哈哈"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n共20条回复 >"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Wyyyy 2020年10月2日 07:13}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"啊为什么我想再睡五百年 为什么 为什么"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Wyyyy 2020年10月2日 11:10}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"引用？化用？对不起是我太不注重细节毁了出卷老师好多温柔"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{我永远喜欢矮子丸 2020年10月2日 18:52}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"成绩出来了"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Nebula 2020年10月2日 19:20}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我物理终于他妈的上80了呜呜呜呜呜呜呜呜呜呜呜呜呜我看见成绩那一刻瞬间暴哭最近学物理真的特别累一心只想突破80这个瓶颈谢谢上天让我圆梦了我感觉这一个月一切的煎熬难耐都被补偿回来了这就泪流满面地去纠错"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{我永远喜欢矮子丸 2020年10月2日 19:29}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"不知道咋学了 我想死"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{bi8bo 2020年10月2日 19:53}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我是一个学不懂数学的傻瓜。"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n鳏鳏.⭕: 你是傻瓜我是学不懂数学"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n陈 劲 生': 你是傻瓜我是学不懂数学"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n想见你: 我也是"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n_: 你是傻瓜我是学不懂数学\\"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{小单 2020年10月2日 20:09}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我也是"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n转发 了: 这成绩我直接裂开来。\\"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{我永远喜欢矮子丸 2020年10月2日 20:34}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"求求了让我苟在700名吧真尼玛不能再退了"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{bi8bo 2020年10月2日 20:41}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"🙂🙂🙂"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{wwwater 2021年10月2日 21:05}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"[图片表情: 人类的悲欢并不相通 我只觉得他们吵闹]"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{猪肝粥猪肝粥猪肝粥 2021年10月2日 22:51}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"“该来的还没来　想要的都不在”"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"[分享音乐: Copy/BT07-PZ/YM牧童 - 花开]"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Mint 2021年10月3日 00:26}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这世界那么大"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n遇到的不可能都是好人"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n总有一些人是为了教会我们成长"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n让我们承受一定的痛苦之后"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n不再执着人生里的一些事"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n　　　　——网易云热评《原来都是梦》\\"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{阿米诺斯 2020年10月3日 03:26}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我害怕你的消息，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n不经意被谁提起，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n像曾贴着我耳边的气息，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n我害怕某个旋律，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n带我回某个场景，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n你说如果雨停了我们就在一起，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n我害怕某条街道，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n有你留下的记号，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"text","value":"\n会自以为是你对我的需要，"},{"type":"element","tag":"br","props":{},"children":[]},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"[查看全文]"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{Nebula 2020年10月3日 11:31}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"未来是由现在决定的，而不是别人用预测的未来来拘束你的现在，谁再给我说我未来会咋样咋样所以我不要干什么干什么我就真的暴起了，我所行所做所为之事皆有分寸，我所念所思所想之事均对我有利，我会成为自己，而不是你所希望的样子"}]}]},{"type":"element","tag":"h2","props":{"id":"评论区"},"children":[{"type":"text","value":"评论区"}]},{"type":"element","tag":"timeline","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{弛豫星空 2020年10月3日 13:19}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"好家伙，整个一现代魔幻现实主义"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{纸鹿本鹿 2020年10月3日 13:20}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"回复 弛豫星空: 这个世界都卷起来了"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{我永远喜欢矮子丸 2020年10月3日 13:21}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"笑死了我谢谢您哈哈哈哈哈哈哈kkk"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{我永远喜欢矮子丸 2020年10月3日 13:22}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"拿图了"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{无妨 2020年10月3日 13:22}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"3➕7=8是什么梗"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{纸鹿本鹿 2020年10月3日 13:24}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"回复 无妨: 假期时长，付言曰：3+7=8≈3"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{无妨 2020年10月3日 13:28}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"回复 纸鹿本鹿: 嗷嗷嗷"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{wwwater 2021年2月11日 21:28}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"惊了哈哈哈哈哈竟然有我"}]}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[{"id":"说说-长图模式","depth":2,"text":"说说 (长图模式)"},{"id":"评论区","depth":2,"text":"评论区"}]}},"_type":"markdown","_id":"content:posts:2020:life-is-dramatic.md","_source":"content","_file":"posts/2020/life-is-dramatic.md","_stem":"posts/2020/life-is-dramatic","_extension":"md","_original_dir":"/posts"},"hash":"jl5CS1fope"}
+---
+title: 生活就是魔幻现实主义
+description: 集合了多位高中生在2020年国庆假期期间的心情感悟和生活琐事，内容涵盖学业压力、考试成绩、生活态度、社交互动等方面，展示了他们在面对成长挑战、情绪起伏和梦想追求时表现出的真实、幽默与迷茫，体现出浓厚的魔幻现实主义色彩。
+date: 2020-10-03 13:18:00
+updated: 2021-02-11 21:28:00
+type: story
+categories: [生活]
+tags: [高中, 说说, 校园]
+---
+
+> 高二发表的空间说说，记录了高中生的精神状态，遂摘之。
+
+## 说说 (长图模式)
+
+若不想出现可联系我删除
+
+感谢你们发布的素材
+
+::timeline
+
+{Tommy 2020年10月3日 12:41}
+
+我觉得整个假期发生的事都在和我开玩笑
+
+{纸鹿本鹿 2020年10月3日 10:25}
+
+生活就是内卷\
+但我懒得绕圈
+
+{纸鹿本鹿 2020年9月30日 20:35}
+
+我爱这个魔幻的世界\
+只有童话才会讲道理
+
+{时若 2020年10月3日 11:25}
+
+这个世界真是无聊啊，未来是由过去给定的，世上没有自由意志可言
+
+{魘. 2020年9月30日 22:56}
+
+3+7＝8≈3\
+整挺好🙂
+
+{落俗无可避免 2020年10月1日 03:58}
+
+天要亮了吧，真好
+
+{阿米诺斯 2020年10月1日 14:12}
+
+说实在的，\
+国庆就应该去人少的地方\
+比如进山\
+\
+@纸鹿本鹿\
+梦开始的地方！\
+`[图片:长图模式]`
+
+{Sh2-261 2020年10月1日 18:13}
+
+就我一个国庆中秋晚自己过？
+
+{TYT. 2020年10月1日 18:33}
+
+持续无聊两小时🤔
+
+{家和 2020年10月1日 18:33}
+
+今天重置头像和签名，是我回归实际的表现。
+
+{小单 2020年10月1日 20:06}
+
+将进酒，杯莫停。与君歌一曲，请君为我听。钟鼓玉帛不足贵，但愿长醉不愿醒。
+
+{hongshizha 2020年10月1日 21:09}
+
+像个假的中秋节\
+连续阴天，感觉消沉\
+白天见不到太阳\
+晚上见不到月亮\
+没什么\
+只是希望这样的氛围早点过\
+在新的一切中焕发生气\
+“彼此”向上\
+`[查看全文]`
+
+{Sei. 2020年10月1日 22:05}
+
+过于真实\
+\
+转发微博: 干以畅闲情\
+早晨起床时，那种困顿，那种悔恨，生不如死的感觉，都让我想杀了昨晚熬夜的自己。可是每天凌晨，那种自信，那种嚣张，那种精神抖擞，我甚至不记得自己是谁。\
+nienienielina: 姐们你这太搞笑了哈哈哈哈 我能截图发朋友圈吗hhhh\
+毛仔大大: 哈哈哈哈哈哈哈哈\
+共20条回复 >
+
+{Wyyyy 2020年10月2日 07:13}
+
+啊为什么我想再睡五百年 为什么 为什么
+
+{Wyyyy 2020年10月2日 11:10}
+
+引用？化用？对不起是我太不注重细节毁了出卷老师好多温柔
+
+{我永远喜欢矮子丸 2020年10月2日 18:52}
+
+成绩出来了
+
+{Nebula 2020年10月2日 19:20}
+
+我物理终于他妈的上80了呜呜呜呜呜呜呜呜呜呜呜呜呜我看见成绩那一刻瞬间暴哭最近学物理真的特别累一心只想突破80这个瓶颈谢谢上天让我圆梦了我感觉这一个月一切的煎熬难耐都被补偿回来了这就泪流满面地去纠错
+
+{我永远喜欢矮子丸 2020年10月2日 19:29}
+
+不知道咋学了 我想死
+
+{bi8bo 2020年10月2日 19:53}
+
+我是一个学不懂数学的傻瓜。\
+\
+鳏鳏.⭕: 你是傻瓜我是学不懂数学\
+陈 劲 生': 你是傻瓜我是学不懂数学\
+想见你: 我也是\
+_: 你是傻瓜我是学不懂数学\
+
+{小单 2020年10月2日 20:09}
+
+我也是\
+\
+转发 了: 这成绩我直接裂开来。\
+
+{我永远喜欢矮子丸 2020年10月2日 20:34}
+
+求求了让我苟在700名吧真尼玛不能再退了
+
+{bi8bo 2020年10月2日 20:41}
+
+🙂🙂🙂
+
+{wwwater 2021年10月2日 21:05}
+
+`[图片表情: 人类的悲欢并不相通 我只觉得他们吵闹]`
+
+{猪肝粥猪肝粥猪肝粥 2021年10月2日 22:51}
+
+“该来的还没来　想要的都不在”\
+`[分享音乐: Copy/BT07-PZ/YM牧童 - 花开]`
+
+{Mint 2021年10月3日 00:26}
+
+这世界那么大\
+遇到的不可能都是好人\
+总有一些人是为了教会我们成长\
+让我们承受一定的痛苦之后\
+不再执着人生里的一些事\
+\
+　　　　——网易云热评《原来都是梦》\
+
+{阿米诺斯 2020年10月3日 03:26}
+
+我害怕你的消息，\
+不经意被谁提起，\
+像曾贴着我耳边的气息，\
+我害怕某个旋律，\
+带我回某个场景，\
+你说如果雨停了我们就在一起，\
+我害怕某条街道，\
+有你留下的记号，\
+会自以为是你对我的需要，\
+`[查看全文]`
+
+{Nebula 2020年10月3日 11:31}
+
+未来是由现在决定的，而不是别人用预测的未来来拘束你的现在，谁再给我说我未来会咋样咋样所以我不要干什么干什么我就真的暴起了，我所行所做所为之事皆有分寸，我所念所思所想之事均对我有利，我会成为自己，而不是你所希望的样子
+
+::
+
+## 评论区
+::timeline
+
+{弛豫星空 2020年10月3日 13:19}
+
+好家伙，整个一现代魔幻现实主义
+
+{纸鹿本鹿 2020年10月3日 13:20}
+
+回复 弛豫星空: 这个世界都卷起来了
+
+{我永远喜欢矮子丸 2020年10月3日 13:21}
+
+笑死了我谢谢您哈哈哈哈哈哈哈kkk
+
+{我永远喜欢矮子丸 2020年10月3日 13:22}
+
+拿图了
+
+{无妨 2020年10月3日 13:22}
+
+3➕7=8是什么梗
+
+{纸鹿本鹿 2020年10月3日 13:24}
+
+回复 无妨: 假期时长，付言曰：3+7=8≈3
+
+{无妨 2020年10月3日 13:28}
+
+回复 纸鹿本鹿: 嗷嗷嗷
+
+{wwwater 2021年2月11日 21:28}
+
+惊了哈哈哈哈哈竟然有我
+::

@@ -1,1 +1,111 @@
-{"parsed":{"_path":"/2024/blog-record","_dir":"2024","_draft":true,"_partial":false,"_locale":"","title":"年末博客杂谈：动力、文章和内容","description":null,"date":"2024-11-19T00:08:07.000Z","type":"story","categories":["经验分享"],"tags":["博客"],"references":[{"title":"2750 words - 如何写好博客？（或如何写好文章？）","link":"https://pathos.page/blog/how-to-write-blog"},{"title":"阮一峰 - 科技爱好者周刊（第 327 期）：没有链接的互联网","link":"https://www.ruanyifeng.com/blog/2024/11/weekly-issue-327.html"},{"title":"Ryoma - 个人博客存在的意义（文章已删除，快照版本）","link":"https://web.archive.org/web/20241116095958/https://ryooma.com/blog/why-start-personal-blogging/"},{"title":"atpX - 我的博客写作流程","link":"https://atpx.com/blog/my-blog-writing-process/"}],"draft":true,"readingTime":{"text":"7 min read","minutes":6.945,"time":416700,"words":1389},"body":{"type":"root","children":[{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"一年前我写了不少技术教程，而前一段时间的文字则更加贴近生活。最近不知该写一些什么，于是写一篇杂谈，记录一下我的博客历程，也算是建站这么久以来的一个总结。前两个标题写于 2024-11-19，后两个标题写于 2025-01-??。"}]}]},{"type":"element","tag":"h2","props":{"id":"正式决定写博客"},"children":[{"type":"text","value":"正式决定写博客"}]},{"type":"element","tag":"h3","props":{"id":"羡慕内容输出与传播"},"children":[{"type":"text","value":"羡慕内容输出与传播"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我从小学一年级（2011）开始接触电脑和互联网，学习了一些简单的电脑技术。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"五年级（2015）时，我有了自己的安卓手机。当时的移动互联网的「用户生产内容」（UGC）已具规模，我曾经在优酷上持续观看 Minecraft 游戏视频，并想着做一个自己的视频内容频道（2017），并且投入了一些尝试。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我把自己的电脑折腾经历发在 QQ 空间，收获了一些反馈。我也看到一些优秀的 B 站 UP 主、知乎创作者、公众号作者等等，我羡慕他们能获得认可和关注。"}]},{"type":"element","tag":"h3","props":{"id":"平台的稳定性"},"children":[{"type":"text","value":"平台的稳定性"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我在互联网上，主打一个「占位留痕」，我在许多平台注册的账号都留着「纸鹿」的昵称（2016），并藉此想要发布一些内容，但大多无果而终。当然，我也注册了一个微信公众号（2021-09-25），偶尔发布一些生活记录。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"现在回头看，QQ 空间真是个赛博日记本。虽然口口声声说「正经人谁写日记」，但仍有不少人孜孜不倦地在空间/朋友圈/微博上记录自己的生活碎片。"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"一天晚上，我在高中思政老师的宿舍里与他聊到公众号。我讲起自己把一些内容发在公众号上，是因为它相比于其他平台，看起来更不容易「挂掉」。老师说"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"任何平台都有数据丢失的风险"}]},{"type":"text","value":"，掌握在自己手里才是最安全的。"}]},{"type":"element","tag":"h3","props":{"id":"不建博客的考量"},"children":[{"type":"text","value":"不建博客的考量"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我只是单纯地羡慕部分人拥有自己的一个博客网站，但大学之前的我并没有足够的时间、精力去维护它。在我看来，博客文章的编写需要"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"花费大量时间"}]},{"type":"text","value":"，而当时我的"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"文字功底或内容深度"}]},{"type":"text","value":"都不足以支撑一个长期运营的博客。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"中学时期，我初始化了一个 Hexo 博客。但随后的我感到迷茫：然后呢？似乎没有内容可以写。"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我看到不少停更的博客，好奇博主为什么停更，又是否会重新开始。后来的朋友找我咨询博客搭建问题时，我都会建议有几篇 Markdown 文章，并且有后续更新方向后再正式回答问题。"}]},{"type":"element","tag":"h3","props":{"id":"重拾博客"},"children":[{"type":"text","value":"重拾博客"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"大学加入实验室后（2022-10-22），我开始撰写一些技术学习笔记，发布在 CSDN 上。CSDN 的 Markdown 撰写体验、"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"阅读体验让我不满"}]},{"type":"text","value":"，机器人点赞评论关注的频率令人厌烦，我的 "},{"type":"element","tag":"tip","props":{"tip":"在网络安全夺旗竞赛中的解题记录"},"children":[{"type":"text","value":"CTF Writeup"}]},{"type":"text","value":" 文章中的图片甚至因为含二维码而被"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"审核屏蔽"}]},{"type":"text","value":"。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"而我内容产出的需求越来越强烈——许多朋友向我咨询相似技术问题，而我在一遍遍回答后，发现这些问题完全可以整理成一篇篇文章，并分享给更多人。与此同时，我发现自己终于有了充分的时间和精力来输出、传播并维护内容了。因此，我把个人网站升级为 Hexo 博客（2023-05-24），并且开始撰写一些文章。"}]},{"type":"element","tag":"h2","props":{"id":"网站与博客的历程"},"children":[{"type":"text","value":"网站与博客的历程"}]},{"type":"element","tag":"h3","props":{"id":"肇始"},"children":[{"type":"text","value":"肇始"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"读初三时，我在互联网上购买了一个域名（2019-05-24），并把 FrontPage 制作的一个简易网页托管到了 GitHub Pages 上，不久就换用了集成的 Jekyll 环境（2019-07-19）。这个站点发布了一些和初中班级相关的内容，随后更新频率越来越低。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"运营四年后，我 "},{"type":"element","tag":"tip","props":{"tip":"此前，我的大一忙于社交🥺"},"children":[{"type":"text","value":"终于"}]},{"type":"text","value":" 用 Hexo 搭建了刚刚提到的个人博客，发布了一些技术教程，比如系统安装、环境配置、实用工具等。"}]},{"type":"element","tag":"h3","props":{"id":"盘活博客和交流群"},"children":[{"type":"text","value":"盘活博客和交流群"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"今年年初，我更换了 Hexo 博客主题并添加了一些友链，发布的技术文章也在搜索引擎中为我带来了早期流量。随后我加入了一些博客交流群，积累了一些关系，同时自己的交流群也逐渐活跃起来。"}]},{"type":"element","tag":"h3","props":{"id":"_2024-博客时间线"},"children":[{"type":"text","value":"2024 博客时间线"}]},{"type":"element","tag":"table","props":{},"children":[{"type":"element","tag":"thead","props":{},"children":[{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"th","props":{"align":"center"},"children":[{"type":"text","value":"时间"}]},{"type":"element","tag":"th","props":{},"children":[{"type":"text","value":"事件"}]}]}]},{"type":"element","tag":"tbody","props":{},"children":[{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"01-09"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"🎨 更换主题为 hexo-theme-stellar"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"01-29"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"🔗 启用友链板块"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"01-30"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"🚇 加入开往"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"02-04"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"📋 加入萌备"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"04-02"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"📊 启用 Bing Webmaster 和 Google Search Console"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"04-11"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"⛔ 发现博客域名被部分地区屏蔽"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"05-25"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"👥 正式启用博客交流群"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"06-19"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"📈 启用 Umami 统计"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"06-28"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"💬 启用 Twikoo 评论"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"08-11"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"⏫ "},{"type":"element","tag":"a","props":{"href":"/2024/blog-using-nuxt"},"children":[{"type":"text","value":"Nuxt Content 重构的博客上线"}]}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"11-13"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"🗃️ 加入 MoreRSS"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"12-24"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"🧾 加入中文独立博客列表"}]}]},{"type":"element","tag":"tr","props":{},"children":[{"type":"element","tag":"td","props":{"align":"center"},"children":[{"type":"text","value":"12-31"}]},{"type":"element","tag":"td","props":{},"children":[{"type":"text","value":"📝 加入博友圈"}]}]}]}]},{"type":"element","tag":"h2","props":{"id":"内容领域的思考"},"children":[{"type":"text","value":"内容领域的思考"}]},{"type":"element","tag":"h3","props":{"id":"优质内容少"},"children":[{"type":"text","value":"优质内容少"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"如今的互联网已经趋于封闭，百度等搜索引擎已经很难搜索到有用的信息，优质内容往往被隐藏在各个平台。"}]},{"type":"element","tag":"h3","props":{"id":"历史在循环"},"children":[{"type":"text","value":"历史在循环"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"博客这个圈子在不断缩小，但一直有新人加入。我常常能看到一些新出现的折腾博客主题的博客网站，希望能看到一些真正有价值的博客内容。"}]},{"type":"element","tag":"h3","props":{"id":"知识的传播"},"children":[{"type":"text","value":"知识的传播"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"个人博客"}]},{"type":"element","tag":"h2","props":{"id":"为博客赋予意义"},"children":[{"type":"text","value":"为博客赋予意义"}]},{"type":"element","tag":"h3","props":{"id":"个人说明书"},"children":[{"type":"text","value":"个人说明书"}]},{"type":"element","tag":"h3","props":{"id":"知识分享"},"children":[{"type":"text","value":"知识分享"}]},{"type":"element","tag":"h3","props":{"id":"交流与互动"},"children":[{"type":"text","value":"交流与互动"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[{"id":"正式决定写博客","depth":2,"text":"正式决定写博客","children":[{"id":"羡慕内容输出与传播","depth":3,"text":"羡慕内容输出与传播"},{"id":"平台的稳定性","depth":3,"text":"平台的稳定性"},{"id":"不建博客的考量","depth":3,"text":"不建博客的考量"},{"id":"重拾博客","depth":3,"text":"重拾博客"}]},{"id":"网站与博客的历程","depth":2,"text":"网站与博客的历程","children":[{"id":"肇始","depth":3,"text":"肇始"},{"id":"盘活博客和交流群","depth":3,"text":"盘活博客和交流群"},{"id":"_2024-博客时间线","depth":3,"text":"2024 博客时间线"}]},{"id":"内容领域的思考","depth":2,"text":"内容领域的思考","children":[{"id":"优质内容少","depth":3,"text":"优质内容少"},{"id":"历史在循环","depth":3,"text":"历史在循环"},{"id":"知识的传播","depth":3,"text":"知识的传播"}]},{"id":"为博客赋予意义","depth":2,"text":"为博客赋予意义","children":[{"id":"个人说明书","depth":3,"text":"个人说明书"},{"id":"知识分享","depth":3,"text":"知识分享"},{"id":"交流与互动","depth":3,"text":"交流与互动"}]}]}},"_type":"markdown","_id":"content:posts:2024:blog-record.md","_source":"content","_file":"posts/2024/blog-record.md","_stem":"posts/2024/blog-record","_extension":"md","_original_dir":"/posts"},"hash":"X5s1pRjvD8"}
+---
+title: 年末博客杂谈：动力、文章和内容
+description:
+date: 2024-11-19 08:08:07
+# updated:
+# image:
+type: story
+categories: [经验分享]
+tags: [博客]
+references:
+  - title: 2750 words - 如何写好博客？（或如何写好文章？）
+    link: https://pathos.page/blog/how-to-write-blog
+  - title: 阮一峰 - 科技爱好者周刊（第 327 期）：没有链接的互联网
+    link: https://www.ruanyifeng.com/blog/2024/11/weekly-issue-327.html
+  - title: Ryoma - 个人博客存在的意义（文章已删除，快照版本）
+    link: https://web.archive.org/web/20241116095958/https://ryooma.com/blog/why-start-personal-blogging/
+  - title: atpX - 我的博客写作流程
+    link: https://atpx.com/blog/my-blog-writing-process/
+
+draft: true
+---
+
+> 一年前我写了不少技术教程，而前一段时间的文字则更加贴近生活。最近不知该写一些什么，于是写一篇杂谈，记录一下我的博客历程，也算是建站这么久以来的一个总结。前两个标题写于 2024-11-19，后两个标题写于 2025-01-??。
+
+## 正式决定写博客
+
+### 羡慕内容输出与传播
+
+我从小学一年级（2011）开始接触电脑和互联网，学习了一些简单的电脑技术。
+
+五年级（2015）时，我有了自己的安卓手机。当时的移动互联网的「用户生产内容」（UGC）已具规模，我曾经在优酷上持续观看 Minecraft 游戏视频，并想着做一个自己的视频内容频道（2017），并且投入了一些尝试。
+
+我把自己的电脑折腾经历发在 QQ 空间，收获了一些反馈。我也看到一些优秀的 B 站 UP 主、知乎创作者、公众号作者等等，我羡慕他们能获得认可和关注。
+
+### 平台的稳定性
+
+我在互联网上，主打一个「占位留痕」，我在许多平台注册的账号都留着「纸鹿」的昵称（2016），并藉此想要发布一些内容，但大多无果而终。当然，我也注册了一个微信公众号（2021-09-25），偶尔发布一些生活记录。
+
+::quote
+现在回头看，QQ 空间真是个赛博日记本。虽然口口声声说「正经人谁写日记」，但仍有不少人孜孜不倦地在空间/朋友圈/微博上记录自己的生活碎片。
+::
+
+一天晚上，我在高中思政老师的宿舍里与他聊到公众号。我讲起自己把一些内容发在公众号上，是因为它相比于其他平台，看起来更不容易「挂掉」。老师说**任何平台都有数据丢失的风险**，掌握在自己手里才是最安全的。
+
+### 不建博客的考量
+
+我只是单纯地羡慕部分人拥有自己的一个博客网站，但大学之前的我并没有足够的时间、精力去维护它。在我看来，博客文章的编写需要**花费大量时间**，而当时我的**文字功底或内容深度**都不足以支撑一个长期运营的博客。
+
+::quote
+中学时期，我初始化了一个 Hexo 博客。但随后的我感到迷茫：然后呢？似乎没有内容可以写。
+::
+
+我看到不少停更的博客，好奇博主为什么停更，又是否会重新开始。后来的朋友找我咨询博客搭建问题时，我都会建议有几篇 Markdown 文章，并且有后续更新方向后再正式回答问题。
+
+### 重拾博客
+
+大学加入实验室后（2022-10-22），我开始撰写一些技术学习笔记，发布在 CSDN 上。CSDN 的 Markdown 撰写体验、**阅读体验让我不满**，机器人点赞评论关注的频率令人厌烦，我的 :tip[CTF Writeup]{tip="在网络安全夺旗竞赛中的解题记录"} 文章中的图片甚至因为含二维码而被**审核屏蔽**。
+
+而我内容产出的需求越来越强烈——许多朋友向我咨询相似技术问题，而我在一遍遍回答后，发现这些问题完全可以整理成一篇篇文章，并分享给更多人。与此同时，我发现自己终于有了充分的时间和精力来输出、传播并维护内容了。因此，我把个人网站升级为 Hexo 博客（2023-05-24），并且开始撰写一些文章。
+
+## 网站与博客的历程
+
+### 肇始
+
+读初三时，我在互联网上购买了一个域名（2019-05-24），并把 FrontPage 制作的一个简易网页托管到了 GitHub Pages 上，不久就换用了集成的 Jekyll 环境（2019-07-19）。这个站点发布了一些和初中班级相关的内容，随后更新频率越来越低。
+
+运营四年后，我 :tip[终于]{tip="此前，我的大一忙于社交🥺"} 用 Hexo 搭建了刚刚提到的个人博客，发布了一些技术教程，比如系统安装、环境配置、实用工具等。
+
+### 盘活博客和交流群
+
+今年年初，我更换了 Hexo 博客主题并添加了一些友链，发布的技术文章也在搜索引擎中为我带来了早期流量。随后我加入了一些博客交流群，积累了一些关系，同时自己的交流群也逐渐活跃起来。
+
+### 2024 博客时间线
+
+| 时间  | 事件                                                   |
+| :---: | ------------------------------------------------------ |
+| 01-09 | 🎨 更换主题为 hexo-theme-stellar                        |
+| 01-29 | 🔗 启用友链板块                                         |
+| 01-30 | 🚇 加入开往                                             |
+| 02-04 | 📋 加入萌备                                             |
+| 04-02 | 📊 启用 Bing Webmaster 和 Google Search Console         |
+| 04-11 | ⛔ 发现博客域名被部分地区屏蔽                           |
+| 05-25 | 👥 正式启用博客交流群                                   |
+| 06-19 | 📈 启用 Umami 统计                                      |
+| 06-28 | 💬 启用 Twikoo 评论                                     |
+| 08-11 | ⏫ [Nuxt Content 重构的博客上线](/2024/blog-using-nuxt) |
+| 11-13 | 🗃️ 加入 MoreRSS                                         |
+| 12-24 | 🧾 加入中文独立博客列表                                 |
+| 12-31 | 📝 加入博友圈                                           |
+
+## 内容领域的思考
+
+### 优质内容少
+
+如今的互联网已经趋于封闭，百度等搜索引擎已经很难搜索到有用的信息，优质内容往往被隐藏在各个平台。
+
+### 历史在循环
+
+博客这个圈子在不断缩小，但一直有新人加入。我常常能看到一些新出现的折腾博客主题的博客网站，希望能看到一些真正有价值的博客内容。
+
+### 知识的传播
+
+个人博客
+
+## 为博客赋予意义
+
+### 个人说明书
+
+### 知识分享
+
+### 交流与互动

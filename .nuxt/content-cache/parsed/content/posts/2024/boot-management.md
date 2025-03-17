@@ -1,1 +1,139 @@
-{"parsed":{"_path":"/2024/boot-management","_dir":"2024","_draft":false,"_partial":false,"_locale":"","title":"系统引导配置分享","description":"指哪里就启动哪里——在 Windows 和 Linux 系统下实现重启至特定 EFI 引导项。","date":"2024-03-01T06:06:19.000Z","updated":"2024-03-01T07:17:30.000Z","image":"https://7.isyangs.cn/24/6664009916cea-24.jpg","categories":["经验分享"],"tags":["教程","系统","archlinux","Windows"],"readingTime":{"text":"4 min read","minutes":3.135,"time":188100,"words":627},"body":{"type":"root","children":[{"type":"element","tag":"h2","props":{"id":"前置知识"},"children":[{"type":"text","value":"前置知识"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"一般来说，系统引导方式有 Legacy 引导和 UEFI 引导。其中 Legacy 引导方式较为古老，不在本篇文章的讨论范围内。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"UEFI 引导中，可以有多个启动项，比如 Windows Boot Manager、Linux Boot Manager、Grub、网络启动、USB设备启动等。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"而在诸如 Windows Boot Manager、Linux Boot Manager、Grub 这些启动项管理器中，也可以设置多个启动项。如果安装了多个 Windows 系统，Windows Boot Manager 中会显示多个 Windows 启动项；如果安装了 Linux 系统， Grub 中会显示 Linux 系统、Linux 系统(高级启动)，以及可能会有 Windows Boot Manager 的启动项。"}]},{"type":"element","tag":"h2","props":{"id":"windows-下使用脚本重启到其他系统"},"children":[{"type":"text","value":"Windows 下使用脚本重启到其他系统"}]},{"type":"element","tag":"h3","props":{"id":"列出-efi-启动项"},"children":[{"type":"text","value":"列出 EFI 启动项"}]},{"type":"element","tag":"copy","props":{"code":"bcdedit /enum ALL","prompt":"PS(管理员)>"},"children":[]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"执行此命令，你会看到类似以下内容："}]},{"type":"element","tag":"pre","props":{"code":"固件启动管理器\n---------------------\n标识符                  {fwbootmgr}\ndisplayorder            {bootmgr}\n                        {77a0d197-59c5-11ee-b0be-c8cb9e630a73}\n                        {9dda157b-7ef3-11ee-b143-806e6f6e6963}\n                        {f0506e71-9c73-11ed-adf2-806e6f6e6963}\n\nWindows 启动管理器\n--------------------\n标识符                  {bootmgr}\ndevice                  partition=\\Device\\HarddiskVolume1\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\ndescription             Windows Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {77a0d197-59c5-11ee-b0be-c8cb9e630a73}\ndevice                  partition=\\Device\\HarddiskVolume1\npath                    \\EFI\\systemd\\systemd-bootx64.efi\ndescription             Linux Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {9dda157b-7ef3-11ee-b143-806e6f6e6963}\ndevice                  partition=\\Device\\HarddiskVolume6\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\ndescription             Windows Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {f0506e71-9c73-11ed-adf2-806e6f6e6963}\ndescription             EFI USB Device\n\nWindows 启动加载器\n-------------------\n标识符                  {current}\ndevice                  partition=C:\npath                    \\WINDOWS\\system32\\winload.efi\ndescription             Windows 11\n\n……\n"},"children":[{"type":"element","tag":"code","props":{"__ignoreMap":""},"children":[{"type":"text","value":"固件启动管理器\n---------------------\n标识符                  {fwbootmgr}\ndisplayorder            {bootmgr}\n                        {77a0d197-59c5-11ee-b0be-c8cb9e630a73}\n                        {9dda157b-7ef3-11ee-b143-806e6f6e6963}\n                        {f0506e71-9c73-11ed-adf2-806e6f6e6963}\n\nWindows 启动管理器\n--------------------\n标识符                  {bootmgr}\ndevice                  partition=\\Device\\HarddiskVolume1\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\ndescription             Windows Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {77a0d197-59c5-11ee-b0be-c8cb9e630a73}\ndevice                  partition=\\Device\\HarddiskVolume1\npath                    \\EFI\\systemd\\systemd-bootx64.efi\ndescription             Linux Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {9dda157b-7ef3-11ee-b143-806e6f6e6963}\ndevice                  partition=\\Device\\HarddiskVolume6\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\ndescription             Windows Boot Manager\n\n固件应用程序(101fffff)\n-------------------------------\n标识符                  {f0506e71-9c73-11ed-adf2-806e6f6e6963}\ndescription             EFI USB Device\n\nWindows 启动加载器\n-------------------\n标识符                  {current}\ndevice                  partition=C:\npath                    \\WINDOWS\\system32\\winload.efi\ndescription             Windows 11\n\n……\n"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"记住你需要重启到的、形如 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"{77a0d197-59c5-11ee-b0be-c8cb9e630a73}"}]},{"type":"text","value":" 的 UUID，就可以编写脚本了。"}]},{"type":"element","tag":"h3","props":{"id":"重启到指定-efi-启动项"},"children":[{"type":"text","value":"重启到指定 EFI 启动项"}]},{"type":"element","tag":"pre","props":{"code":"rem 使用管理员权限运行此脚本\n%1 mshta vbscript:CreateObject(\"Shell.Application\").ShellExecute(\"cmd\",\"/c %~s0 ::\",\"\",\"runas\",1)(window.close) && exit\nrem 将 Linux Boot Manager 设置为下次启动项\nbcdedit /set \"{fwbootmgr}\" bootsequence \"{77a0d197-59c5-11ee-b0be-c8cb9e630a73}\" /addfirst\nrem 重启\nshutdown -r -t 0\n","filename":"reboot-to-some-entry.bat","language":"bat","meta":"","className":"language-bat shiki shiki-themes catppuccin-latte one-dark-pro","style":""},"children":[{"type":"element","tag":"code","props":{"__ignoreMap":""},"children":[{"type":"element","tag":"span","props":{"class":"line","line":1},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-default-font-style:inherit;--shiki-dark:#C678DD;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"rem"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":" 使用管理员权限运行此脚本\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":2},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-default-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"%"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#E64553;--shiki-default-font-style:italic;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"1"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" mshta vbscript:CreateObject"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"("}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"Shell.Application\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":")"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":".ShellExecute"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"("}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"cmd\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":","}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"/c "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-default-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"%"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#E64553;--shiki-default-font-style:italic;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"~s0"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":" ::\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":","}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":","}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"runas\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":","}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"1"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":")("}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"window.close"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#7C7F93;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":")"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" &&"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-dark:#C678DD"},"children":[{"type":"text","value":" exit\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":3},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-default-font-style:inherit;--shiki-dark:#C678DD;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"rem"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":" 将 Linux Boot Manager 设置为下次启动项\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":4},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-dark:#C678DD"},"children":[{"type":"text","value":"bcdedit"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" /set "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"{fwbootmgr}\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" bootsequence "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#40A02B;--shiki-dark:#98C379"},"children":[{"type":"text","value":"\"{77a0d197-59c5-11ee-b0be-c8cb9e630a73}\""}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" /addfirst\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":5},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-default-font-style:inherit;--shiki-dark:#C678DD;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"rem"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":" 重启\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":6},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#8839EF;--shiki-dark:#C678DD"},"children":[{"type":"text","value":"shutdown"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":" -r -t "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#FE640B;--shiki-dark:#D19A66"},"children":[{"type":"text","value":"0\n"}]}]}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"推荐将脚本放在用户文件夹下，因为这是终端启动、SSH连接时的默认目录，输入文件名即可运行。"}]},{"type":"element","tag":"h2","props":{"id":"在-linux-下重启到其他系统"},"children":[{"type":"text","value":"在 Linux 下重启到其他系统"}]},{"type":"element","tag":"h3","props":{"id":"列出启动项"},"children":[{"type":"text","value":"列出启动项"}]},{"type":"element","tag":"copy","props":{"code":"efibootmgr"},"children":[]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"执行此命令后，会得到如下所示的 EFI 启动项列表："}]},{"type":"element","tag":"pre","props":{"code":"BootCurrent: 0005\nBootOrder: 0001,0005,0004,2001\nBoot0001* Windows Boot Manager  HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\\EFI\\Microsoft\\Boot\\bootmgfw.efi\nBoot0004* Windows Boot Manager  HD(1,GPT,3f296803-1e98-4d7f-b76b-263785c2dcef,0x28,0x100000)/\\EFI\\Microsoft\\Boot\\bootmgfw.efi\nBoot0005* Linux Boot Manager    HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\\EFI\\systemd\\systemd-bootx64.efi\nBoot2001* EFI USB Device        RC\n"},"children":[{"type":"element","tag":"code","props":{"__ignoreMap":""},"children":[{"type":"text","value":"BootCurrent: 0005\nBootOrder: 0001,0005,0004,2001\nBoot0001* Windows Boot Manager  HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\\EFI\\Microsoft\\Boot\\bootmgfw.efi\nBoot0004* Windows Boot Manager  HD(1,GPT,3f296803-1e98-4d7f-b76b-263785c2dcef,0x28,0x100000)/\\EFI\\Microsoft\\Boot\\bootmgfw.efi\nBoot0005* Linux Boot Manager    HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\\EFI\\systemd\\systemd-bootx64.efi\nBoot2001* EFI USB Device        RC\n"}]}]},{"type":"element","tag":"h3","props":{"id":"重启到指定-efi-启动项-1"},"children":[{"type":"text","value":"重启到指定 EFI 启动项"}]},{"type":"element","tag":"copy","props":{"code":"sudo efibootmgr -n 四位数序号"},"children":[]},{"type":"element","tag":"h3","props":{"id":"修改-linux-boot-manager-的下一次启动项默认启动项"},"children":[{"type":"text","value":"修改 Linux Boot Manager 的下一次启动项/默认启动项"}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"仅适用于使用 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"systemd-boot"}]},{"type":"text","value":" 启动的系统，如果你在使用 Grub，请参阅其他教程。"}]}]},{"type":"element","tag":"copy","props":{"code":"bootctl list"},"children":[]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"执行此命令后，可以列出如下所示的启动项列表："}]},{"type":"element","tag":"pre","props":{"code":"         type: Boot Loader Specification Type #1 (.conf)\n        title: Arch Linux (default) (selected)\n           id: 10-arch.conf\n       source: /boot//loader/entries/10-arch.conf\n        linux: /boot//vmlinuz-linux\n       initrd: /boot//amd-ucode.img\n               /boot//initramfs-linux.img\n      options: root=PARTUUID=7227604a-aca1-034d-9bd3-e17d53548a62 rw rootfstype=btrfs\n\n         type: Automatic\n        title: Windows Boot Manager\n           id: auto-windows\n       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f\n\n         type: Automatic\n        title: Reboot Into Firmware Interface\n           id: auto-reboot-to-firmware-setup\n       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f\n"},"children":[{"type":"element","tag":"code","props":{"__ignoreMap":""},"children":[{"type":"text","value":"         type: Boot Loader Specification Type #1 (.conf)\n        title: Arch Linux (default) (selected)\n           id: 10-arch.conf\n       source: /boot//loader/entries/10-arch.conf\n        linux: /boot//vmlinuz-linux\n       initrd: /boot//amd-ucode.img\n               /boot//initramfs-linux.img\n      options: root=PARTUUID=7227604a-aca1-034d-9bd3-e17d53548a62 rw rootfstype=btrfs\n\n         type: Automatic\n        title: Windows Boot Manager\n           id: auto-windows\n       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f\n\n         type: Automatic\n        title: Reboot Into Firmware Interface\n           id: auto-reboot-to-firmware-setup\n       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f\n"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"使用此命令可以修改 Linux Boot Manager 的下一次启动项，若想修改默认启动项，请使用 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"set-dafault"}]},{"type":"text","value":" 选项。"}]},{"type":"element","tag":"copy","props":{"code":"sudo bootctl set-oneshot [ID]"},"children":[]},{"type":"element","tag":"style","props":{},"children":[{"type":"text","value":"html .default .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}html.dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[{"id":"前置知识","depth":2,"text":"前置知识"},{"id":"windows-下使用脚本重启到其他系统","depth":2,"text":"Windows 下使用脚本重启到其他系统","children":[{"id":"列出-efi-启动项","depth":3,"text":"列出 EFI 启动项"},{"id":"重启到指定-efi-启动项","depth":3,"text":"重启到指定 EFI 启动项"}]},{"id":"在-linux-下重启到其他系统","depth":2,"text":"在 Linux 下重启到其他系统","children":[{"id":"列出启动项","depth":3,"text":"列出启动项"},{"id":"重启到指定-efi-启动项-1","depth":3,"text":"重启到指定 EFI 启动项"},{"id":"修改-linux-boot-manager-的下一次启动项默认启动项","depth":3,"text":"修改 Linux Boot Manager 的下一次启动项/默认启动项"}]}]}},"_type":"markdown","_id":"content:posts:2024:boot-management.md","_source":"content","_file":"posts/2024/boot-management.md","_stem":"posts/2024/boot-management","_extension":"md","_original_dir":"/posts"},"hash":"bFxyFbqRYh"}
+---
+title: 系统引导配置分享
+description: 指哪里就启动哪里——在 Windows 和 Linux 系统下实现重启至特定 EFI 引导项。
+date: 2024-03-01 14:06:19
+updated: 2024-03-01 15:17:30
+image: https://7.isyangs.cn/24/6664009916cea-24.jpg
+categories: [经验分享]
+tags: [教程, 系统, archlinux, Windows]
+---
+
+## 前置知识
+
+一般来说，系统引导方式有 Legacy 引导和 UEFI 引导。其中 Legacy 引导方式较为古老，不在本篇文章的讨论范围内。
+
+UEFI 引导中，可以有多个启动项，比如 Windows Boot Manager、Linux Boot Manager、Grub、网络启动、USB设备启动等。
+
+而在诸如 Windows Boot Manager、Linux Boot Manager、Grub 这些启动项管理器中，也可以设置多个启动项。如果安装了多个 Windows 系统，Windows Boot Manager 中会显示多个 Windows 启动项；如果安装了 Linux 系统， Grub 中会显示 Linux 系统、Linux 系统(高级启动)，以及可能会有 Windows Boot Manager 的启动项。
+
+## Windows 下使用脚本重启到其他系统
+
+### 列出 EFI 启动项
+
+:copy{prompt="PS(管理员)>" code="bcdedit /enum ALL"}
+
+执行此命令，你会看到类似以下内容：
+
+```
+固件启动管理器
+---------------------
+标识符                  {fwbootmgr}
+displayorder            {bootmgr}
+                        {77a0d197-59c5-11ee-b0be-c8cb9e630a73}
+                        {9dda157b-7ef3-11ee-b143-806e6f6e6963}
+                        {f0506e71-9c73-11ed-adf2-806e6f6e6963}
+
+Windows 启动管理器
+--------------------
+标识符                  {bootmgr}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+description             Windows Boot Manager
+
+固件应用程序(101fffff)
+-------------------------------
+标识符                  {77a0d197-59c5-11ee-b0be-c8cb9e630a73}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\systemd\systemd-bootx64.efi
+description             Linux Boot Manager
+
+固件应用程序(101fffff)
+-------------------------------
+标识符                  {9dda157b-7ef3-11ee-b143-806e6f6e6963}
+device                  partition=\Device\HarddiskVolume6
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+description             Windows Boot Manager
+
+固件应用程序(101fffff)
+-------------------------------
+标识符                  {f0506e71-9c73-11ed-adf2-806e6f6e6963}
+description             EFI USB Device
+
+Windows 启动加载器
+-------------------
+标识符                  {current}
+device                  partition=C:
+path                    \WINDOWS\system32\winload.efi
+description             Windows 11
+
+……
+```
+
+记住你需要重启到的、形如 `{77a0d197-59c5-11ee-b0be-c8cb9e630a73}` 的 UUID，就可以编写脚本了。
+
+### 重启到指定 EFI 启动项
+
+```bat [reboot-to-some-entry.bat]
+rem 使用管理员权限运行此脚本
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd","/c %~s0 ::","","runas",1)(window.close) && exit
+rem 将 Linux Boot Manager 设置为下次启动项
+bcdedit /set "{fwbootmgr}" bootsequence "{77a0d197-59c5-11ee-b0be-c8cb9e630a73}" /addfirst
+rem 重启
+shutdown -r -t 0
+```
+
+推荐将脚本放在用户文件夹下，因为这是终端启动、SSH连接时的默认目录，输入文件名即可运行。
+
+## 在 Linux 下重启到其他系统
+
+### 列出启动项
+
+:copy{code="efibootmgr"}
+
+执行此命令后，会得到如下所示的 EFI 启动项列表：
+
+```
+BootCurrent: 0005
+BootOrder: 0001,0005,0004,2001
+Boot0001* Windows Boot Manager  HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\EFI\Microsoft\Boot\bootmgfw.efi
+Boot0004* Windows Boot Manager  HD(1,GPT,3f296803-1e98-4d7f-b76b-263785c2dcef,0x28,0x100000)/\EFI\Microsoft\Boot\bootmgfw.efi
+Boot0005* Linux Boot Manager    HD(1,GPT,04f43acd-5a75-4946-b8eb-8c2b4aa000c3,0x800,0x100000)/\EFI\systemd\systemd-bootx64.efi
+Boot2001* EFI USB Device        RC
+```
+
+### 重启到指定 EFI 启动项
+
+:copy{code="sudo efibootmgr -n 四位数序号"}
+
+### 修改 Linux Boot Manager 的下一次启动项/默认启动项
+
+> 仅适用于使用 `systemd-boot` 启动的系统，如果你在使用 Grub，请参阅其他教程。
+
+:copy{code="bootctl list"}
+
+执行此命令后，可以列出如下所示的启动项列表：
+
+```
+         type: Boot Loader Specification Type #1 (.conf)
+        title: Arch Linux (default) (selected)
+           id: 10-arch.conf
+       source: /boot//loader/entries/10-arch.conf
+        linux: /boot//vmlinuz-linux
+       initrd: /boot//amd-ucode.img
+               /boot//initramfs-linux.img
+      options: root=PARTUUID=7227604a-aca1-034d-9bd3-e17d53548a62 rw rootfstype=btrfs
+
+         type: Automatic
+        title: Windows Boot Manager
+           id: auto-windows
+       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+
+         type: Automatic
+        title: Reboot Into Firmware Interface
+           id: auto-reboot-to-firmware-setup
+       source: /sys/firmware/efi/efivars/LoaderEntries-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+```
+
+使用此命令可以修改 Linux Boot Manager 的下一次启动项，若想修改默认启动项，请使用 `set-dafault` 选项。
+
+:copy{code="sudo bootctl set-oneshot [ID]"}

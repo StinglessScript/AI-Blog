@@ -1,1 +1,17 @@
-{"parsed":{"_path":"/2010s/zhilu-site-biography","_dir":"2010s","_draft":false,"_partial":false,"_locale":"","title":"纸鹿站记","description":"建成个人网站之后撰写的一段文言文。","date":"2019-08-08T14:01:00.000Z","updated":"2019-12-27T14:17:00.000Z","type":"story","categories":["生活"],"tags":["网站","文言文"],"readingTime":{"text":"1 min read","minutes":0.54,"time":32400,"words":108},"body":{"type":"root","children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"关中有纸鹿君者，癸未年生者也。"},{"type":"element","tag":"del","props":{},"children":[{"type":"text","value":"善摸鱼咕甚"}]},{"type":"text","value":"。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"人之言曰：“汝惰甚，页之不成。”曰：“无文以成。”人之言曰：“盍学？”对曰：“方学一语曰Python。”或曰：“汝何为作此站？”答之曰：“无事，乃作网站以研。”"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"del","props":{},"children":[{"type":"text","value":"习时两年有半，"}]},{"type":"text","value":"‍站初成，请观之以礼。若有误， "},{"type":"element","tag":"tip","props":{"ip":"QQ聊天链接，但是挂了"},"children":[{"type":"text","value":"击此"}]},{"type":"text","value":" ，汝甚美。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"己亥年七月初八。"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[]}},"_type":"markdown","_id":"content:posts:2010s:zhilu-site-biography.md","_source":"content","_file":"posts/2010s/zhilu-site-biography.md","_stem":"posts/2010s/zhilu-site-biography","_extension":"md","_original_dir":"/posts"},"hash":"LUDKXiBFRq"}
+---
+title: 纸鹿站记
+description: 建成个人网站之后撰写的一段文言文。
+date: 2019-08-08 22:01:00
+updated: 2019-12-27 22:17:00
+type: story
+categories: [生活]
+tags: [网站, 文言文]
+---
+
+关中有纸鹿君者，癸未年生者也。~~善摸鱼咕甚~~。
+
+人之言曰：“汝惰甚，页之不成。”曰：“无文以成。”人之言曰：“盍学？”对曰：“方学一语曰Python。”或曰：“汝何为作此站？”答之曰：“无事，乃作网站以研。”
+
+~~习时两年有半，~~&zwj;站初成，请观之以礼。若有误， :tip[击此]{ip="QQ聊天链接，但是挂了"} ，汝甚美。
+
+己亥年七月初八。

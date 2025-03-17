@@ -1,1 +1,103 @@
-{"parsed":{"_path":"/2024/helping-day","_dir":"2024","_draft":false,"_partial":false,"_locale":"","title":"今日无事，除了一些技术咨询","description":"一天中帮助朋友们解决各类问题，如软件警告甄别、平板选购咨询、远程协作实现、签到操作指导、下载文件查找、卸载工具推荐、AI代码探讨，展现技术分享与互助的价值。","date":"2024-03-10T13:14:38.000Z","updated":"2024-03-31T14:31:58.000Z","type":"story","categories":["生活"],"tags":["大学","问题","朋友"],"readingTime":{"text":"8 min read","minutes":7.22,"time":433200,"words":1444},"body":{"type":"root","children":[{"type":"element","tag":"h2","props":{"id":"_1046-谷歌浏览器有风险"},"children":[{"type":"text","value":"10:46 “谷歌浏览器”有“风险”"}]},{"type":"element","tag":"chat","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{学妹}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"你好，学长我想问问我电脑最近电脑管家有弹窗上面显示下载谷歌浏览器稳定版提示有风险"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{学妹}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"但是我已经有谷歌浏览器了，在官网下的"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{.}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"截图"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"{学妹}"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"好的，我找找。那个老是不定期弹出来"},{"type":"element","tag":"span","props":{},"children":[{"type":"text","value":"/泪奔"}]}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我猜要么“谷歌浏览器”是山寨版，要么“电脑管家”手脚不干净，想要推荐有利益关系的其他浏览器。不过没有截图，通过只言片语很难判断问题啊。"}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"补充：后来学妹的情况复现，是联想电脑管家的软件推荐弹窗，为的是让用户从联系软件商店下载软件，可信度不高。"}]}]},{"type":"element","tag":"h2","props":{"id":"_1456-挑选平板一曲三折"},"children":[{"type":"text","value":"14:56 挑选平板一曲三折"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"647 想买一部 iPad 或者华为平板，用来看视频、记笔记。她用的华为手机，所以我在前一天晚上就向她推荐了华为 MatePad 11 2023（我许多朋友都在用）。然而，今天下午她又来询问我是否有推荐的平板型号。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我这才得知，到店之后，店员极力推荐华为 MatePad 2023。我告诉她这款用的是骁龙 7gen1 处理器，性能可能比较一般。最后，店员才讲我推荐的型号没货了。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我一边讲“不信同城调不到货”，一边推荐通过线上渠道购买。果然，不到半小时后，店内又可以同城调货了。"}]},{"type":"element","tag":"h2","props":{"id":"_1611-macbook也要工科制图"},"children":[{"type":"text","value":"16:11 MacBook也要工科制图"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"到了写数字电路课程设计报告的时间，Luyoung 想用我的游戏本修改电路图，他的 MacBook 不方便编辑。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我也要用电脑，不过我的电脑通过 "},{"type":"element","tag":"a","props":{"href":"https://github.com/anhkgg/SuperRDP","rel":["nofollow"]},"children":[{"type":"text","value":"SuperRDP"}]},{"type":"text","value":" 启用了远程多账户登录，所以让他安装了 "},{"type":"element","tag":"a","props":{"href":"https://aka.ms/rdmacbeta","rel":["nofollow"]},"children":[{"type":"text","value":"Remote Desktop Beta"}]},{"type":"text","value":"（正式版不能在大陆地区的 App Store 中下载），他用 MacBook 远程连接到我电脑的 temp 账户的桌面，完成了电路图。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"有点方便，但不多，毕竟一台电脑要当成两台用。"}]},{"type":"element","tag":"h2","props":{"id":"_1950-有个朋友要定位签到"},"children":[{"type":"text","value":"19:50 “有个朋友”要定位签到"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"正在实验室开会，Chenglin 突然打来了微信电话。我挂断后，他发了共计25秒的语音，讲他“"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"有个朋友"}]},{"type":"text","value":"”没在学校，有没有完成晚点名定位签到的办法。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我推荐他使用网页版而不是微信小程序完成签到，不过他似乎又遇到了一些问题。幸好他及时提供了截图，我发现链接是在微信内置浏览器里打开的，因此签到网页会使用微信绑定的用户信息。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我告诉他要使用浏览器打开网页才能登录其他账号，不知道密码可以点击“忘记密码”。最后应该是成功签到了吧。"}]},{"type":"element","tag":"h2","props":{"id":"_2044-下载的iso去哪了"},"children":[{"type":"text","value":"20:44 下载的ISO去哪了"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"小吴想要装虚拟机，但是她找不到下载的ISO镜像文件了。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我建议她打开浏览器的下载记录，那里能查看文件的下载位置。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"最后她找到了ISO镜像文件，我们都很开心。"}]},{"type":"element","tag":"h2","props":{"id":"_2108-软件装不上救救我"},"children":[{"type":"text","value":"21:08 软件装不上救救我"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"小张张口就叫“大哥”，随即便是两声“救救我”，以及一个哭泣的表情。看样子，相比于解决问题，更重要的是安抚朋友的情绪，所以我回复了一条“啊😦”。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"个人认为这是简洁高效且十分到位的情绪安抚，因为他及时进入了正题。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"他说，电脑上的工程制图软件出了问题，也没办法覆盖安装，想要找一个卸载工具。我认为他可以试试 "},{"type":"element","tag":"a","props":{"href":"https://cn.bing.com/search?q=GeekUninstaller","rel":["nofollow"]},"children":[{"type":"text","value":"GeekUninstaller"}]},{"type":"text","value":"。他问是不是在“软件商店直接下载”，我回答“都行，凭自己本事下载”。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"下载、安装软件确实挺考验电脑基本功的。"}]},{"type":"element","tag":"h2","props":{"id":"_2248-ai疑云贻笑大方"},"children":[{"type":"text","value":"22:48 AI疑云，贻笑大方"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"古古怪怪向我分享了一则趣事：他在互评 MATLAB 作业时，发现其他人写的一段代码非常有趣，不像是人类写的。"}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"3.(论述题)\n大于等于0.5或小于等于0.3的元素个数;"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"***的答案:"}]},{"type":"element","tag":"pre","props":{"className":"language-matlab shiki shiki-themes catppuccin-latte one-dark-pro","code":"% 创建一个逻辑矩阵，其中元素满足大于等于0.5或小于等于0.3的条件\nlogical_matrix = (A >= 0.5)|(A <= 0.3);\n% 使用sum函数计算逻辑矩阵中true的个数，即满足条件的元素个数\ncount_greater_or_equal_to_0_5_or_less_or_equal_to_0_3 = sum(logical_matrix(:));\n","language":"matlab","meta":"","style":""},"children":[{"type":"element","tag":"code","props":{"__ignoreMap":""},"children":[{"type":"element","tag":"span","props":{"class":"line","line":1},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"% 创建一个逻辑矩阵，其中元素满足大于等于0.5或小于等于0.3的条件\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":2},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"logical_matrix = (A "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":">="}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#FE640B;--shiki-dark:#D19A66"},"children":[{"type":"text","value":" 0.5"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":")|(A "}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"<="}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#FE640B;--shiki-dark:#D19A66"},"children":[{"type":"text","value":" 0.3"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":");\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":3},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":"% 使用sum函数计算逻辑矩阵中true的个数，即满足条件的元素个数\n"}]}]},{"type":"element","tag":"span","props":{"class":"line","line":4},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3 = sum(logical_matrix(:));\n"}]}]}]}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我也觉得这段代码十分有趣，其中 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3"}]},{"type":"text","value":" 是一个非常好的变量名，好就好在一般人根本写不出来这么一坨玩意儿。我去问文心一言，文心一言都摇头，讲："}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3"}]},{"type":"text","value":" 这个变量名过于冗长和机械，不符合一般编程实践中对变量命名简洁明了的要求。在实际编程中，程序员通常会选择更简洁、更具描述性的变量名，以提高代码的可读性和维护性。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"因此，如果这段代码是在实际开发环境中由人类编写的，那么这样的变量名很可能是不合适的。然而，如果是AI生成的代码，由于AI可能只是简单地根据语法规则和逻辑结构来生成代码，而没有考虑到人类编程的习惯和约定，所以可能会出现这样的变量名。"}]}]},{"type":"element","tag":"h2","props":{"id":"总而言之一言以蔽之"},"children":[{"type":"text","value":"总而言之，一言以蔽之"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"每一个问题，不管“难”还是“简单”，都是大家真真切切实实在在遇到的。技术不应只掌握在少数人手里，排忧解难正如传递薪火，也是技术的价值所在。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"✅中肯的。"}]},{"type":"element","tag":"style","props":{},"children":[{"type":"text","value":"html .default .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}html.dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[{"id":"_1046-谷歌浏览器有风险","depth":2,"text":"10:46 “谷歌浏览器”有“风险”"},{"id":"_1456-挑选平板一曲三折","depth":2,"text":"14:56 挑选平板一曲三折"},{"id":"_1611-macbook也要工科制图","depth":2,"text":"16:11 MacBook也要工科制图"},{"id":"_1950-有个朋友要定位签到","depth":2,"text":"19:50 “有个朋友”要定位签到"},{"id":"_2044-下载的iso去哪了","depth":2,"text":"20:44 下载的ISO去哪了"},{"id":"_2108-软件装不上救救我","depth":2,"text":"21:08 软件装不上救救我"},{"id":"_2248-ai疑云贻笑大方","depth":2,"text":"22:48 AI疑云，贻笑大方"},{"id":"总而言之一言以蔽之","depth":2,"text":"总而言之，一言以蔽之"}]}},"_type":"markdown","_id":"content:posts:2024:helping-day.md","_source":"content","_file":"posts/2024/helping-day.md","_stem":"posts/2024/helping-day","_extension":"md","_original_dir":"/posts"},"hash":"O9zuYOvQlT"}
+---
+title: 今日无事，除了一些技术咨询
+description: 一天中帮助朋友们解决各类问题，如软件警告甄别、平板选购咨询、远程协作实现、签到操作指导、下载文件查找、卸载工具推荐、AI代码探讨，展现技术分享与互助的价值。
+date: 2024-03-10 21:14:38
+updated: 2024-03-31 22:31:58
+type: story
+categories: [生活]
+tags: [大学, 问题, 朋友]
+---
+
+## 10:46 “谷歌浏览器”有“风险”
+
+::chat
+
+{学妹}
+
+你好，学长我想问问我电脑最近电脑管家有弹窗上面显示下载谷歌浏览器稳定版提示有风险
+
+{学妹}
+
+但是我已经有谷歌浏览器了，在官网下的
+
+{.}
+
+截图
+
+{学妹}
+
+好的，我找找。那个老是不定期弹出来[/泪奔]
+::
+
+我猜要么“谷歌浏览器”是山寨版，要么“电脑管家”手脚不干净，想要推荐有利益关系的其他浏览器。不过没有截图，通过只言片语很难判断问题啊。
+
+> 补充：后来学妹的情况复现，是联想电脑管家的软件推荐弹窗，为的是让用户从联系软件商店下载软件，可信度不高。
+
+## 14:56 挑选平板一曲三折
+
+647 想买一部 iPad 或者华为平板，用来看视频、记笔记。她用的华为手机，所以我在前一天晚上就向她推荐了华为 MatePad 11 2023（我许多朋友都在用）。然而，今天下午她又来询问我是否有推荐的平板型号。
+
+我这才得知，到店之后，店员极力推荐华为 MatePad 2023。我告诉她这款用的是骁龙 7gen1 处理器，性能可能比较一般。最后，店员才讲我推荐的型号没货了。
+
+我一边讲“不信同城调不到货”，一边推荐通过线上渠道购买。果然，不到半小时后，店内又可以同城调货了。
+
+## 16:11 MacBook也要工科制图
+
+到了写数字电路课程设计报告的时间，Luyoung 想用我的游戏本修改电路图，他的 MacBook 不方便编辑。
+
+我也要用电脑，不过我的电脑通过 [SuperRDP](https://github.com/anhkgg/SuperRDP) 启用了远程多账户登录，所以让他安装了 [Remote Desktop Beta](https://aka.ms/rdmacbeta)（正式版不能在大陆地区的 App Store 中下载），他用 MacBook 远程连接到我电脑的 temp 账户的桌面，完成了电路图。
+
+有点方便，但不多，毕竟一台电脑要当成两台用。
+
+## 19:50 “有个朋友”要定位签到
+
+正在实验室开会，Chenglin 突然打来了微信电话。我挂断后，他发了共计25秒的语音，讲他“**有个朋友**”没在学校，有没有完成晚点名定位签到的办法。
+
+我推荐他使用网页版而不是微信小程序完成签到，不过他似乎又遇到了一些问题。幸好他及时提供了截图，我发现链接是在微信内置浏览器里打开的，因此签到网页会使用微信绑定的用户信息。
+
+我告诉他要使用浏览器打开网页才能登录其他账号，不知道密码可以点击“忘记密码”。最后应该是成功签到了吧。
+
+## 20:44 下载的ISO去哪了
+
+小吴想要装虚拟机，但是她找不到下载的ISO镜像文件了。
+
+我建议她打开浏览器的下载记录，那里能查看文件的下载位置。
+
+最后她找到了ISO镜像文件，我们都很开心。
+
+## 21:08 软件装不上救救我
+
+小张张口就叫“大哥”，随即便是两声“救救我”，以及一个哭泣的表情。看样子，相比于解决问题，更重要的是安抚朋友的情绪，所以我回复了一条“啊😦”。
+
+个人认为这是简洁高效且十分到位的情绪安抚，因为他及时进入了正题。
+
+他说，电脑上的工程制图软件出了问题，也没办法覆盖安装，想要找一个卸载工具。我认为他可以试试 [GeekUninstaller](https://cn.bing.com/search?q=GeekUninstaller)。他问是不是在“软件商店直接下载”，我回答“都行，凭自己本事下载”。
+
+下载、安装软件确实挺考验电脑基本功的。
+
+## 22:48 AI疑云，贻笑大方
+
+古古怪怪向我分享了一则趣事：他在互评 MATLAB 作业时，发现其他人写的一段代码非常有趣，不像是人类写的。
+
+> 3.(论述题)
+> 大于等于0.5或小于等于0.3的元素个数;
+>
+> ***的答案:
+> ```matlab
+> % 创建一个逻辑矩阵，其中元素满足大于等于0.5或小于等于0.3的条件
+> logical_matrix = (A >= 0.5)|(A <= 0.3);
+> % 使用sum函数计算逻辑矩阵中true的个数，即满足条件的元素个数
+> count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3 = sum(logical_matrix(:));
+> ```
+
+我也觉得这段代码十分有趣，其中 `count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3` 是一个非常好的变量名，好就好在一般人根本写不出来这么一坨玩意儿。我去问文心一言，文心一言都摇头，讲：
+
+> `count_greater_or_equal_to_0_5_or_less_or_equal_to_0_3` 这个变量名过于冗长和机械，不符合一般编程实践中对变量命名简洁明了的要求。在实际编程中，程序员通常会选择更简洁、更具描述性的变量名，以提高代码的可读性和维护性。
+>
+> 因此，如果这段代码是在实际开发环境中由人类编写的，那么这样的变量名很可能是不合适的。然而，如果是AI生成的代码，由于AI可能只是简单地根据语法规则和逻辑结构来生成代码，而没有考虑到人类编程的习惯和约定，所以可能会出现这样的变量名。
+
+## 总而言之，一言以蔽之
+
+每一个问题，不管“难”还是“简单”，都是大家真真切切实实在在遇到的。技术不应只掌握在少数人手里，排忧解难正如传递薪火，也是技术的价值所在。
+
+✅中肯的。

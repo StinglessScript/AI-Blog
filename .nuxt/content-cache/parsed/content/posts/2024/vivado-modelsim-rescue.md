@@ -1,1 +1,148 @@
-{"parsed":{"_path":"/2024/vivado-modelsim-rescue","_dir":"2024","_draft":false,"_partial":false,"_locale":"","title":"朋友的 Vivado 和 Modelsim 装上了吗","description":"明明只是遵照教程配置硬件开发环境，Vivado 添加许可证后却没有产品 License，Modelsim 注册机也会在生成许可证后闪退。教程竟不能覆盖这些情况了！亲自动手，误打误撞地在种种机缘巧合之下，探索 Windows 的种种「环境之谜」。","date":"2024-12-03T00:00:41.000Z","updated":"2024-12-03T13:37:53.000Z","type":"story","categories":["经验分享"],"tags":["Windows","硬件开发","Vivado","Modelsim","踩坑"],"readingTime":{"text":"14 min read","minutes":13.435,"time":806100,"words":2687},"body":{"type":"root","children":[{"type":"element","tag":"h2","props":{"id":"给你发个安装包"},"children":[{"type":"text","value":"给你发个安装包"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"Skymaster 心血来潮，想要在自己的笔记本上配置 Vivado 和 Modelsim "},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"硬件开发环境"}]},{"type":"text","value":"，用于预习本学期的《计算机组成原理》和《基于Vivado的FPGA设计基础》。于是，他想找我要安装包。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"多提一嘴，为什么不自己下载？因为有些文件可能在网盘里，下载速度很慢；校园网在宿舍的网速上限也只有 50 Mbps，根据"},{"type":"element","tag":"a","props":{"href":"https://www.ithome.com/0/708/282.htm","rel":["nofollow"]},"children":[{"type":"text","value":"FCC 欲调整美国宽带标准：下行 100 Mbps，上行 20 Mbps"}]},{"type":"text","value":"，下行速度似乎已经脱离了「宽带」的范畴。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这我能忍？我刚配的千兆内网！很快啊，我就邀请 Skymaster 来我宿舍拉取共计几十 GB 的安装包。 "},{"type":"element","tag":"tip","props":{"tip":"此处仅作夸张，实际传输速度在 90MiB/s 左右"},"children":[{"type":"text","value":"啪地一下"}]},{"type":"text","value":"，他的电脑连接上了我 5GHz 频段 160MHz 频宽的 Wi-Fi 6 无线局域网，安装包就传过去了。"}]},{"type":"element","tag":"alert","props":{"title":"尽可能地支持正版","type":"warning"},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"本文不提供任何盗版资源。购买并使用正版软件是对开发者的一种认可，盗版软件也可能会有安全风险。"}]}]},{"type":"element","tag":"h2","props":{"id":"vivado-装上了吗"},"children":[{"type":"text","value":"Vivado 装上了吗"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"安装包随附安装教程图文链接，Skymaster 具有良好的技术素养，我认为他应该能顺利安装。"}]},{"type":"element","tag":"h3","props":{"id":"无法检测许可证"},"children":[{"type":"text","value":"无法检测许可证"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"然而，他告诉我，Vivado 许可证管理器导入许可证后，没有更新任何许可年份期限。Skymaster 同时表明他严格按照教程安装，并已尝试导入另一份许可证文件，问题依旧。我不信，动身前往他的宿舍尝试亲自卸载后安装。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"即使口头上说着「重启、重装、重买」是维修电脑的三大锦囊，但这已然属于「"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"治末病"}]},{"type":"text","value":"」的范畴，科学的使用习惯才是能「"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"治未病"}]},{"type":"text","value":"」的法宝。"}]}]},{"type":"element","tag":"h3","props":{"id":"安装包的启动路径也不能有中文"},"children":[{"type":"text","value":"安装包的启动路径也不能有中文"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我卸载后按照安装教程重新安装，复现了……🤔没有复现，安装"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"卡住了"}]},{"type":"text","value":"！"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"阅读日志，发现是无法找到 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"D:\\ \\Vivado 2018.3\\"}]},{"type":"text","value":" 目录下的某个文件，而这里本应该是 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"D:\\新建文件夹\\Vivado 2018.3\\"}]},{"type":"text","value":"。所以，安装包的启动路径不能有中文，我只得修改文件夹名称。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"🤓☝️不过到饭点了，吃个饭先。"}]},{"type":"element","tag":"h4","props":{"id":"种种机缘巧合误寻得问题原因"},"children":[{"type":"text","value":"种种机缘巧合，误寻得问题原因"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我原本想在 Skymaster 的电脑 D 盘建一个 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Install"}]},{"type":"text","value":" 或者 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Package"}]},{"type":"text","value":" 文件夹，用于存放安装包。然而，Skymaster 将输入法（微软拼音）的中英文切换键位由 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Shift"}]},{"type":"text","value":" 修改为了 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Ctrl+空格"}]},{"type":"text","value":"，这令我在切换中英文时"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"颇为恼火"}]},{"type":"text","value":"，想着安装后就删掉了，就直接使用「"},{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"新建文件夹"}]},{"type":"text","value":"」作为文件夹名称。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我了解某些特定场景（如游戏）下需要长期保持英文输入状态，因此有用户修改了输入法（微软拼音）的中英文切换键位，并且发布了相关教程。但这不利于频繁的语言切换。更好的方法是为电脑添加 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"英语(美国)"}]},{"type":"text","value":" 语言包键盘的美式键盘输入法，这样，在中文场景下可以方便地使用 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Shift"}]},{"type":"text","value":" 切换中英文，对应需要保持英文键盘的场景，使用 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Alt+Shift"}]},{"type":"text","value":" 或 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Win+空格"}]},{"type":"text","value":" 切换到英语的美式键盘输入法，还不用担心切换后误触到中英文切换键位。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"不乏有真材实料的教程，但搜索或是短视频平台推送的所谓「电脑小技巧」，大多是在误人子弟。诸如「垃圾清理」「电脑加速」之类的内容，往往只是迎合网友需求的噱头，却不能解决实际问题或反而引入更大的隐患。"}]}]},{"type":"element","tag":"h3","props":{"id":"中文用户名文件夹"},"children":[{"type":"text","value":"中文用户名文件夹"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"修改安装包所在的文件夹名之后重新安装问题依旧，我不得不对着证书管理器的界面思考。偶然间，我瞥见了这段话："}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"span","props":{"className":["title-like"]},"children":[{"type":"text","value":"加载许可证 - 基于证书的许可证（翻译后的版本）"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"点击“复制许可证”按钮，将基于证书的许可证（"},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":".lic"}]},{"type":"text","value":" 文件）复制到 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%APPDATA%\\XilinxLicense"}]},{"type":"text","value":" 目录中。Xilinx 应用程序会自动检测位于 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%APPDATA%\\XilinxLicense"}]},{"type":"text","value":" 目录中的有效且绑定到节点的许可证（"},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"*.lic"}]},{"type":"text","value":"）。"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我顿时灵光一现，既然安装程序因为启动路径含有中文而乱码，虽然安装在了英文目录下，但证书管理器会不会因为用户文件夹名为中文而不能读取 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%APPDATA%\\XilinxLicense"}]},{"type":"text","value":" 呢？"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"再一看，Skymaster 的用户文件夹名果然是中文，还带了几个乱码文件夹。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这并不怪他，因为系统是别人帮忙装的，并且 Windows 安装引导（OOBE）输入用户名界面的文本框提示是「您的姓名」，很容易输入中文。"}]},{"type":"element","tag":"h3","props":{"id":"绕过中文路径"},"children":[{"type":"text","value":"绕过中文路径"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"起初，我以为证书管理器访问的是乱码目录，但结合之前安装程序中「中文变空格」的现象，显然我不能把证书抛到空格文件夹里。既然如此，我便提出几种解决无法访问 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%APPDATA%\\XilinxLicense"}]},{"type":"text","value":" 的方案："}]},{"type":"element","tag":"ol","props":{},"children":[{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"修改用户文件夹名为英文（我的另一篇踩坑中有"},{"type":"element","tag":"a","props":{"href":"/2024/all-pits-stepped#%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D"},"children":[{"type":"text","value":"教程"}]},{"type":"text","value":"），风险较高。"}]},{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"通过系统全局（为所有用户而不是单个用户）安装，这样证书的导入路径可能会变成 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%ProgramData%\\XilinxLicense"}]},{"type":"text","value":"（未尝试）。"}]},{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"灵机一动，把自己的证书打入内置的证书目录 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"C:\\Xilinx\\Vivado\\2018.3\\data\\ip\\core_licenses"}]},{"type":"text","value":"，这样证书管理器就能自动导入了（不规范）。"}]},{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"证书管理器内其实给出了指定许可证路径的选项，通过环境变量 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"XILINXD_LICENSE_FILE"}]},{"type":"text","value":" 实现。"}]}]},{"type":"element","tag":"blockquote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"span","props":{"className":["title-like"]},"children":[{"type":"text","value":"管理许可证搜索路径（翻译后的版本）"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"要指向浮动服务器许可证，或指向除 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"%APPDATA%\\XilinxLicense"}]},{"type":"text","value":" 之外位置中的许可证文件，请设置以下环境变量之一。"},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"XILINXD_LICENSE_FILE"}]},{"type":"text","value":" 是与 Xilinx 许可证一起使用时首选的环境变量。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"strong","props":{},"children":[{"type":"text","value":"示例"}]},{"type":"text","value":"："}]},{"type":"element","tag":"ul","props":{},"children":[{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"指向浮动服务器许可证："},{"type":"element","tag":"code","props":{"className":"language-ini shiki shiki-themes catppuccin-latte one-dark-pro","language":"ini","style":""},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#1E66F5;--shiki-dark:#C678DD"},"children":[{"type":"text","value":"XILINXD_LICENSE_FILE"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"="}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#98C379"},"children":[{"type":"text","value":"1234@server"}]}]}]},{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"包含其他本地目录："},{"type":"element","tag":"code","props":{"className":"language-ini shiki shiki-themes catppuccin-latte one-dark-pro","language":"ini","style":""},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#1E66F5;--shiki-dark:#C678DD"},"children":[{"type":"text","value":"XILINXD_LICENSE_FILE"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"="}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#98C379"},"children":[{"type":"text","value":"C:\\licenses\\Xilinx.lic"}]}]}]},{"type":"element","tag":"li","props":{},"children":[{"type":"text","value":"指向多个位置："},{"type":"element","tag":"code","props":{"className":"language-ini shiki shiki-themes catppuccin-latte one-dark-pro","language":"ini","style":""},"children":[{"type":"element","tag":"span","props":{"style":"--shiki-default:#1E66F5;--shiki-dark:#C678DD"},"children":[{"type":"text","value":"XILINXD_LICENSE_FILE"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#179299;--shiki-dark:#ABB2BF"},"children":[{"type":"text","value":"="}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#4C4F69;--shiki-dark:#98C379"},"children":[{"type":"text","value":"1234@server"}]},{"type":"element","tag":"span","props":{"style":"--shiki-default:#9CA0B0;--shiki-default-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"},"children":[{"type":"text","value":";C:\\licenses\\Xilinx.lic"}]}]}]}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这样，我们就导入了某个支持 HLS、AccelDSP、System Generator、软硬 CPU、SoC、嵌入式 Linux、重配置等功能的证书了。"}]},{"type":"element","tag":"h2","props":{"id":"modelsim-装上了吗"},"children":[{"type":"text","value":"Modelsim 装上了吗"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这个安装包也附带详细的文字版安装教程，这下 Skymaster 应该能顺利安装了。然而，他依旧遇到了诸多问题。"}]},{"type":"element","tag":"h3","props":{"id":"乱码的安装教程"},"children":[{"type":"text","value":"乱码的安装教程"}]},{"type":"element","tag":"alert","props":{"title":"写文章时 AI 补全的内容","type":"info"},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我打开安装教程，发现里面全是乱码，我顿时明白，安装教程的 TXT 文件是用 VS Code 打开的，而 VS Code 默认使用 UTF-8 编码，而安装教程的 TXT 文件是 GBK 编码。"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"AI 分析的原因没有问题，Skymaster 也确实给我发来了 VS Code 打开 TXT 文件乱码的截图。我重新把 TXT 内的内容通过 QQ 发给了 Skymaster，他按照我发的教程继续安装，随后又遇到了问题。"}]},{"type":"element","tag":"h3","props":{"id":"许可证生成失败"},"children":[{"type":"text","value":"许可证生成失败"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"在宿舍 23:30 熄灯断电的前一刻，他告诉我注册机无法生成许可证，表现为流程执行结束后直接退出而不打开许可证文件。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"这我能忍？完全忍不了！😠我再次来到他的宿舍，复现了问……😡还多复现了一个 VS Code 打开 TXT 文件��的问题。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"更忍不了了，我直接一个「通过编码重新打开」为 GBK，「通过编码保存」为 UTF-8。在 VS Code 按下 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Alt+Z"}]},{"type":"text","value":" 启用自动换行……🤬快捷键被 NVIDIA GeForce Experience 占用了。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"右键点击 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"安装教程.txt"}]},{"type":"text","value":"，选择「使用记事本打开」……😨我辣么大个记事本呢？通过 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"Shift+右键"}]},{"type":"text","value":" 打开详细右键菜单，选择「在记事本中编辑」……😱也没有记事本，只有传统记事本的「编辑」和「打印」选项。"}]},{"type":"element","tag":"h3","props":{"id":"电脑竟然没有记事本"},"children":[{"type":"text","value":"电脑竟然没有记事本"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"通过开始菜单搜索 "},{"type":"element","tag":"code","props":{"className":[]},"children":[{"type":"text","value":"notepad"}]},{"type":"text","value":"，果真没有。🤦通过命令行终于启动了记事本，发现这台 Win 11 笔记本搭载的竟然还是 Win32 Notepad，菜单栏上一个大大的高亮通知，提示升级到新版记事本。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"template","props":{"v-slot:icon":""},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"😭"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"四欲「施法」，总被打断。"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"肾上腺素让我的思绪渐渐清晰：注册机在生成许可证后会调用记事本打开，但这个电脑缺少了新版 Win 11「标配」的 UWP 版记事本，所以无法用记事本打开生成的 TXT 文件。所以——只要安装新版记事本，能弹出许可证窗口——问题就解决了。"}]},{"type":"element","tag":"h3","props":{"id":"安装记事本需解除-uwp-代理限制"},"children":[{"type":"text","value":"安装记事本，需解除 UWP 代理限制"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"那就在微软商店安装……😵卡住了，网络不好。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"Cl$(echo a)sh for Windows 或 v2$(echo r)ayaN 提供了 Fiddler EnableLoopback Utility 插件，能够解除 UWP 应用代理回环限制，从而在 UWP 应用上使用代理。解除代理限制后，这个 2 MB 的小记事本几秒就下载好了。"}]},{"type":"element","tag":"h3","props":{"id":"重新激活-modelsim"},"children":[{"type":"text","value":"重新激活 Modelsim"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"安抚了许可证的情绪，给它放在合适的窝里，配置好环境变量，观察到 Modelsim 情绪良好，就是在 "},{"type":"element","tag":"tip","props":{"tip":"高分辨率屏幕"},"children":[{"type":"text","value":"高分屏"}]},{"type":"text","value":" 下有点糊。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"在快捷方式属性 - 兼容性 - 更改高 DPI 设置里，勾选「替代高 DPI 缩放行为」，「缩放执行」选择「应用程序」，界面便清晰了。如果太小，也可以选择「系统(增强)」，会先放大到整数倍再缩小到系统缩放比例。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"此时，具有详细安装教程+专业导师指点的软件安装服务结束了，我猛灌了两口 Skymaster 的「888 mL 国区限定版可口可乐」，觉得「偏要来看看怎么个事」还真遇到一些不一样的坑。"}]},{"type":"element","tag":"h2","props":{"id":"思考留意异常迹象"},"children":[{"type":"text","value":"思考：留意异常迹象"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"我自诩为「Bug 圣体」，表现为我在使用程序的过程中，常能遇到并留意一些微小的异常迹象。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"最近在与 KazariEX 使用 Vue 开发的过程中，遇到了不少令我困惑的现象，KazariEX 对 vue-language-tools 比较熟悉，他帮忙解决了一些问题并向上游提交了 PR。在这些 PR 中，我起到了关键的一环——「触发并留意到问题」。"}]},{"type":"element","tag":"quote","props":{},"children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"在重大问题出现之前，往往伴随着一些微小的异常迹象。然而，能敏锐捕捉的关键在于知晓预期行为并了解其中机理。若是对正常行为的理解不够深刻，又何以辨别「异常迹象」？"}]}]},{"type":"element","tag":"p","props":{},"children":[{"type":"element","tag":"tip","props":{"tip":"写实验报告写的"},"children":[{"type":"text","value":"在本次实验中，我"}]},{"type":"text","value":"在推测并证实 Vivado 证书管理器的用户证书路径乱码的灵感，源自安装包的启动路径在中文文件夹时会安装失败；而推测 Modelsim 注册机不弹出证书文件窗口的灵感，源自安装教程 TXT 竟然默认用 VS Code 而不是记事本打开。"}]},{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"主人公 Skymaster 看到这篇文章，他说「我才是真正的 bug 圣体，这些 bug 的原因谁能想到」。因此，我重新为昨天的自己授予「玄学流电脑疑难杂症解决糕手」称号。"}]},{"type":"element","tag":"style","props":{},"children":[{"type":"text","value":"html .default .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}html.dark .shiki span {color: var(--shiki-dark);background: var(--shiki-dark-bg);font-style: var(--shiki-dark-font-style);font-weight: var(--shiki-dark-font-weight);text-decoration: var(--shiki-dark-text-decoration);}"}]}],"toc":{"title":"","searchDepth":4,"depth":4,"links":[{"id":"给你发个安装包","depth":2,"text":"给你发个安装包"},{"id":"vivado-装上了吗","depth":2,"text":"Vivado 装上了吗","children":[{"id":"无法检测许可证","depth":3,"text":"无法检测许可证"},{"id":"安装包的启动路径也不能有中文","depth":3,"text":"安装包的启动路径也不能有中文","children":[{"id":"种种机缘巧合误寻得问题原因","depth":4,"text":"种种机缘巧合，误寻得问题原因"}]},{"id":"中文用户名文件夹","depth":3,"text":"中文用户名文件夹"},{"id":"绕过中文路径","depth":3,"text":"绕过中文路径"}]},{"id":"modelsim-装上了吗","depth":2,"text":"Modelsim 装上了吗","children":[{"id":"乱码的安装教程","depth":3,"text":"乱码的安装教程"},{"id":"许可证生成失败","depth":3,"text":"许可证生成失败"},{"id":"电脑竟然没有记事本","depth":3,"text":"电脑竟然没有记事本"},{"id":"安装记事本需解除-uwp-代理限制","depth":3,"text":"安装记事本，需解除 UWP 代理限制"},{"id":"重新激活-modelsim","depth":3,"text":"重新激活 Modelsim"}]},{"id":"思考留意异常迹象","depth":2,"text":"思考：留意异常迹象"}]}},"_type":"markdown","_id":"content:posts:2024:vivado-modelsim-rescue.md","_source":"content","_file":"posts/2024/vivado-modelsim-rescue.md","_stem":"posts/2024/vivado-modelsim-rescue","_extension":"md","_original_dir":"/posts"},"hash":"DdK2lXUJVf"}
+---
+title: 朋友的 Vivado 和 Modelsim 装上了吗
+description: 明明只是遵照教程配置硬件开发环境，Vivado 添加许可证后却没有产品 License，Modelsim 注册机也会在生成许可证后闪退。教程竟不能覆盖这些情况了！亲自动手，误打误撞地在种种机缘巧合之下，探索 Windows 的种种「环境之谜」。
+date: 2024-12-03 08:00:41
+updated: 2024-12-03 21:37:53
+type: story
+categories: [经验分享]
+tags: [Windows, 硬件开发, Vivado, Modelsim, 踩坑]
+---
+
+## 给你发个安装包
+
+Skymaster 心血来潮，想要在自己的笔记本上配置 Vivado 和 Modelsim **硬件开发环境**，用于预习本学期的《计算机组成原理》和《基于Vivado的FPGA设计基础》。于是，他想找我要安装包。
+
+多提一嘴，为什么不自己下载？因为有些文件可能在网盘里，下载速度很慢；校园网在宿舍的网速上限也只有 50 Mbps，根据[FCC 欲调整美国宽带标准：下行 100 Mbps，上行 20 Mbps](https://www.ithome.com/0/708/282.htm)，下行速度似乎已经脱离了「宽带」的范畴。
+
+这我能忍？我刚配的千兆内网！很快啊，我就邀请 Skymaster 来我宿舍拉取共计几十 GB 的安装包。 :tip[啪地一下]{tip="此处仅作夸张，实际传输速度在 90MiB/s 左右"}，他的电脑连接上了我 5GHz 频段 160MHz 频宽的 Wi-Fi 6 无线局域网，安装包就传过去了。
+
+::alert{type="warning" title="尽可能地支持正版"}
+本文不提供任何盗版资源。购买并使用正版软件是对开发者的一种认可，盗版软件也可能会有安全风险。
+::
+
+## Vivado 装上了吗
+
+安装包随附安装教程图文链接，Skymaster 具有良好的技术素养，我认为他应该能顺利安装。
+
+### 无法检测许可证
+
+然而，他告诉我，Vivado 许可证管理器导入许可证后，没有更新任何许可年份期限。Skymaster 同时表明他严格按照教程安装，并已尝试导入另一份许可证文件，问题依旧。我不信，动身前往他的宿舍尝试亲自卸载后安装。
+
+::quote
+即使口头上说着「重启、重装、重买」是维修电脑的三大锦囊，但这已然属于「**治末病**」的范畴，科学的使用习惯才是能「**治未病**」的法宝。
+::
+
+### 安装包的启动路径也不能有中文
+
+我卸载后按照安装教程重新安装，复现了……🤔没有复现，安装**卡住了**！
+
+阅读日志，发现是无法找到 `D:\ \Vivado 2018.3\` 目录下的某个文件，而这里本应该是 `D:\新建文件夹\Vivado 2018.3\`。所以，安装包的启动路径不能有中文，我只得修改文件夹名称。
+
+🤓☝️不过到饭点了，吃个饭先。
+
+#### 种种机缘巧合，误寻得问题原因
+
+我原本想在 Skymaster 的电脑 D 盘建一个 `Install` 或者 `Package` 文件夹，用于存放安装包。然而，Skymaster 将输入法（微软拼音）的中英文切换键位由 `Shift` 修改为了 `Ctrl+空格`，这令我在切换中英文时**颇为恼火**，想着安装后就删掉了，就直接使用「**新建文件夹**」作为文件夹名称。
+
+我了解某些特定场景（如游戏）下需要长期保持英文输入状态，因此有用户修改了输入法（微软拼音）的中英文切换键位，并且发布了相关教程。但这不利于频繁的语言切换。更好的方法是为电脑添加 `英语(美国)` 语言包键盘的美式键盘输入法，这样，在中文场景下可以方便地使用 `Shift` 切换中英文，对应需要保持英文键盘的场景，使用 `Alt+Shift` 或 `Win+空格` 切换到英语的美式键盘输入法，还不用担心切换后误触到中英文切换键位。
+
+::quote
+不乏有真材实料的教程，但搜索或是短视频平台推送的所谓「电脑小技巧」，大多是在误人子弟。诸如「垃圾清理」「电脑加速」之类的内容，往往只是迎合网友需求的噱头，却不能解决实际问题或反而引入更大的隐患。
+::
+
+### 中文用户名文件夹
+
+修改安装包所在的文件夹名之后重新安装问题依旧，我不得不对着证书管理器的界面思考。偶然间，我瞥见了这段话：
+
+> [加载许可证 - 基于证书的许可证（翻译后的版本）]{.title-like}
+>
+> 点击“复制许可证”按钮，将基于证书的许可证（`.lic` 文件）复制到 `%APPDATA%\XilinxLicense` 目录中。Xilinx 应用程序会自动检测位于 `%APPDATA%\XilinxLicense` 目录中的有效且绑定到节点的许可证（`*.lic`）。
+
+我顿时灵光一现，既然安装程序因为启动路径含有中文而乱码，虽然安装在了英文目录下，但证书管理器会不会因为用户文件夹名为中文而不能读取 `%APPDATA%\XilinxLicense` 呢？
+
+再一看，Skymaster 的用户文件夹名果然是中文，还带了几个乱码文件夹。
+
+这并不怪他，因为系统是别人帮忙装的，并且 Windows 安装引导（OOBE）输入用户名界面的文本框提示是「您的姓名」，很容易输入中文。
+
+### 绕过中文路径
+
+起初，我以为证书管理器访问的是乱码目录，但结合之前安装程序中「中文变空格」的现象，显然我不能把证书抛到空格文件夹里。既然如此，我便提出几种解决无法访问 `%APPDATA%\XilinxLicense` 的方案：
+
+1. 修改用户文件夹名为英文（我的另一篇踩坑中有[教程](/2024/all-pits-stepped#中文用户文件夹名)），风险较高。
+2. 通过系统全局（为所有用户而不是单个用户）安装，这样证书的导入路径可能会变成 `%ProgramData%\XilinxLicense`（未尝试）。
+3. 灵机一动，把自己的证书打入内置的证书目录 `C:\Xilinx\Vivado\2018.3\data\ip\core_licenses`，这样证书管理器就能自动导入了（不规范）。
+4. 证书管理器内其实给出了指定许可证路径的选项，通过环境变量 `XILINXD_LICENSE_FILE` 实现。
+
+> [管理许可证搜索路径（翻译后的版本）]{.title-like}
+>
+> 要指向浮动服务器许可证，或指向除 `%APPDATA%\XilinxLicense` 之外位置中的许可证文件，请设置以下环境变量之一。`XILINXD_LICENSE_FILE` 是与 Xilinx 许可证一起使用时首选的环境变量。
+>
+> **示例**：
+> - 指向浮动服务器许可证：`XILINXD_LICENSE_FILE=1234@server`{lang="ini"}
+> - 包含其他本地目录：`XILINXD_LICENSE_FILE=C:\licenses\Xilinx.lic`{lang="ini"}
+> - 指向多个位置：`XILINXD_LICENSE_FILE=1234@server;C:\licenses\Xilinx.lic`{lang="ini"}
+
+这样，我们就导入了某个支持 HLS、AccelDSP、System Generator、软硬 CPU、SoC、嵌入式 Linux、重配置等功能的证书了。
+
+## Modelsim 装上了吗
+
+这个安装包也附带详细的文字版安装教程，这下 Skymaster 应该能顺利安装了。然而，他依旧遇到了诸多问题。
+
+### 乱码的安装教程
+
+::alert{type="info" title="写文章时 AI 补全的内容"}
+我打开安装教程，发现里面全是乱码，我顿时明白，安装教程的 TXT 文件是用 VS Code 打开的，而 VS Code 默认使用 UTF-8 编码，而安装教程的 TXT 文件是 GBK 编码。
+::
+
+AI 分析的原因没有问题，Skymaster 也确实给我发来了 VS Code 打开 TXT 文件乱码的截图。我重新把 TXT 内的内容通过 QQ 发给了 Skymaster，他按照我发的教程继续安装，随后又遇到了问题。
+
+### 许可证生成失败
+
+在宿舍 23:30 熄灯断电的前一刻，他告诉我注册机无法生成许可证，表现为流程执行结束后直接退出而不打开许可证文件。
+
+这我能忍？完全忍不了！😠我再次来到他的宿舍，复现了问……😡还多复现了一个 VS Code 打开 TXT 文件��的问题。
+
+更忍不了了，我直接一个「通过编码重新打开」为 GBK，「通过编码保存」为 UTF-8。在 VS Code 按下 `Alt+Z` 启用自动换行……🤬快捷键被 NVIDIA GeForce Experience 占用了。
+
+右键点击 `安装教程.txt`，选择「使用记事本打开」……😨我辣么大个记事本呢？通过 `Shift+右键` 打开详细右键菜单，选择「在记事本中编辑」……😱也没有记事本，只有传统记事本的「编辑」和「打印」选项。
+
+### 电脑竟然没有记事本
+
+通过开始菜单搜索 `notepad`，果真没有。🤦通过命令行终于启动了记事本，发现这台 Win 11 笔记本搭载的竟然还是 Win32 Notepad，菜单栏上一个大大的高亮通知，提示升级到新版记事本。
+
+::quote
+#icon
+😭
+#default
+四欲「施法」，总被打断。
+::
+
+肾上腺素让我的思绪渐渐清晰：注册机在生成许可证后会调用记事本打开，但这个电脑缺少了新版 Win 11「标配」的 UWP 版记事本，所以无法用记事本打开生成的 TXT 文件。所以——只要安装新版记事本，能弹出许可证窗口——问题就解决了。
+
+### 安装记事本，需解除 UWP 代理限制
+
+那就在微软商店安装……😵卡住了，网络不好。
+
+Cl$(echo a)sh for Windows 或 v2$(echo r)ayaN 提供了 Fiddler EnableLoopback Utility 插件，能够解除 UWP 应用代理回环限制，从而在 UWP 应用上使用代理。解除代理限制后，这个 2 MB 的小记事本几秒就下载好了。
+
+### 重新激活 Modelsim
+
+安抚了许可证的情绪，给它放在合适的窝里，配置好环境变量，观察到 Modelsim 情绪良好，就是在 :tip[高分屏]{tip="高分辨率屏幕"} 下有点糊。
+
+在快捷方式属性 - 兼容性 - 更改高 DPI 设置里，勾选「替代高 DPI 缩放行为」，「缩放执行」选择「应用程序」，界面便清晰了。如果太小，也可以选择「系统(增强)」，会先放大到整数倍再缩小到系统缩放比例。
+
+此时，具有详细安装教程+专业导师指点的软件安装服务结束了，我猛灌了两口 Skymaster 的「888 mL 国区限定版可口可乐」，觉得「偏要来看看怎么个事」还真遇到一些不一样的坑。
+
+## 思考：留意异常迹象
+
+我自诩为「Bug 圣体」，表现为我在使用程序的过程中，常能遇到并留意一些微小的异常迹象。
+
+最近在与 KazariEX 使用 Vue 开发的过程中，遇到了不少令我困惑的现象，KazariEX 对 vue-language-tools 比较熟悉，他帮忙解决了一些问题并向上游提交了 PR。在这些 PR 中，我起到了关键的一环——「触发并留意到问题」。
+
+::quote
+在重大问题出现之前，往往伴随着一些微小的异常迹象。然而，能敏锐捕捉的关键在于知晓预期行为并了解其中机理。若是对正常行为的理解不够深刻，又何以辨别「异常迹象」？
+::
+
+:tip[在本次实验中，我]{tip="写实验报告写的"}在推测并证实 Vivado 证书管理器的用户证书路径乱码的灵感，源自安装包的启动路径在中文文件夹时会安装失败；而推测 Modelsim 注册机不弹出证书文件窗口的灵感，源自安装教程 TXT 竟然默认用 VS Code 而不是记事本打开。
+
+主人公 Skymaster 看到这篇文章，他说「我才是真正的 bug 圣体，这些 bug 的原因谁能想到」。因此，我重新为昨天的自己授予「玄学流电脑疑难杂症解决糕手」称号。
