@@ -70,7 +70,7 @@ const [emblaRef, emblaApi] = emblaCarouselVue({
     gap: 2rem;
     overflow: hidden;
     height: 3rem;
-    margin-bottom: -0.2rem;
+    margin-bottom: 0.9rem;
     mask: linear-gradient(#fff, transparent);
     color: var(--c-text-3);
     flex-wrap: wrap;
