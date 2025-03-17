@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/__sitemap__/style.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/AI-Blog/__sitemap__/style.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://blog.zhilu.cyou/</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog</loc>
         <image:image>
             <image:loc>https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160</image:loc>
         </image:image>
@@ -49,7 +49,55 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/archive</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/AI-Blog</loc>
+        <image:image>
+            <image:loc>https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/6664009b8f999-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/66640095c770c-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/6664009c87ec5-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/6664009cce512-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/6664009d45024-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/65a8dcff71bdf-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/65b66289c9a2e-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/6671b766a4312-24.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/67290b1bd1b29-24.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/67211d63f4203-24.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/67211d63f41fd-24.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/67211d6477610-24.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/67211d656e0ac-24.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://7.isyangs.cn/24/66d4c3ea35003-24.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://blog.zhilu.cyou/AI-Blog/archive</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67290b1bd1b29-24.webp</image:loc>
         </image:image>
@@ -196,7 +244,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/link</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/link</loc>
         <image:image>
             <image:loc>https://cdn.libravatar.org/avatar/646331bff8f19a0e05679c3cc0fc54d6?s=160</image:loc>
         </image:image>
@@ -637,7 +685,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/page</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/page</loc>
         <image:image>
             <image:loc>https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160</image:loc>
         </image:image>
@@ -685,76 +733,79 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/theme</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/preview</loc>
+    </url>
+    <url>
+        <loc>https://blog.zhilu.cyou/AI-Blog/theme</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66d4c3ea35003-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2000s/letter-in-kindergarton</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2000s/letter-in-kindergarton</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/668ba60f3d8f9-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/danger-falling-ice</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/danger-falling-ice</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/essay1-where</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/essay1-where</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/have-a-strange-dream</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/have-a-strange-dream</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/phone-2015</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/phone-2015</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/school-stress</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/school-stress</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/score-query-leak</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/score-query-leak</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/windows-launch-anim</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/windows-launch-anim</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2010s/zhilu-site-biography</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2010s/zhilu-site-biography</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2020/essay3</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2020/essay3</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2020/essay4</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2020/essay4</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2020/father-birthday</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2020/father-birthday</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2020/life-is-dramatic</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2020/life-is-dramatic</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2020/school-diary</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2020/school-diary</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fb0bmOJ0WDHSIh5QLePxjwe8Uc32M5n1jGL4A9KgZZ0ZNicrEqwSQRtJ6yg5HicDxnVbSzkmTssX1hw/640</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/bad-grade-gone</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/bad-grade-gone</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fb0bmOJ0WDHSIh5QLePxjweNYr4bLDnz83cm1N2hg66zEmH2NQLV3uSOx2D9KZzo9m5I4yA1vsaaQ/640</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/classroom-pc-1</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/classroom-pc-1</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/classroom-pc-2</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/classroom-pc-2</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/classroom-pc-3</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/classroom-pc-3</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/exam-clock-develop</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/exam-clock-develop</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fakRBg1y4yOeSUKNE2Sdf26M22aKhJHOahC7fkdKpHsgTpQQgtia5uN4ROYAgd2bOzPD5Yzb0LOibgA/640</image:loc>
         </image:image>
@@ -790,19 +841,19 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/message-heard</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/message-heard</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fZclobj17h7XiawIziavdejl55ziahIqnyXrJV1YibpXxSZNMj6yybyo5ic6pF5f1K6NulElicVCCnDeaiag/640</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/noob-in-ctf</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/noob-in-ctf</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fYUK7hslxhyibEjh7Yc4MRhRz0OWyVibZnk89pSH7aeFkXicBOS42b6hjUJfx1x9S4CgkSCQaZrMoWWg/640</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/shot-at-dusk</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/shot-at-dusk</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fYmiagTWUXm7NjnYBWSaHvekXibO0hSfWY6y8LowhqtgX6C3N3HLefMBkmE3Rv3iaBibrFDHP7K5qOGOQ/0</image:loc>
         </image:image>
@@ -814,7 +865,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/virus-fakefolder</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/virus-fakefolder</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fakRBg1y4yOeSUKNE2Sdf26SuYFj0v7jz4Wpao1JAzlibcKia6mPLktFvKabXAcWOsZbxIB01DdGnCQ/640</image:loc>
         </image:image>
@@ -823,7 +874,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2021/way-home</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2021/way-home</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fb0bmOJ0WDHSIh5QLePxjwe81pcvtkjq9zVIVuZBakAh3ibRMdOXSPTLkYblS2dGN6V7B10BSWqoiaA/</image:loc>
         </image:image>
@@ -838,10 +889,10 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/c-next-sec</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/c-next-sec</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/ctf-nwpu</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/ctf-nwpu</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fZKkd6byLH93QsQDWyGNaJxO0L3rLIJL5ND6KbbEBBonjHsEDXVNEW6iacNG6k39x74MAibRa9KM8Fw/0</image:loc>
         </image:image>
@@ -901,7 +952,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/ctf-xupt-gctf</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/ctf-xupt-gctf</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fbR2djcvEqTjtOJavT3z9ibWTVjL3YA0cJOwfvEHD7TlUuc6hKE0QZqwka3qpbZdJ403WNjNDuuktw/640</image:loc>
         </image:image>
@@ -1033,7 +1084,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/ctf-xupt-skill</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/ctf-xupt-skill</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_png/9sIibiadwv3fbR2djcvEqTjtOJavT3z9ibWSpuCJ6wj9ejjZz9Dp9l0NoRjRqXjZIibsKORpAk3WFEE4k5r02cdtXQ/640</image:loc>
         </image:image>
@@ -1066,31 +1117,31 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/linux-interview-2020</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/linux-interview-2020</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65a8dcfb73493-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/linux-interview-2021</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/linux-interview-2021</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65a8dcfb647c2-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/linux-interview-2022</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/linux-interview-2022</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65a8dcfb2a43b-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/school-thief</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/school-thief</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fZOET0iaB29muw24RYFpe5n4XHbzicWrMekkx4bQ1xm2NCdC3Rlk53icpyqOpJSH9f4bGGJm9861Qibjg/0</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2022/thoughts-in-classroom</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2022/thoughts-in-classroom</loc>
         <image:image>
             <image:loc>https://image.baidu.com/search/down?url=https://mmbiz.qpic.cn/mmbiz_jpg/9sIibiadwv3fanhCXLENPFNE8ERNJ9cAIZgBT0gb6K2IefVfqokxbo6DhCpQscdEdktPR0jCvafyZesFxmxgLfQg/0</image:loc>
         </image:image>
@@ -1102,7 +1153,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/archinstall-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/archinstall-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66640095c770c-24.jpg</image:loc>
         </image:image>
@@ -1117,13 +1168,13 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/archlinux-beautify</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/archlinux-beautify</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/666400971559b-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/archlinux-configure</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/archlinux-configure</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009851eb0-24.jpg</image:loc>
         </image:image>
@@ -1132,19 +1183,19 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/c-strbuf</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/c-strbuf</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009a7190a-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/light-backpack</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/light-backpack</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65b6628ac8181-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/linuxqq-crash</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/linuxqq-crash</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65a8dcff995c4-24.jpg</image:loc>
         </image:image>
@@ -1153,7 +1204,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/ssh-key-login</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/ssh-key-login</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009c87ec5-24.jpg</image:loc>
         </image:image>
@@ -1165,7 +1216,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/tailscale-incomplete-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/tailscale-incomplete-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009cce512-24.jpg</image:loc>
         </image:image>
@@ -1177,19 +1228,19 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/termux-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/termux-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009d45024-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/vscode-simple-config</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/vscode-simple-config</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65a8dcff71bdf-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/windows-setup-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/windows-setup-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/65b66289c9a2e-24.jpg</image:loc>
         </image:image>
@@ -1198,25 +1249,25 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/xv6-lab-setup</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/xv6-lab-setup</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2023/zls</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2023/zls</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/all-pits-stepped</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/all-pits-stepped</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67211d6517aa3-24.webp</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/archlinux-boot-repair</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/archlinux-boot-repair</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66640097e0cbb-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/auto-payment</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/auto-payment</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6691f614da807-24.jpg</image:loc>
         </image:image>
@@ -1231,34 +1282,34 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/balancing-today-tomorrow</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/balancing-today-tomorrow</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66006f656a35d-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/blog-link-pattern</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/blog-link-pattern</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/blog-using-nuxt</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/blog-using-nuxt</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66d4c3ea35003-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/boot-management</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/boot-management</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009916cea-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/carrier-overbilling</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/carrier-overbilling</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009994d5d-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/cover-copied</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/cover-copied</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66714b1f0bc35-24.jpg</image:loc>
         </image:image>
@@ -1276,7 +1327,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/css-sort</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/css-sort</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009e81625-24.jpg</image:loc>
         </image:image>
@@ -1285,7 +1336,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/digital-products-bought</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/digital-products-bought</loc>
         <image:image>
             <image:loc>https://img11.360buyimg.com//popWaterMark/jfs/t5392/247/2614428577/57380/68e693e/591c08aeN2220d31c.jpg</image:loc>
         </image:image>
@@ -1315,7 +1366,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/dosbox-setup</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/dosbox-setup</loc>
         <image:image>
             <image:loc>https://dosasm.github.io/dosrun/favicon.ico</image:loc>
         </image:image>
@@ -1324,7 +1375,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/exam-clock-thinking</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/exam-clock-thinking</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67211d63f41fd-24.webp</image:loc>
         </image:image>
@@ -1339,31 +1390,31 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/fake-today</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/fake-today</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/66346bbe07c33-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/grandma-high-point</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/grandma-high-point</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/helping-day</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/helping-day</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/link-util</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/link-util</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009b04dea-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/linux-samba</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/linux-samba</loc>
         <image:image>
             <image:loc>https://coda.world/favicon.ico</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/magic-code</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/magic-code</loc>
         <image:image>
             <image:loc>https://cooo.site/favicon.ico</image:loc>
         </image:image>
@@ -1372,13 +1423,13 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/milink-util</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/milink-util</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009b29739-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/moonlight-streaming-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/moonlight-streaming-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009b8f999-24.jpg</image:loc>
         </image:image>
@@ -1405,7 +1456,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/new-laptop-guide</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/new-laptop-guide</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67211d63f4203-24.webp</image:loc>
         </image:image>
@@ -1438,13 +1489,13 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/observe-at-school</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/observe-at-school</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67075d3d11de4-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/problem-solved</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/problem-solved</loc>
         <image:image>
             <image:loc>https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160</image:loc>
         </image:image>
@@ -1456,7 +1507,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/run-java-applets</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/run-java-applets</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67211d6477610-24.webp</image:loc>
         </image:image>
@@ -1465,7 +1516,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/sfd-xupt</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/sfd-xupt</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67211d656e0ac-24.webp</image:loc>
         </image:image>
@@ -1519,13 +1570,13 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/virus-trueupdate</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/virus-trueupdate</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6664009db743b-24.jpg</image:loc>
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/vitepress-enhancement</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/vitepress-enhancement</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/67290b1bd1b29-24.webp</image:loc>
         </image:image>
@@ -1540,10 +1591,10 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/vivado-modelsim-rescue</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/vivado-modelsim-rescue</loc>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/windows-storage</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/windows-storage</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/669776aed29f4-24.jpg</image:loc>
         </image:image>
@@ -1552,7 +1603,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2024/windows-terminal</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2024/windows-terminal</loc>
         <image:image>
             <image:loc>https://7.isyangs.cn/24/6671b766a4312-24.jpg</image:loc>
         </image:image>
@@ -1561,7 +1612,37 @@
         </image:image>
     </url>
     <url>
-        <loc>https://blog.zhilu.cyou/2025/my-post-title</loc>
+        <loc>https://blog.zhilu.cyou/AI-Blog/2025/my-post-title</loc>
+    </url>
+    <url>
+        <loc>https://blog.zhilu.cyou/AI-Blog/previews/apps-websites-preference-2023</loc>
+    </url>
+    <url>
+        <loc>https://blog.zhilu.cyou/AI-Blog/previews/example</loc>
+        <image:image>
+            <image:loc>https://v2.content.nuxt.com/favicon.ico</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/100/100</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://unavatar.webp.se/zhilu.cyou?w</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://unavatar.webp.se/gug.thisis.host?w</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://wsrv.nl/?url=github.com/KazariEX.png%3fsize=92</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://wsrv.nl/?url=github.com/isYangs.png%3fsize=92</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/480/240</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160</image:loc>
+        </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.2.9 at 2025-03-17T18:52:29.935Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.2.9 at 2025-03-17T18:58:18.911Z -->
