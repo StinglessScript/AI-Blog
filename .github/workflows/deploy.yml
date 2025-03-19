@@ -17,14 +17,20 @@ jobs:
       - run: corepack prepare pnpm@latest --activate
       - run: pnpm install
       - run: pnpm run generate
-
-      - name: Deploy to gh-pages branch
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "github-actions@github.com"
-          git checkout --orphan gh-pages
-          git rm -rf .
-          cp -r .output/public/* .
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push --force origin gh-pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
