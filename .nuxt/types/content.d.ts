@@ -1,4 +1,0 @@
-declare module '#content/server' {
-  const serverQueryContent: typeof import('/Users/macos/Documents/LongvanV2/AI-Blog/node_modules/.pnpm/@nuxt+content@2.13.4_db0@0.3.1_better-sqlite3@11.8.1__ioredis@5.6.0_magicast@0.3.5_nuxt_ee6042bc4605e727c085668dbcd7e2f7/node_modules/@nuxt/content/dist/runtime/legacy/types').serverQueryContent
-  const parseContent: typeof import('/Users/macos/Documents/LongvanV2/AI-Blog/node_modules/.pnpm/@nuxt+content@2.13.4_db0@0.3.1_better-sqlite3@11.8.1__ioredis@5.6.0_magicast@0.3.5_nuxt_ee6042bc4605e727c085668dbcd7e2f7/node_modules/@nuxt/content/dist/runtime/server').parseContent
-}
