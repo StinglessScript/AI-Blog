@@ -16,7 +16,7 @@ jobs:
           cache: "pnpm"
       - run: corepack prepare pnpm@latest --activate
       - run: pnpm install
-      - run: pnpm run build --preset github_pages
+      - run: pnpm run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

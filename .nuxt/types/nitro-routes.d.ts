@@ -21,9 +21,6 @@ declare module "nitropack/types" {
     '/api/_nuxt_icon/:collection': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+icon@1.11.0_magicast@0.3.5_vite@6.2.2_@types+node@22.13.10_jiti@2.4.2_sass@1.85.1_17513f5aa69cd99474a3bc7f34cbf1e5/node_modules/@nuxt/icon/dist/runtime/server/api').default>>>>
     }
-    '/robots.txt': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.2.8_magicast@0.3.5_vue@3.5.13_typescript@5.8.2_/node_modules/@nuxtjs/robots/dist/runtime/server/routes/robots-txt').default>>>>
-    }
     '/__robots__/nuxt-content.json': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.2.8_magicast@0.3.5_vue@3.5.13_typescript@5.8.2_/node_modules/@nuxtjs/robots/dist/runtime/server/routes/__robots__/nuxt-content-v2').default>>>>
     }
@@ -54,10 +51,10 @@ declare module "nitropack/types" {
     '/api/_content/query': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.4_db0@0.3.1_better-sqlite3@11.8.1__ioredis@5.6.0_magicast@0.3.5_nuxt_ee6042bc4605e727c085668dbcd7e2f7/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
     }
-    '/api/_content/cache.1742235526817.json': {
+    '/api/_content/cache.1742365942229.json': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.4_db0@0.3.1_better-sqlite3@11.8.1__ioredis@5.6.0_magicast@0.3.5_nuxt_ee6042bc4605e727c085668dbcd7e2f7/node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>>>
     }
-    '/api/_content/search-1742235526817': {
+    '/api/_content/search-1742365942229': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.4_db0@0.3.1_better-sqlite3@11.8.1__ioredis@5.6.0_magicast@0.3.5_nuxt_ee6042bc4605e727c085668dbcd7e2f7/node_modules/@nuxt/content/dist/runtime/server/api/search').default>>>>
     }
     '/api/_content/navigation/:qid/**:params': {
