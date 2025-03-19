@@ -50,7 +50,7 @@ const categoryIcon = getCategoryIcon(props.categories?.[0])
                 </span>
                 <span v-if="readingTime?.words" class="article-words">
                     <Icon name="ph:paragraph-bold" />
-                    {{ formatNumber(readingTime.words) }}字
+                    {{ formatNumber(readingTime.words) }} Từ
                 </span>
             </div>
         </article>

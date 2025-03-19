@@ -43,7 +43,7 @@ else {
         </template>
         <PostFooter v-bind="post" />
         <PostSurround />
-        <PostComment :key="route.path" />
+        <!-- <PostComment :key="route.path" /> -->
     </ContentRenderer>
 </template>
 

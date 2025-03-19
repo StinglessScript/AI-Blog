@@ -17,7 +17,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
         <nav class="sidebar-nav scrollcheck-y">
             <div class="search-btn sidebar-nav-item gradient-card" @click="layoutStore.toggle('search')">
                 <Icon name="ph:magnifying-glass-bold" />
-                <span class="nav-text">搜索</span>
+                <span class="nav-text">Tìm kiếm</span>
                 <span class="keycut widescreen-only">{{ keycut }}</span>
             </div>
             <template v-for="(group, groupIndex) in appConfig.nav" :key="groupIndex">
@@ -37,7 +37,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
         </nav>
         <footer class="sidebar-footer">
             <ThemeToggle />
-            <ZIconNavList :list="appConfig.footer.iconNav" />
+            <!-- <ZIconNavList :list="appConfig.footer.iconNav" /> -->
         </footer>
     </aside>
 </template>

@@ -5,7 +5,7 @@
     <div id="content">
         <main id="main-content">
             <NuxtPage />
-            <ZFooter />
+            <!-- <ZFooter /> -->
         </main>
         <ZAside />
     </div>

@@ -34,12 +34,12 @@ function toggleDirection() {
         <ZDropdown trigger="click">
             <button :disabled="!categories">
                 <Icon :name="getCategoryIcon(category)" />
-                <span class="order-text">{{ category ?? '全部分类' }}</span>
+                <span class="order-text">{{ category ?? 'All Categories' }}</span>
             </button>
             <template #content="{ hide }">
                 <button @click="hide(), category = undefined">
                     <Icon :name="getCategoryIcon()" />
-                    <span>全部分类</span>
+                    <span>All Categories</span>
                 </button>
                 <button v-for="item in categories" :key="item" @click="hide(), category = item">
                     <Icon :name="getCategoryIcon(item)" />
@@ -49,7 +49,7 @@ function toggleDirection() {
         </ZDropdown>
 
         <div>
-            <button v-if="allowAscending" aria-label="切换排序方向" @click="toggleDirection">
+            <button v-if="allowAscending" aria-label="Toggle Sort Direction" @click="toggleDirection">
                 <Icon name="ph:sort-ascending-bold" class="toggle-direction" :class="{ ascending: isAscending }" />
             </button>
 

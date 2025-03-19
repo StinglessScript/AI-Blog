@@ -6,26 +6,26 @@ export default defineAppConfig({
 
     article: {
         categories: <{ [category: string]: { icon: string, color?: string } }>{
-            经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
-            生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
-            代码: { icon: 'ph:code-bold', color: '#77f' },
-            未分类: { icon: 'ph:folder-dotted-bold' },
+            "Experience Sharing": { icon: 'ph:mouse-bold', color: '#3af' },
+            "Life": { icon: 'ph:shooting-star-bold', color: '#3ba' },
+            "Code": { icon: 'ph:code-bold', color: '#77f' },
+            "Uncategorized": { icon: 'ph:folder-dotted-bold' },
         },
         defaultCategoryIcon: 'ph:folder-bold',
-        /** 分类排序方式，键为排序字段，值为显示名称 */
+        /** Category sorting method, key is the sorting field, value is the display name */
         order: {
-            date: '创建日期',
-            updated: '更新日期',
-            // title: '标题',
+            date: 'Creation Date',
+            updated: 'Update Date',
+            // title: 'Title',
         },
-        // 需要同时修改上方分类图标对应的键名
-        uncategorizedLabel: '未分类',
+        // Need to modify the key name corresponding to the category icon above
+        uncategorizedLabel: 'Uncategorized',
     },
 
     content: {
-        /** 代码块自动折叠触发行数 */
+        /** Code block auto-collapse trigger line number */
         codeblockCollapsibleRows: 16,
-        /** 文章开头摘要 */
+        /** Article excerpt */
         excerpt: {
             animation: true,
             caret: '_',
@@ -33,51 +33,51 @@ export default defineAppConfig({
     },
 
     footer: {
-        /** 页脚版权信息 */
+        /** Footer copyright information */
         copyright: `© ${new Date().getFullYear()} ${blogConfig.author.name}`,
-        /** 侧边栏底部图标导航 */
+        /** Sidebar bottom icon navigation */
         iconNav: [
-            { icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
-            { icon: 'ri:qq-line', text: '交流群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+            { icon: 'ph:house-bold', text: 'Homepage', url: blogConfig.author.homepage },
+            { icon: 'ri:qq-line', text: 'Group: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
             { icon: 'ph:github-logo-bold', text: 'GitHub: L33Z22L11', url: 'https://github.com/L33Z22L11' },
-            { icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-            { icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go-by-clouds.html' },
+            { icon: 'ph:rss-simple-bold', text: 'Atom Subscription', url: '/atom.xml' },
+            { icon: 'ph:subway-bold', text: 'Traveling', url: 'https://www.travellings.cn/go-by-clouds.html' },
         ] satisfies NavItem[],
-        /** 页脚站点地图 */
+        /** Footer site map */
         nav: [
             {
-                title: '探索',
+                title: 'Explore',
                 items: [
-                    { icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-                    { icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go-by-clouds.html' },
-                    { icon: 'ph:flying-saucer-bold', text: '异次元旅行', url: 'https://travel.moe/go.html?travel=on' },
+                    { icon: 'ph:rss-simple-bold', text: 'Atom Subscription', url: '/atom.xml' },
+                    { icon: 'ph:subway-bold', text: 'Traveling', url: 'https://www.travellings.cn/go-by-clouds.html' },
+                    { icon: 'ph:flying-saucer-bold', text: 'Interdimensional Travel', url: 'https://travel.moe/go.html?travel=on' },
                 ],
             },
             {
-                title: '社交',
+                title: 'Social',
                 items: [
                     { icon: 'ph:github-logo-bold', text: 'L33Z22L11', url: 'https://github.com/L33Z22L11' },
-                    { icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+                    { icon: 'ri:qq-line', text: 'Group: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
                     { icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
                 ],
             },
             {
-                title: '信息',
+                title: 'Information',
                 items: [
-                    { icon: 'simple-icons:nuxtdotjs', text: 'Nuxt博客已开源', url: 'https://github.com/L33Z22L11/blog-v3' },
-                    { icon: 'ph:swatches-bold', text: '主题灵感源自Stellar', url: '/theme' },
-                    { icon: 'ph:certificate-bold', text: '萌ICP备20246888号', url: 'https://icp.gov.moe/?keyword=20246888' },
+                    { icon: 'simple-icons:nuxtdotjs', text: 'Nuxt Blog Open Source', url: 'https://github.com/L33Z22L11/blog-v3' },
+                    { icon: 'ph:swatches-bold', text: 'Theme Inspired by Stellar', url: '/theme' },
+                    { icon: 'ph:certificate-bold', text: 'ICP Certificate No. 20246888', url: 'https://icp.gov.moe/?keyword=20246888' },
                 ],
             },
         ] satisfies Nav,
-        /** 页脚版权信息底部的其他信息 */
+        /** Other information at the bottom of the footer copyright information */
         message: '',
     },
 
-    /** 左侧栏顶部 Logo */
+    /** Top logo in the left sidebar */
     header: {
         logo: 'https://weavatar.com/avatar/47c0f2e82b76d9b10eb3023df9e02e4e3fdbeaf5b74b842063f207971e7fbe7b?s=160',
-        /** 展示标题文本，否则展示纯 Logo */
+        /** Display title text, otherwise display pure logo */
         showTitle: true,
         subtitle: blogConfig.subtitle,
         emojiTail: ['📄', '🦌', '🙌', '🐟', '🏖️'],
@@ -85,49 +85,49 @@ export default defineAppConfig({
 
     pagination: {
         perPage: 10,
-        /** 默认排序方式，需要是 this.article.order 中的键名 */
+        /** Default sorting method, needs to be a key name in this.article.order */
         sortOrder: 'date' as const,
-        /** 允许（普通/预览/归档）文章列表正序，开启后排序方式左侧图标可切换顺序 */
+        /** Allow (normal/preview/archive) article list ascending order, enable to switch order by clicking the icon on the left side of the sorting method */
         allowAscending: false,
     },
 
-    /** 左侧栏导航 */
+    /** Left sidebar navigation */
     nav: [
         {
             title: '',
             items: [
-                { icon: 'ph:files-bold', text: '文章', url: '/' },
-                { icon: 'ph:link-bold', text: '友链', url: '/link' },
-                { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
+                { icon: 'ph:files-bold', text: 'Articles', url: '/' },
+                // { icon: 'ph:link-bold', text: 'Links', url: '/link' },
+                { icon: 'ph:archive-bold', text: 'Archive', url: '/archive' },
             ],
         },
     ] satisfies Nav,
 
-    /** 风格化 blog-stats widget */
+    /** Stylized blog-stats widget */
     seasonal: {
         // widgetBackground: 'https://wsrv.nl/?url=i2.hdslb.com/bfs/archive/46165212e09842103752c453d7987a470059760b.jpg@320w',
         // emoji: '🧧',
     },
 
     stats: {
-        /** 归档页面每年标题对应的年龄 */
+        /** Age corresponding to the title of each year on the archive page */
         birthYear: 2003,
-        /** blog-stats widget 的预置文本 */
-        wordCount: '约10万',
+        /** Preset text for blog-stats widget */
+        wordCount: 'About 100,000',
     },
 
     themes: {
         light: {
             icon: 'ph:sun-bold',
-            tip: '浅色模式',
+            tip: 'Light Mode',
         },
         system: {
             icon: 'ph:monitor-bold',
-            tip: '跟随系统',
+            tip: 'Follow System',
         },
         dark: {
             icon: 'ph:moon-bold',
-            tip: '深色模式',
+            tip: 'Dark Mode',
         },
     },
 })

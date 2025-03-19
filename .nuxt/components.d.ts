@@ -119,8 +119,6 @@ interface _GlobalComponents {
     'MDCSlot': typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.9.5_magicast@0.3.5/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot.vue")['default']
     'Icon': typeof import("../node_modules/.pnpm/@nuxt+icon@1.11.0_magicast@0.3.5_vite@6.2.2_@types+node@22.13.10_jiti@2.4.2_sass@1.85.1_17513f5aa69cd99474a3bc7f34cbf1e5/node_modules/@nuxt/icon/dist/runtime/components/index")['default']
     'ColorScheme': typeof import("../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']
-    'OgImage': typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImage")['default']
-    'OgImageScreenshot': typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImageScreenshot")['default']
     'SchemaOrgDebug': typeof import("@unhead/schema-org/vue")['SchemaOrgDebug']
     'SchemaOrgArticle': typeof import("@unhead/schema-org/vue")['SchemaOrgArticle']
     'SchemaOrgBreadcrumb': typeof import("@unhead/schema-org/vue")['SchemaOrgBreadcrumb']
@@ -265,8 +263,6 @@ interface _GlobalComponents {
     'LazyMDCSlot': LazyComponent<typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.9.5_magicast@0.3.5/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot.vue")['default']>
     'LazyIcon': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+icon@1.11.0_magicast@0.3.5_vite@6.2.2_@types+node@22.13.10_jiti@2.4.2_sass@1.85.1_17513f5aa69cd99474a3bc7f34cbf1e5/node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
     'LazyColorScheme': LazyComponent<typeof import("../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']>
-    'LazyOgImage': LazyComponent<typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImage")['default']>
-    'LazyOgImageScreenshot': LazyComponent<typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImageScreenshot")['default']>
     'LazySchemaOrgDebug': LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgDebug']>
     'LazySchemaOrgArticle': LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgArticle']>
     'LazySchemaOrgBreadcrumb': LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgBreadcrumb']>
@@ -417,8 +413,6 @@ export const MDCRenderer: typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.9.5
 export const MDCSlot: typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.9.5_magicast@0.3.5/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot.vue")['default']
 export const Icon: typeof import("../node_modules/.pnpm/@nuxt+icon@1.11.0_magicast@0.3.5_vite@6.2.2_@types+node@22.13.10_jiti@2.4.2_sass@1.85.1_17513f5aa69cd99474a3bc7f34cbf1e5/node_modules/@nuxt/icon/dist/runtime/components/index")['default']
 export const ColorScheme: typeof import("../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']
-export const OgImage: typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImage")['default']
-export const OgImageScreenshot: typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImageScreenshot")['default']
 export const SchemaOrgDebug: typeof import("@unhead/schema-org/vue")['SchemaOrgDebug']
 export const SchemaOrgArticle: typeof import("@unhead/schema-org/vue")['SchemaOrgArticle']
 export const SchemaOrgBreadcrumb: typeof import("@unhead/schema-org/vue")['SchemaOrgBreadcrumb']
@@ -563,8 +557,6 @@ export const LazyMDCRenderer: LazyComponent<typeof import("../node_modules/.pnpm
 export const LazyMDCSlot: LazyComponent<typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.9.5_magicast@0.3.5/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot.vue")['default']>
 export const LazyIcon: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+icon@1.11.0_magicast@0.3.5_vite@6.2.2_@types+node@22.13.10_jiti@2.4.2_sass@1.85.1_17513f5aa69cd99474a3bc7f34cbf1e5/node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
 export const LazyColorScheme: LazyComponent<typeof import("../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/component.vue3.vue")['default']>
-export const LazyOgImage: LazyComponent<typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImage")['default']>
-export const LazyOgImageScreenshot: LazyComponent<typeof import("../node_modules/.pnpm/nuxt-og-image@5.0.3_@unhead+vue@2.0.0-rc.13_vue@3.5.13_typescript@5.8.2___magicast@0.3._f24d55df089b7868f004598e1227c90f/node_modules/nuxt-og-image/dist/runtime/app/components/OgImage/OgImageScreenshot")['default']>
 export const LazySchemaOrgDebug: LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgDebug']>
 export const LazySchemaOrgArticle: LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgArticle']>
 export const LazySchemaOrgBreadcrumb: LazyComponent<typeof import("@unhead/schema-org/vue")['SchemaOrgBreadcrumb']>

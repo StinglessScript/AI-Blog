@@ -15,8 +15,8 @@ const blogConfig = {
     author: {
         name: 'ZTBee',
         avatar: 'https://www.zhilu.cyou/api/avatar.png',
-        email: 'hi@zhilu.cyou',
-        homepage: 'https://www.zhilu.cyou/',
+        email: 'huucong.fe@gmail.com',
+        homepage: 'https://huucong95.github.io/',
     },
     copyright: {
         abbr: 'CC BY-NC-SA 4.0',
@@ -27,8 +27,8 @@ const blogConfig = {
     language: 'en',
     qqGroup: '169994096',
     timeEstablished: '2019-07-19',
-    timezone: 'Asia/Shanghai',
-    url: 'https://blog.zhilu.cyou/',
+    timezone: 'Asia/Bangkok',
+    url: 'https://stinglessscript.github.io/AI-Blog/',
 
     feed: {
         limit: 50,

@@ -36,11 +36,11 @@ const [DefineTemplate, ReuseTemplate] = createReusableTemplate<{
     <div v-if="prev || next" class="surround-post">
         <ReuseTemplate
             :post="next" icon="solar:rewind-back-bold-duotone"
-            fallback-icon="solar:document-add-bold-duotone" fallback-text="新故事即将发生"
+            fallback-icon="solar:document-add-bold-duotone" fallback-text="Chuyện mới sắp xảy ra"
         />
         <ReuseTemplate
             :post="prev" class="align-right" icon="solar:rewind-forward-bold-duotone"
-            fallback-icon="solar:reel-bold-duotone" fallback-text="已抵达博客尽头"
+            fallback-icon="solar:reel-bold-duotone" fallback-text="Đã đến cuối blog"
         />
     </div>
 </template>

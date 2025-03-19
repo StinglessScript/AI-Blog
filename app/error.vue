@@ -34,7 +34,7 @@ const handleError = () => clearError({ redirect: '/' })
                     </ZButton>
                 </ZError>
             </div>
-            <ZFooter />
+            <!-- <ZFooter /> -->
         </main>
         <ZAside v-if="!$route.meta.hideAside" />
     </div>
