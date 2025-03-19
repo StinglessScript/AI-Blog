@@ -28,7 +28,7 @@ const blogConfig = {
     qqGroup: '169994096',
     timeEstablished: '2019-07-19',
     timezone: 'Asia/Bangkok',
-    url: 'https://stinglessscript.github.io/',
+    url: 'https://aihubd.com/',
 
     feed: {
         limit: 50,
