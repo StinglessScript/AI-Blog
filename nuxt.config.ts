@@ -31,7 +31,7 @@ export default defineNuxtConfig({
             script: blogConfig.scripts,
         },
         rootId: 'z-root',
-        baseURL: process.env.BASE_URL || '/AI-Blog/' // Đổi thành tên repo của bạn
+        baseURL: process.env.BASE_URL || '/' // Đổi thành tên repo của bạn
     },
 
     compatibilityDate: '2024-08-03',

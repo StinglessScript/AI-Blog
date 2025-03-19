@@ -8,7 +8,7 @@ export { enUS as dateLocale } from 'date-fns/locale/en-US'
 // Shared configuration for both nuxt.config and app.config
 // This includes startup configurations, while runtime configurations are in app/app.config.ts
 const blogConfig = {
-    title: 'ZTBee',
+    title: 'AIHUBD',
     subtitle: 'The path is unclear, yet the journey continues',
     // A long description is beneficial for SEO
     description: 'ZTBee\'s personal blog, sharing technology and life. "Keep tinkering, keep exploring." ZTBee is an open-source enthusiast who has met many like-minded friends. This blog records his experiences in life and technical learning, filled with inspiration and thoughts. The website has a clean and beautiful interface, rich and practical content, and active user interaction. It covers programming, life, learning, and other fields, providing an excellent reading experience for visitors.',
@@ -28,7 +28,7 @@ const blogConfig = {
     qqGroup: '169994096',
     timeEstablished: '2019-07-19',
     timezone: 'Asia/Bangkok',
-    url: 'https://stinglessscript.github.io/AI-Blog/',
+    url: 'https://stinglessscript.github.io/',
 
     feed: {
         limit: 50,
