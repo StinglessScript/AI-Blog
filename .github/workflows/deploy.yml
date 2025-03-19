@@ -1,26 +1,43 @@
 name: Deploy to GitHub Pages
+
 on:
   workflow_dispatch:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      # Cập nhật và reset Corepack để tránh lỗi keyid
+      - run: npm uninstall -g corepack
+      - run: npm install -g corepack
+      - run: corepack disable
       - run: corepack enable
+      
+      # Thiết lập Node.js với phiên bản ổn định hơn
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "20.10.0" # Hạ xuống phiên bản ổn định hơn
           cache: "pnpm"
+      
+      # Cài đặt pnpm và làm sạch cache để tránh lỗi keyid
       - run: corepack prepare pnpm@latest --activate
+      - run: pnpm store prune
+      
+      # Cài đặt dependencies và build project
       - run: pnpm install
       - run: pnpm run generate
+
+      # Tải artifact lên để deploy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
+
   deploy:
     needs: build
     permissions:
