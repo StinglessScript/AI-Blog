@@ -69,14 +69,14 @@ const [emblaRef, emblaApi] = emblaCarouselVue({
     justify-content: space-between;
     gap: 2rem;
     overflow: hidden;
-    height: 3rem;
+    height: 2rem;
     margin-bottom: 0.9rem;
-    mask: linear-gradient(#fff, transparent);
-    color: var(--c-text-3);
+    // mask: linear-gradient(#fff, transparent);
+    color: var(--c-text-1);
     flex-wrap: wrap;
 
     .title {
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: var(--font-weight-bold);
         line-height: 1;
     }
