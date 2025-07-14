@@ -12,7 +12,10 @@
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "new": "node scripts/new-blog.js"
+    "new": "node scripts/new-blog.js",
+    "ai:blog": "node scripts/ai-auto-blog.js",
+    "ai:setup": "node scripts/setup-ai-blog.js",
+    "ai:test": "node scripts/test-ai-blog.js"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

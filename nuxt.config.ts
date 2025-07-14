@@ -28,7 +28,7 @@ export default defineNuxtConfig({
             script: blogConfig.scripts,
         },
         rootId: 'z-root',
-        baseURL: process.env.BASE_URL || '/' // Đổi thành tên repo của bạn
+        baseURL: process.env.BASE_URL || '/' // GitHub Pages sẽ tự động inject
     },
 
     compatibilityDate: '2024-08-03',
