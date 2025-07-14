@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 WAKE UP! 🚨</title>
+    <title>🦚 ĐẾM CÔNG GAME! 🦚</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,6 @@
             animation: gradientShift 3s ease infinite;
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
         }
 
         @keyframes gradientShift {
@@ -35,8 +34,6 @@
             min-height: 100vh;
             padding: 20px;
             text-align: center;
-            position: relative;
-            z-index: 10;
         }
 
         .main-title {
@@ -45,7 +42,6 @@
             text-shadow: 3px 3px 0px #000;
             margin-bottom: 20px;
             animation: bounce 1s infinite;
-            transform-origin: center bottom;
         }
 
         @keyframes bounce {
@@ -54,32 +50,111 @@
             60% { transform: translateY(-15px); }
         }
 
-        .emoji-rain {
-            position: fixed;
-            top: -50px;
-            font-size: 30px;
-            animation: fall linear infinite;
-            z-index: 1;
+        .game-area {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 800px;
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
         }
 
-        @keyframes fall {
-            to { transform: translateY(100vh); }
+        .peacock {
+            font-size: 50px;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: float 2s ease-in-out infinite;
+            user-select: none;
+            z-index: 10;
         }
 
-        .wake-up-btn {
-            background: linear-gradient(45deg, #ff4757, #ff3838);
+        .peacock:hover {
+            transform: scale(1.3) rotate(15deg);
+            filter: drop-shadow(0 0 10px gold);
+        }
+
+        .peacock.clicked {
+            animation: explode 0.8s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(2) rotate(360deg); opacity: 0.8; }
+            100% { transform: scale(0) rotate(720deg); opacity: 0; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .fake-animal {
+            font-size: 45px;
+            position: absolute;
+            cursor: pointer;
+            animation: wiggle 1.5s ease-in-out infinite;
+            user-select: none;
+        }
+
+        .fake-animal:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px red);
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .score-board {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .timer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #2ecc71;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .controls {
+            margin: 20px 0;
+        }
+
+        .start-btn {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
             color: white;
             border: none;
             padding: 20px 40px;
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
-            border-radius: 50px;
+            font-size: 1.5rem;
+            border-radius: 25px;
             cursor: pointer;
             margin: 10px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
             font-weight: bold;
-            text-transform: uppercase;
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
@@ -88,9 +163,45 @@
             100% { transform: scale(1); }
         }
 
-        .wake-up-btn:hover {
-            transform: scale(1.1) rotate(5deg);
+        .start-btn:hover {
+            transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        }
+
+        .difficulty-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .difficulty-btn.active {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .surprise-effect {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            z-index: 1000;
+            animation: surprise 2s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes surprise {
+            0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.5) rotate(180deg); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); opacity: 0; }
         }
 
         .message {
@@ -102,255 +213,341 @@
             color: #333;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             max-width: 90%;
-            animation: wiggle 0.5s ease-in-out infinite alternate;
         }
 
-        @keyframes wiggle {
-            0% { transform: rotate(-2deg); }
-            100% { transform: rotate(2deg); }
-        }
-
-        .sleepy-detector {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #ff4757;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 25px;
-            font-size: 14px;
-            animation: blink 1s infinite;
-            z-index: 100;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-
-        .floating-emoji {
-            position: fixed;
-            font-size: 40px;
-            animation: float 3s ease-in-out infinite;
-            z-index: 5;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        .shake-screen {
-            animation: shake 0.5s ease-in-out;
+        .chaos-mode {
+            animation: shake 0.1s infinite;
         }
 
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
         }
 
-        .coffee-cup {
-            font-size: 60px;
-            animation: steam 2s ease-in-out infinite;
-            margin: 20px 0;
+        .invisible {
+            opacity: 0.1;
         }
 
-        @keyframes steam {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        .spinning {
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         /* Mobile optimizations */
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+            .peacock, .fake-animal {
+                font-size: 40px;
             }
             
-            .wake-up-btn {
-                padding: 15px 30px;
-                margin: 8px;
-            }
-            
-            .message {
-                padding: 15px;
-                margin: 15px 0;
-            }
-            
-            .floating-emoji {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .wake-up-btn {
-                padding: 12px 25px;
-                margin: 5px;
-            }
-            
-            .message {
-                padding: 12px;
-                margin: 10px 0;
+            .game-area {
+                min-height: 400px;
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">🚨 DẬY ĐI! 🚨</h1>
-        
-        <div class="coffee-cup">☕</div>
+        <h1 class="main-title">🦚 ĐẾM CÔNG GAME! 🦚</h1>
         
         <div class="message" id="message">
-            Tôi thấy bạn đang buồn ngủ đấy! 😴<br>
-            Hãy tỉnh táo lên nào! 💪
+            Hãy đếm tất cả con CÔNG! 🦚<br>
+            Nhưng cẩn thận... có nhiều con giả! 😈
         </div>
         
-        <button class="wake-up-btn" onclick="wakeUp()">
-            🔔 ĐÁNH THỨC TÔI! 🔔
-        </button>
+        <div class="controls">
+            <div>
+                <button class="difficulty-btn" onclick="setDifficulty('easy')">😊 Dễ</button>
+                <button class="difficulty-btn active" onclick="setDifficulty('normal')">😐 Bình thường</button>
+                <button class="difficulty-btn" onclick="setDifficulty('hard')">😤 Khó</button>
+                <button class="difficulty-btn" onclick="setDifficulty('nightmare')">💀 Ác mộng</button>
+            </div>
+            <button class="start-btn" onclick="startGame()">
+                🎮 BẮT ĐẦU ĐẾM CÔNG! 🎮
+            </button>
+        </div>
         
-        <button class="wake-up-btn" onclick="coffeeTime()">
-            ☕ CẦN CAFE! ☕
-        </button>
-        
-        <button class="wake-up-btn" onclick="exerciseTime()">
-            🏃‍♂️ TẬP THỂ DỤC! 🏃‍♂️
-        </button>
-        
-        <button class="wake-up-btn" onclick="musicTime()">
-            🎵 NHẠC SÔĨ ĐỘNG! 🎵
-        </button>
-    </div>
-    
-    <div class="sleepy-detector" id="sleepyDetector">
-        😴 Phát hiện người buồn ngủ!
+        <div class="game-area" id="gameArea">
+            <div class="timer" id="timer">⏰ 30s</div>
+            <div class="score-board" id="score">🦚 0/0</div>
+            <div id="gameInstructions" style="text-align: center; margin-top: 200px; font-size: 1.2rem; color: #666;">
+                Chọn độ khó và nhấn "Bắt đầu đếm công"!<br>
+                <small>Đếm tất cả con CÔNG thật 🦚, tránh con giả! 🕵️‍♂️</small><br>
+                <small style="color: #e74c3c;">⚠️ Có nhiều bẫy bất ngờ! ⚠️</small>
+            </div>
+        </div>
     </div>
 
     <script>
-        const messages = [
-            "Ê! Tỉnh dậy đi! 😤",
-            "Ngủ gật à? Không được đâu! 🙅‍♂️",
-            "Hãy uống nước lạnh đi! 🧊",
-            "Đứng dậy đi bộ 5 phút! 🚶‍♂️",
-            "Rửa mặt bằng nước lạnh! 💦",
-            "Nghe nhạc sôi động lên! 🎵",
-            "Làm vài động tác thể dục! 💪",
-            "Gọi điện cho bạn bè! 📞",
-            "Ăn kẹo bạc hà! 🍬",
-            "Nhìn ra ngoài cửa sổ! 🪟"
+        // Game variables
+        let gameActive = false;
+        let score = 0;
+        let totalPeacocks = 0;
+        let timeLeft = 30;
+        let difficulty = 'normal';
+        let gameTimer;
+        let countdownTimer;
+        let surpriseTimer;
+        
+        const difficulties = {
+            easy: { peacocks: 12, fakes: 3, time: 45, speed: 3500, surprises: 1 },
+            normal: { peacocks: 20, fakes: 8, time: 30, speed: 2500, surprises: 2 },
+            hard: { peacocks: 35, fakes: 15, time: 25, speed: 1500, surprises: 4 },
+            nightmare: { peacocks: 50, fakes: 25, time: 20, speed: 1000, surprises: 6 }
+        };
+        
+        const peacockEmojis = ['🦚'];
+        const fakeEmojis = ['🦆', '🦅', '🦉', '🐧', '🦜', '🐦', '🕊️', '🦢', '🦩', '🐔', '🐓', '🐣', '🐤', '🐥', '🦃'];
+        const surpriseEmojis = ['💥', '⚡', '🌟', '✨', '🎉', '🎊', '💫', '🌈', '🔥', '💎'];
+        
+        let surpriseEvents = [
+            { name: "🌪️ LỐC XOÁY!", effect: "tornado" },
+            { name: "🌙 TỐI ĐEN!", effect: "darkness" },
+            { name: "🔄 ĐẢO NGƯỢC!", effect: "flip" },
+            { name: "⚡ CHỚP NHÁY!", effect: "lightning" },
+            { name: "🎭 HÓA TRANG!", effect: "disguise" },
+            { name: "🏃‍♂️ CHẠY ĐI!", effect: "chaos" },
+            { name: "🎪 RỐI LOẠN!", effect: "spin" }
         ];
 
-        const emojis = ['😴', '💤', '☕', '⚡', '🔔', '🎵', '💪', '🏃‍♂️', '🧊', '💦'];
-        
-        let messageIndex = 0;
-
-        function wakeUp() {
-            document.body.classList.add('shake-screen');
-            playSound();
+        function setDifficulty(level) {
+            difficulty = level;
+            document.querySelectorAll('.difficulty-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
             
-            setTimeout(() => {
-                document.body.classList.remove('shake-screen');
-            }, 500);
+            const config = difficulties[level];
+            document.getElementById('timer').textContent = `⏰ ${config.time}s`;
+            document.getElementById('message').innerHTML = 
+                `Độ khó: ${level.toUpperCase()}<br>
+                ${config.peacocks} con công, ${config.fakes} con giả, ${config.time} giây!`;
+        }
+
+        function startGame() {
+            if (gameActive) return;
             
-            messageIndex = (messageIndex + 1) % messages.length;
-            document.getElementById('message').innerHTML = messages[messageIndex];
+            gameActive = true;
+            score = 0;
+            const config = difficulties[difficulty];
+            totalPeacocks = config.peacocks;
+            timeLeft = config.time;
             
-            createEmojiRain();
-            createFloatingEmojis();
-        }
-
-        function coffeeTime() {
+            document.getElementById('gameInstructions').style.display = 'none';
+            document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
             document.getElementById('message').innerHTML = 
-                "☕ Đi pha cafe ngay! ☕<br>Cafe đen đá nhé! 🧊";
-            createCoffeeAnimation();
-        }
-
-        function exerciseTime() {
-            document.getElementById('message').innerHTML = 
-                "🏃‍♂️ Đứng dậy! Nhảy 10 cái! 🏃‍♂️<br>1... 2... 3... BẮT ĐẦU! 💪";
-            startCountdown();
-        }
-
-        function musicTime() {
-            document.getElementById('message').innerHTML = 
-                "🎵 Bật nhạc lên! 🎵<br>Nhảy theo nhịp đi! 💃🕺";
-            createMusicVibes();
-        }
-
-        function createEmojiRain() {
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    const emoji = document.createElement('div');
-                    emoji.className = 'emoji-rain';
-                    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                    emoji.style.left = Math.random() * 100 + '%';
-                    emoji.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                    document.body.appendChild(emoji);
-                    
-                    setTimeout(() => {
-                        emoji.remove();
-                    }, 5000);
-                }, i * 100);
+                `🎮 GAME BẮT ĐẦU! 🎮<br>Tìm ${totalPeacocks} con CÔNG!`;
+            
+            // Start countdown
+            countdownTimer = setInterval(updateTimer, 1000);
+            
+            // Spawn peacocks and fakes
+            spawnAnimals();
+            
+            // Start surprise events
+            if (config.surprises > 0) {
+                scheduleSupriseEvents(config.surprises);
             }
         }
 
-        function createFloatingEmojis() {
-            for (let i = 0; i < 5; i++) {
-                const emoji = document.createElement('div');
-                emoji.className = 'floating-emoji';
-                emoji.textContent = ['⚡', '🔥', '💥', '✨', '🌟'][i];
-                emoji.style.left = Math.random() * 80 + 10 + '%';
-                emoji.style.top = Math.random() * 80 + 10 + '%';
-                emoji.style.animationDelay = i * 0.5 + 's';
-                document.body.appendChild(emoji);
-                
-                setTimeout(() => {
-                    emoji.remove();
-                }, 3000);
+        function updateTimer() {
+            timeLeft--;
+            document.getElementById('timer').textContent = `⏰ ${timeLeft}s`;
+            
+            if (timeLeft <= 0) {
+                endGame(false);
+            } else if (timeLeft <= 5) {
+                document.getElementById('timer').style.background = '#e74c3c';
+                document.getElementById('timer').style.animation = 'pulse 0.5s infinite';
             }
         }
 
-        function createCoffeeAnimation() {
-            const coffee = document.querySelector('.coffee-cup');
-            coffee.style.animation = 'none';
-            setTimeout(() => {
-                coffee.style.animation = 'steam 0.5s ease-in-out infinite';
-            }, 10);
+        function spawnAnimals() {
+            const gameArea = document.getElementById('gameArea');
+            const config = difficulties[difficulty];
+            
+            // Spawn peacocks
+            for (let i = 0; i < config.peacocks; i++) {
+                setTimeout(() => {
+                    if (gameActive) spawnPeacock();
+                }, Math.random() * config.speed * 2);
+            }
+            
+            // Spawn fakes
+            for (let i = 0; i < config.fakes; i++) {
+                setTimeout(() => {
+                    if (gameActive) spawnFake();
+                }, Math.random() * config.speed * 3);
+            }
         }
 
-        function startCountdown() {
-            let count = 10;
-            const interval = setInterval(() => {
-                document.getElementById('message').innerHTML = 
-                    `🏃‍♂️ NHẢY! ${count}! 🏃‍♂️<br>Tiếp tục đi! 💪`;
-                count--;
+        function spawnPeacock() {
+            const gameArea = document.getElementById('gameArea');
+            const peacock = document.createElement('div');
+            peacock.className = 'peacock';
+            peacock.textContent = peacockEmojis[Math.floor(Math.random() * peacockEmojis.length)];
+            
+            // Random position
+            peacock.style.left = Math.random() * (gameArea.offsetWidth - 60) + 'px';
+            peacock.style.top = Math.random() * (gameArea.offsetHeight - 100) + 60 + 'px';
+            
+            peacock.onclick = function() {
+                if (!gameActive) return;
                 
-                if (count < 0) {
-                    clearInterval(interval);
-                    document.getElementById('message').innerHTML = 
-                        "🎉 Tuyệt vời! Bạn đã tỉnh rồi! 🎉<br>Cảm thấy khỏe hơn chưa? 😊";
+                score++;
+                document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
+                
+                this.classList.add('clicked');
+                playSound('success');
+                createParticles(this, '✨');
+                
+                setTimeout(() => this.remove(), 800);
+                
+                if (score >= totalPeacocks) {
+                    endGame(true);
                 }
-            }, 1000);
-        }
-
-        function createMusicVibes() {
-            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7'];
-            let colorIndex = 0;
+            };
             
-            const interval = setInterval(() => {
-                document.body.style.background = colors[colorIndex];
-                colorIndex = (colorIndex + 1) % colors.length;
-            }, 200);
+            gameArea.appendChild(peacock);
             
+            // Remove after some time if not clicked
             setTimeout(() => {
-                clearInterval(interval);
-                document.body.style.background = 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7)';
-                document.body.style.backgroundSize = '400% 400%';
-            }, 3000);
+                if (peacock.parentNode && gameActive) {
+                    peacock.remove();
+                }
+            }, difficulties[difficulty].speed * 2);
         }
 
-        function playSound() {
+        function spawnFake() {
+            const gameArea = document.getElementById('gameArea');
+            const fake = document.createElement('div');
+            fake.className = 'fake-animal';
+            fake.textContent = fakeEmojis[Math.floor(Math.random() * fakeEmojis.length)];
+            
+            // Random position
+            fake.style.left = Math.random() * (gameArea.offsetWidth - 60) + 'px';
+            fake.style.top = Math.random() * (gameArea.offsetHeight - 100) + 60 + 'px';
+            
+            fake.onclick = function() {
+                if (!gameActive) return;
+                
+                // Penalty for clicking fake
+                score = Math.max(0, score - 1);
+                document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
+                document.getElementById('message').innerHTML = 
+                    `❌ SAI RỒI! -1 điểm! ❌<br>Đó không phải con CÔNG!`;
+                
+                this.style.animation = 'shake 0.5s ease-in-out';
+                playSound('error');
+                createParticles(this, '💥');
+                
+                setTimeout(() => this.remove(), 500);
+            };
+            
+            gameArea.appendChild(fake);
+            
+            // Remove after some time
+            setTimeout(() => {
+                if (fake.parentNode && gameActive) {
+                    fake.remove();
+                }
+            }, difficulties[difficulty].speed * 3);
+        }
+
+        function scheduleSupriseEvents(count) {
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    if (gameActive) triggerSurprise();
+                }, Math.random() * timeLeft * 1000);
+            }
+        }
+
+        function triggerSurprise() {
+            const surprise = surpriseEvents[Math.floor(Math.random() * surpriseEvents.length)];
+            
+            // Show surprise message
+            const surpriseEl = document.createElement('div');
+            surpriseEl.className = 'surprise-effect';
+            surpriseEl.textContent = surprise.name;
+            document.body.appendChild(surpriseEl);
+            
+            setTimeout(() => surpriseEl.remove(), 2000);
+            
+            // Apply effect
+            applySurpriseEffect(surprise.effect);
+            
+            document.getElementById('message').innerHTML = 
+                `${surprise.name}<br>Mọi thứ thay đổi! 😵‍💫`;
+        }
+
+        function applySurpriseEffect(effect) {
+            const gameArea = document.getElementById('gameArea');
+            
+            switch(effect) {
+                case 'tornado':
+                    // Remove all animals
+                    document.querySelectorAll('.peacock, .fake-animal').forEach(el => el.remove());
+                    setTimeout(() => spawnAnimals(), 1000);
+                    break;
+                    
+                case 'darkness':
+                    gameArea.classList.add('invisible');
+                    setTimeout(() => gameArea.classList.remove('invisible'), 3000);
+                    break;
+                    
+                case 'flip':
+                    gameArea.style.transform = 'scaleX(-1)';
+                    setTimeout(() => gameArea.style.transform = '', 4000);
+                    break;
+                    
+                case 'lightning':
+                    for (let i = 0; i < 10; i++) {
+                        setTimeout(() => spawnPeacock(), i * 200);
+                    }
+                    break;
+                    
+                case 'disguise':
+                    // Make some fakes look like peacocks temporarily
+                    document.querySelectorAll('.fake-animal').forEach(fake => {
+                        const original = fake.textContent;
+                        fake.textContent = '🦚';
+                        setTimeout(() => fake.textContent = original, 3000);
+                    });
+                    break;
+                    
+                case 'chaos':
+                    gameArea.classList.add('chaos-mode');
+                    setTimeout(() => gameArea.classList.remove('chaos-mode'), 5000);
+                    break;
+                    
+                case 'spin':
+                    gameArea.classList.add('spinning');
+                    setTimeout(() => gameArea.classList.remove('spinning'), 3000);
+                    break;
+            }
+        }
+
+        function createParticles(element, emoji) {
+            for (let i = 0; i < 5; i++) {
+                const particle = document.createElement('div');
+                particle.textContent = emoji;
+                particle.style.position = 'absolute';
+                particle.style.left = element.offsetLeft + 'px';
+                particle.style.top = element.offsetTop + 'px';
+                particle.style.fontSize = '20px';
+                particle.style.pointerEvents = 'none';
+                particle.style.animation = `float 1s ease-out forwards`;
+                particle.style.animationDelay = i * 0.1 + 's';
+                
+                element.parentNode.appendChild(particle);
+                setTimeout(() => particle.remove(), 1000);
+            }
+        }
+
+        function playSound(type) {
             try {
                 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
                 const oscillator = audioContext.createOscillator();
@@ -359,8 +556,13 @@
                 oscillator.connect(gainNode);
                 gainNode.connect(audioContext.destination);
                 
-                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-                oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
+                if (type === 'success') {
+                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                    oscillator.frequency.setValueAtTime(1200, audioContext.currentTime + 0.1);
+                } else {
+                    oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
+                    oscillator.frequency.setValueAtTime(200, audioContext.currentTime + 0.2);
+                }
                 
                 gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
                 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
@@ -372,41 +574,53 @@
             }
         }
 
-        // Tự động tạo hiệu ứng mỗi 5 giây
-        setInterval(() => {
-            if (Math.random() > 0.7) {
-                createEmojiRain();
-            }
-        }, 5000);
-
-        // Phát hiện không hoạt động
-        let lastActivity = Date.now();
-        let inactivityTimer;
-
-        function resetInactivityTimer() {
-            lastActivity = Date.now();
-            clearTimeout(inactivityTimer);
+        function endGame(won) {
+            gameActive = false;
+            clearInterval(countdownTimer);
+            clearInterval(gameTimer);
             
-            inactivityTimer = setTimeout(() => {
-                document.getElementById('sleepyDetector').style.display = 'block';
+            // Remove all animals
+            document.querySelectorAll('.peacock, .fake-animal').forEach(el => el.remove());
+            
+            if (won) {
                 document.getElementById('message').innerHTML = 
-                    "😴 Tôi thấy bạn không hoạt động! 😴<br>Có phải đang ngủ gật không? 🤔";
-                createEmojiRain();
-            }, 10000);
+                    `🎉 CHIẾN THẮNG! 🎉<br>Bạn đã đếm được ${score}/${totalPeacocks} con CÔNG!<br>⭐ Xuất sắc! ⭐`;
+                createCelebration();
+            } else {
+                document.getElementById('message').innerHTML = 
+                    `⏰ HẾT GIỜ! ⏰<br>Bạn chỉ đếm được ${score}/${totalPeacocks} con CÔNG!<br>😅 Thử lại nhé!`;
+            }
+            
+            // Reset timer display
+            document.getElementById('timer').style.background = '#2ecc71';
+            document.getElementById('timer').style.animation = '';
+            
+            // Show restart option
+            setTimeout(() => {
+                document.getElementById('gameInstructions').style.display = 'block';
+                document.getElementById('gameInstructions').innerHTML = 
+                    `Game kết thúc!<br>
+                    <small>Nhấn "Bắt đầu đếm công" để chơi lại! 🎮</small>`;
+            }, 3000);
         }
 
-        // Lắng nghe các sự kiện hoạt động
-        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
-            document.addEventListener(event, resetInactivityTimer, true);
-        });
+        function createCelebration() {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const celebration = document.createElement('div');
+                    celebration.className = 'surprise-effect';
+                    celebration.textContent = surpriseEmojis[Math.floor(Math.random() * surpriseEmojis.length)];
+                    celebration.style.left = Math.random() * 100 + '%';
+                    celebration.style.top = Math.random() * 100 + '%';
+                    document.body.appendChild(celebration);
+                    
+                    setTimeout(() => celebration.remove(), 2000);
+                }, i * 100);
+            }
+        }
 
-        // Khởi tạo
-        resetInactivityTimer();
-        
-        // Tạo hiệu ứng ban đầu
-        setTimeout(() => {
-            createFloatingEmojis();
-        }, 1000);
+        // Initialize
+        setDifficulty('normal');
     </script>
 </body>
 </html>
