@@ -2,6 +2,10 @@ import { exec } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import dotenv from 'dotenv'
+
+// Load environment variables
+dotenv.config()
 
 // AI API Configuration
 const AI_PROVIDERS = {
@@ -21,7 +25,7 @@ const AI_PROVIDERS = {
         }
     },
     gemini: {
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
         headers: {
             'Content-Type': 'application/json'
         }
