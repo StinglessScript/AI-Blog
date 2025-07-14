@@ -57,4 +57,35 @@ aside {
         min-width: 0;
     }
 }
+
+/* Wake-up page global styles */
+.wake-up-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hide sidebar and other elements on wake-up page */
+.wake-up-page ~ * {
+    display: none !important;
+}
+
+body:has(.wake-up-page) #z-sidebar,
+body:has(.wake-up-page) #z-aside,
+body:has(.wake-up-page) .z-panel,
+body:has(.wake-up-page) .z-popover {
+    display: none !important;
+}
 </style>
