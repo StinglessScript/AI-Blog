@@ -55,7 +55,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Static HTML export with Nuxt
-        run: pnpm generate
+        run: |
+          export NUXT_CONFIG_FILE=nuxt.config.static.ts
+          pnpm generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2

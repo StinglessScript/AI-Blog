@@ -66,6 +66,7 @@ jobs:
       if: steps.verify-changed-files.outputs.changed == 'true'
       env:
         BASE_URL: /${{ github.event.repository.name }}/
+        NUXT_CONFIG_FILE: nuxt.config.static.ts
       run: |
         pnpm generate
 

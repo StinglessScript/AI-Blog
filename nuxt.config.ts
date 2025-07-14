@@ -33,6 +33,15 @@ export default defineNuxtConfig({
 
     compatibilityDate: '2024-08-03',
 
+    // Static site generation configuration
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml']
+        }
+    },
+
+    ssr: false, // Disable SSR for static deployment
+
     components: [
         { path: '~/components/partial', prefix: 'Z' },
         { path: '~/components/zhilu', prefix: 'Zhilu', global: true },
@@ -49,6 +58,10 @@ export default defineNuxtConfig({
 
     features: {
         inlineStyles: false,
+    },
+
+    experimental: {
+        payloadExtraction: false, // Disable payload extraction for static sites
     },
 
     future: {

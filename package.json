@@ -15,7 +15,9 @@
     "new": "node scripts/new-blog.js",
     "ai:blog": "node scripts/ai-auto-blog.js",
     "ai:setup": "node scripts/setup-ai-blog.js",
-    "ai:test": "node scripts/test-ai-blog.js"
+    "ai:test": "node scripts/test-ai-blog.js",
+    "build:static": "nuxt generate --config nuxt.config.static.ts",
+    "preview:static": "nuxt preview --config nuxt.config.static.ts"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
