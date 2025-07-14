@@ -150,10 +150,6 @@
             75% { transform: translateX(10px); }
         }
 
-        .hidden {
-            display: none;
-        }
-
         .coffee-cup {
             font-size: 60px;
             animation: steam 2s ease-in-out infinite;
@@ -248,7 +244,6 @@
         const emojis = ['😴', '💤', '☕', '⚡', '🔔', '🎵', '💪', '🏃‍♂️', '🧊', '💦'];
         
         let messageIndex = 0;
-        let isAwake = false;
 
         function wakeUp() {
             document.body.classList.add('shake-screen');
@@ -356,22 +351,25 @@
         }
 
         function playSound() {
-            // Tạo âm thanh bằng Web Audio API
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            
-            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-            oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
-            
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-            
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + 0.3);
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+            } catch (error) {
+                console.log('Audio not supported');
+            }
         }
 
         // Tự động tạo hiệu ứng mỗi 5 giây
@@ -381,7 +379,7 @@
             }
         }, 5000);
 
-        // Phát hiện không hoạt động (giả lập phát hiện buồn ngủ)
+        // Phát hiện không hoạt động
         let lastActivity = Date.now();
         let inactivityTimer;
 
@@ -394,7 +392,7 @@
                 document.getElementById('message').innerHTML = 
                     "😴 Tôi thấy bạn không hoạt động! 😴<br>Có phải đang ngủ gật không? 🤔";
                 createEmojiRain();
-            }, 10000); // 10 giây không hoạt động
+            }, 10000);
         }
 
         // Lắng nghe các sự kiện hoạt động
