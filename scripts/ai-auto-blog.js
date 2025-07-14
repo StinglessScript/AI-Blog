@@ -260,6 +260,17 @@ async function generateBlogPost() {
 }
 
 async function createBlogFile(blogData) {
+    // Try to save to external database first
+    if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY) {
+        try {
+            await saveToSupabase(blogData)
+            console.log('✅ Saved to Supabase database')
+        } catch (error) {
+            console.error('❌ Failed to save to Supabase:', error.message)
+        }
+    }
+
+    // Also save to file for GitHub Pages fallback
     const year = new Date().getFullYear()
     const directory = path.join(process.cwd(), 'content', 'posts', year.toString())
 
@@ -269,7 +280,7 @@ async function createBlogFile(blogData) {
     }
 
     const filePath = path.join(directory, `${blogData.slug}.md`)
-    
+
     // Check if file already exists
     if (fs.existsSync(filePath)) {
         console.log(`File ${blogData.slug}.md already exists, skipping...`)
@@ -293,24 +304,82 @@ ${blogData.content}`
     return filePath
 }
 
+async function saveToSupabase(blogData) {
+    const supabaseUrl = process.env.SUPABASE_URL
+    const supabaseKey = process.env.SUPABASE_SERVICE_KEY
+
+    const response = await fetch(`${supabaseUrl}/rest/v1/posts`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`,
+            'Prefer': 'return=representation'
+        },
+        body: JSON.stringify({
+            title: blogData.title,
+            slug: blogData.slug,
+            content: blogData.content,
+            description: blogData.description,
+            category: blogData.category,
+            tags: blogData.tags,
+            ai_provider: blogData.provider,
+            created_at: new Date().toISOString()
+        })
+    })
+
+    if (!response.ok) {
+        const error = await response.text()
+        throw new Error(`Supabase API error: ${response.status} ${error}`)
+    }
+
+    return response.json()
+}
+
 async function main() {
     try {
         console.log('🤖 Starting AI auto-blog generation...')
-        
-        const blogData = await generateBlogPost()
-        const filePath = await createBlogFile(blogData)
-        
-        if (filePath) {
-            console.log('✅ Blog post generated successfully!')
-            console.log(`📝 Title: ${blogData.title}`)
-            console.log(`📁 File: ${filePath}`)
-            console.log(`🤖 Provider: ${blogData.provider}`)
-        } else {
-            console.log('⚠️ Blog post already exists for today')
+
+        // Generate 2-3 posts per run (instead of every few minutes)
+        const postsToGenerate = Math.floor(Math.random() * 2) + 2 // 2-3 posts
+        const generatedPosts = []
+
+        for (let i = 0; i < postsToGenerate; i++) {
+            console.log(`\n📝 Generating post ${i + 1}/${postsToGenerate}...`)
+
+            try {
+                const blogData = await generateBlogPost()
+                const filePath = await createBlogFile(blogData)
+
+                if (filePath) {
+                    generatedPosts.push(blogData)
+                    console.log(`✅ Generated: ${blogData.title}`)
+
+                    // Wait a bit between posts to avoid rate limits
+                    if (i < postsToGenerate - 1) {
+                        await new Promise(resolve => setTimeout(resolve, 5000))
+                    }
+                } else {
+                    console.log(`⚠️ Post already exists, skipping...`)
+                }
+
+            } catch (error) {
+                console.error(`❌ Failed to generate post ${i + 1}:`, error.message)
+                continue // Continue with next post
+            }
         }
-        
+
+        if (generatedPosts.length > 0) {
+            console.log(`\n🎉 Successfully generated ${generatedPosts.length} posts:`)
+            generatedPosts.forEach((post, index) => {
+                console.log(`${index + 1}. ${post.title} (${post.provider})`)
+            })
+        } else {
+            console.log('⚠️ No new posts generated')
+        }
+
     } catch (error) {
-        console.error('❌ Error generating blog post:', error.message)
+        console.error('❌ Error in main process:', error.message)
         process.exit(1)
     }
 }
