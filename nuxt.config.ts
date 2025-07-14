@@ -36,7 +36,8 @@ export default defineNuxtConfig({
     // Static site generation configuration
     nitro: {
         prerender: {
-            routes: ['/sitemap.xml']
+            routes: ['/sitemap.xml'],
+            crawlLinks: true
         }
     },
 
@@ -109,7 +110,12 @@ export default defineNuxtConfig({
 
     content: {
         experimental: {
-            search: {},
+            search: {
+                indexed: true
+            },
+        },
+        api: {
+            baseURL: '/api/_content'
         },
         highlight: {
             langs: blogConfig.shiki.langs,

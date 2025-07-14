@@ -14,6 +14,14 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
+
+  content: {
+    experimental: {
+      search: {
+        indexed: true
+      }
+    }
+  },
   
   experimental: {
     payloadExtraction: false,

@@ -2,8 +2,8 @@ name: AI Auto Blog Generator
 
 on:
   schedule:
-    # Run every 5 minutes (for testing - change later)
-    - cron: '*/5 * * * *'
+    # Run every 2 hours (more reasonable)
+    - cron: '0 */2 * * *'
   workflow_dispatch: # Allow manual trigger
     inputs:
       force_generate:
