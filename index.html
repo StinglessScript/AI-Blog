@@ -3,624 +3,878 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦚 ĐẾM CÔNG GAME! 🦚</title>
+    <title>Hướng Dẫn Sử Dụng AI Tạo UI - Team Workflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
-            background-size: 400% 400%;
-            animation: gradientShift 3s ease infinite;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .main-title {
-            font-size: clamp(2rem, 8vw, 4rem);
-            color: #fff;
-            text-shadow: 3px 3px 0px #000;
-            margin-bottom: 20px;
-            animation: bounce 1s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
-        }
-
-        .game-area {
-            background: rgba(255,255,255,0.95);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            width: 90%;
-            max-width: 800px;
-            min-height: 500px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .peacock {
-            font-size: 50px;
-            position: absolute;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: float 2s ease-in-out infinite;
-            user-select: none;
-            z-index: 10;
-        }
-
-        .peacock:hover {
-            transform: scale(1.3) rotate(15deg);
-            filter: drop-shadow(0 0 10px gold);
-        }
-
-        .peacock.clicked {
-            animation: explode 0.8s ease-out;
-            pointer-events: none;
-        }
-
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(2) rotate(360deg); opacity: 0.8; }
-            100% { transform: scale(0) rotate(720deg); opacity: 0; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(5deg); }
-        }
-
-        .fake-animal {
-            font-size: 45px;
-            position: absolute;
-            cursor: pointer;
-            animation: wiggle 1.5s ease-in-out infinite;
-            user-select: none;
-        }
-
-        .fake-animal:hover {
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 10px red);
-        }
-
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
-        }
-
-        .score-board {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #e74c3c;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .timer {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #2ecc71;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .controls {
-            margin: 20px 0;
-        }
-
-        .start-btn {
-            background: linear-gradient(45deg, #2ecc71, #27ae60);
-            color: white;
-            border: none;
-            padding: 20px 40px;
-            font-size: 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            margin: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-
         @keyframes pulse {
-            0% { transform: scale(1); }
+            0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
         }
-
-        .start-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-
-        .difficulty-btn {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            margin: 5px;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .difficulty-btn.active {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .surprise-effect {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 120px;
-            z-index: 1000;
-            animation: surprise 2s ease-out;
-            pointer-events: none;
-        }
-
-        @keyframes surprise {
-            0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 0; }
-            50% { transform: translate(-50%, -50%) scale(1.5) rotate(180deg); opacity: 1; }
-            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); opacity: 0; }
-        }
-
-        .message {
-            background: rgba(255,255,255,0.9);
-            padding: 20px;
-            border-radius: 20px;
-            margin: 20px 0;
-            font-size: clamp(1rem, 3vw, 1.3rem);
-            color: #333;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            max-width: 90%;
-        }
-
-        .chaos-mode {
-            animation: shake 0.1s infinite;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        .invisible {
-            opacity: 0.1;
-        }
-
-        .spinning {
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-            .peacock, .fake-animal {
-                font-size: 40px;
-            }
-            
-            .game-area {
-                min-height: 400px;
-                padding: 20px;
-            }
-        }
+        .animate-fadeInUp { animation: fadeInUp 0.6s ease-out; }
+        .animate-pulse-custom { animation: pulse 2s infinite; }
+        .animate-slideIn { animation: slideIn 0.8s ease-out; }
+        .step-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .code-block { background: #1a1a1a; color: #f8f8f2; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1 class="main-title">🦚 ĐẾM CÔNG GAME! 🦚</h1>
-        
-        <div class="message" id="message">
-            Hãy đếm tất cả con CÔNG! 🦚<br>
-            Nhưng cẩn thận... có nhiều con giả! 😈
-        </div>
-        
-        <div class="controls">
-            <div>
-                <button class="difficulty-btn" onclick="setDifficulty('easy')">😊 Dễ</button>
-                <button class="difficulty-btn active" onclick="setDifficulty('normal')">😐 Bình thường</button>
-                <button class="difficulty-btn" onclick="setDifficulty('hard')">😤 Khó</button>
-                <button class="difficulty-btn" onclick="setDifficulty('nightmare')">💀 Ác mộng</button>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="animate-fadeInUp">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    <i class="fas fa-robot mr-4"></i>
+                    AI UI Workflow Guide
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90">Hướng dẫn sử dụng AI để tạo UI chuyên nghiệp</p>
+                <div class="mt-8">
+                    <button onclick="scrollToSteps()" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all animate-pulse-custom">
+                        Bắt đầu ngay <i class="fas fa-arrow-down ml-2"></i>
+                    </button>
+                </div>
             </div>
-            <button class="start-btn" onclick="startGame()">
-                🎮 BẮT ĐẦU ĐẾM CÔNG! 🎮
+        </div>
+    </header>
+
+    <!-- Workflow Selection -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 animate-fadeInUp">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Chọn Quy Trình Phù Hợp</h2>
+                <p class="text-xl text-gray-600">3 cách tiếp cận khác nhau cho từng tình huống</p>
+            </div>
+            
+            <!-- Workflow Options -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Basic Workflow -->
+                <div class="workflow-card group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl cursor-pointer transform hover:-translate-y-1 transition-all duration-200 border border-gray-100" onclick="selectWorkflow('basic')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200">
+                            <i class="fas fa-rocket text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200">Cơ Bản</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-blue-600 transition-colors duration-200">Cho dự án đơn giản, cần nhanh</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center justify-center bg-blue-50 rounded-lg px-4 py-2 group-hover:bg-blue-100 transition-all duration-200">
+                                <span class="text-sm font-medium text-blue-700">🎯 UI đơn giản, 1 người thực hiện</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-200">
+                            Chọn workflow này
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Workflow -->
+                <div class="workflow-card group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl cursor-pointer transform hover:-translate-y-1 transition-all duration-200 border border-gray-100 ring-4 ring-green-500 ring-opacity-20" onclick="selectWorkflow('standard')">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold">KHUYẾN NGHỊ</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200">
+                            <i class="fas fa-cogs text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors duration-200">Chuẩn</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-green-600 transition-colors duration-200">Cho dự án trung bình, cần chất lượng</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center justify-center bg-green-50 rounded-lg px-4 py-2 group-hover:bg-green-100 transition-all duration-200">
+                                <span class="text-sm font-medium text-green-700">🎯 UI chuyên nghiệp, 2-3 người</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-200">
+                            Chọn workflow này
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Workflow -->
+                <div class="workflow-card group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl cursor-pointer transform hover:-translate-y-1 transition-all duration-200 border border-gray-100" onclick="selectWorkflow('advanced')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200">
+                            <i class="fas fa-crown text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-purple-700 transition-colors duration-200">Nâng Cao</h3>
+                        <p class="text-gray-600 mb-6 group-hover:text-purple-600 transition-colors duration-200">Cho dự án phức tạp, cần hoàn hảo</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center justify-center bg-purple-50 rounded-lg px-4 py-2 group-hover:bg-purple-100 transition-all duration-200">
+                                <span class="text-sm font-medium text-purple-700">🎯 UI enterprise, team đầy đủ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-200">
+                            Chọn workflow này
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Selected Workflow Display -->
+            <div id="selected-workflow" class="bg-white rounded-2xl shadow-xl p-8 hidden">
+                <div class="text-center mb-8">
+                    <h3 id="workflow-title" class="text-2xl font-bold text-gray-800 mb-2"></h3>
+                    <p id="workflow-description" class="text-gray-600"></p>
+                </div>
+                <div id="workflow-steps"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 animate-fadeInUp">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">So Sánh Các Công Cụ AI</h2>
+                <p class="text-xl text-gray-600">Chọn công cụ phù hợp cho từng bước</p>
+            </div>
+            
+            <!-- AI Tools Comparison -->
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <thead class="bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left">Bước</th>
+                            <th class="px-6 py-4 text-center">Công Cụ Chính</th>
+                            <th class="px-6 py-4 text-center">Lựa Chọn Khác</th>
+                            <th class="px-6 py-4 text-center">Ưu Điểm</th>
+                            <th class="px-6 py-4 text-center">Thời Gian</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">1</span>
+                                    </div>
+                                    <span class="font-semibold">Phân Tích Yêu Cầu</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">ChatGPT 4</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="space-y-1">
+                                    <span class="block text-sm text-gray-600">Claude 3</span>
+                                    <span class="block text-sm text-gray-600">Gemini Pro</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm text-gray-600">
+                                Hiểu context tốt<br>
+                                Tạo requirement chi tiết
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-blue-600 font-semibold">5-15 phút</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-green-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">2</span>
+                                    </div>
+                                    <span class="font-semibold">Tạo Sơ Đồ</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Mermaid + ChatGPT</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="space-y-1">
+                                    <span class="block text-sm text-gray-600">Figma + AI</span>
+                                    <span class="block text-sm text-gray-600">Draw.io</span>
+                                    <span class="block text-sm text-gray-600">PlantUML</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm text-gray-600">
+                                Tự động hóa<br>
+                                Dễ chỉnh sửa
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-green-600 font-semibold">10-20 phút</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-purple-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">3</span>
+                                    </div>
+                                    <span class="font-semibold">Tạo Prompt</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">ChatGPT + Template</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="space-y-1">
+                                    <span class="block text-sm text-gray-600">Prompt Engineering Tools</span>
+                                    <span class="block text-sm text-gray-600">Custom Templates</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm text-gray-600">
+                                Chuẩn hóa<br>
+                                Tái sử dụng
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-purple-600 font-semibold">15-30 phút</span>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-red-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">4</span>
+                                    </div>
+                                    <span class="font-semibold">Tạo UI</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">UXPilot</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="space-y-1">
+                                    <span class="block text-sm text-gray-600">v0.dev</span>
+                                    <span class="block text-sm text-gray-600">Cursor AI</span>
+                                    <span class="block text-sm text-gray-600">GitHub Copilot</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm text-gray-600">
+                                Code sạch<br>
+                                Responsive
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <span class="text-red-600 font-semibold">5-15 phút</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Quick Tips -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <i class="fas fa-lightbulb text-yellow-500 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Pro Tip</h3>
+                    <p class="text-sm text-gray-600">Luôn bắt đầu với wireframe đơn giản</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <i class="fas fa-clock text-blue-500 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Tiết Kiệm Thời Gian</h3>
+                    <p class="text-sm text-gray-600">Sử dụng template có sẵn</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <i class="fas fa-users text-green-500 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Collaboration</h3>
+                    <p class="text-sm text-gray-600">Chia sẻ Mermaid diagram với team</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <i class="fas fa-mobile-alt text-purple-500 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Mobile First</h3>
+                    <p class="text-sm text-gray-600">Luôn thiết kế cho mobile trước</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section id="steps" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Step 1 -->
+            <div class="step-card bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 mb-12 shadow-lg">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-xl">1</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Mô Tả Yêu Cầu với ChatGPT</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-700">
+                            <i class="fas fa-comments mr-2"></i>Cách thực hiện:
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                Mô tả chi tiết chức năng cần tạo
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                Nêu rõ đối tượng người dùng
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                Liệt kê các tính năng chính
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                Đề cập yêu cầu về UX/UI
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-700">
+                            <i class="fas fa-code mr-2"></i>Ví dụ prompt:
+                        </h3>
+                        <div class="code-block rounded-lg p-4 text-sm">
+                            <pre class="text-green-400"># Yêu cầu tạo UI đặt lịch khám bệnh
+
+**Mục đích:** Tạo form đặt lịch khám bệnh online
+**Người dùng:** Bệnh nhân muốn đặt lịch khám
+**Tính năng chính:**
+- Nhập số điện thoại
+- Chọn phòng khám
+- Chọn ngày giờ khám
+- Xác nhận đặt lịch
+
+**Yêu cầu UX:** 
+- Workflow từng bước rõ ràng
+- Mobile-friendly
+- Hiển thị thông tin khách hàng</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 mb-12 shadow-lg">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-xl">2</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Tạo Sơ Đồ Mermaid - Kiểm Tra Hiểu Biết AI</h2>
+                </div>
+                
+                <!-- Main Purpose -->
+                <div class="bg-gradient-to-r from-yellow-100 to-yellow-200 border-l-4 border-yellow-500 rounded-lg p-6 mb-8">
+                    <div class="flex items-start">
+                        <i class="fas fa-bullseye text-yellow-600 text-2xl mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-yellow-800 mb-2">🎯 Mục Tiêu Chính</h3>
+                            <p class="text-yellow-700 text-lg">
+                                <strong>Kiểm tra xem AI đã hiểu đúng yêu cầu của bạn chưa</strong> thông qua việc tạo sơ đồ trực quan
+                            </p>
+                            <ul class="mt-3 space-y-2 text-yellow-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-600 mr-2"></i>
+                                    Xác minh AI hiểu đúng user flow
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-600 mr-2"></i>
+                                    Phát hiện thiếu sót hoặc hiểu lầm
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-600 mr-2"></i>
+                                    Điều chỉnh yêu cầu trước khi tạo UI
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">
+                            <i class="fas fa-comments mr-2"></i>Prompt Kiểm Tra Hiểu Biết:
+                        </h3>
+                        <div class="bg-white rounded-lg p-4 border-l-4 border-green-500 mb-4">
+                            <p class="text-gray-700 italic mb-2">
+                                "Để tôi kiểm tra xem bạn đã hiểu đúng yêu cầu chưa, hãy tạo sơ đồ Mermaid sequenceDiagram mô tả từng bước tương tác người dùng với hệ thống đặt lịch khám bệnh này"
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500 mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">
+                                <i class="fas fa-lightbulb mr-2"></i>Tại sao cần kiểm tra?
+                            </h4>
+                            <ul class="text-blue-700 text-sm space-y-1">
+                                <li>• AI có thể hiểu sai workflow</li>
+                                <li>• Thiếu các bước quan trọng</li>
+                                <li>• Thứ tự các bước không đúng</li>
+                                <li>• Bỏ qua validation hoặc error handling</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-external-link-alt mr-2"></i>Visualize & Verify:
+                            </h4>
+                            <a href="https://www.mermaidchart.com/" target="_blank" 
+                               class="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all">
+                                <i class="fas fa-eye mr-2"></i>
+                                MermaidChart.com
+                            </a>
+                            <p class="text-sm text-gray-600 mt-2">
+                                Paste code vào đây để xem sơ đồ trực quan
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">
+                            <i class="fas fa-code mr-2"></i>Ví dụ Output từ AI:
+                        </h3>
+                        <div class="code-block rounded-lg p-4 text-sm overflow-x-auto mb-4">
+                            <pre class="text-cyan-400">sequenceDiagram
+    participant U as User
+    participant UI as Interface  
+    participant S as System
+    participant DB as Database
+    
+    Note over U,DB: Bước 1: Xác thực
+    U->>UI: Nhập số điện thoại
+    UI->>UI: Validate format
+    UI->>S: Kiểm tra thông tin
+    S->>DB: Query customer data
+    DB-->>S: Return customer info
+    S-->>UI: Customer found/not found
+    
+    alt Customer exists
+        UI->>U: Hiển thị thông tin khách
+        Note over U,UI: Bước 2: Chọn phòng khám
+        U->>UI: Chọn phòng khám
+        Note over U,UI: Bước 3: Chọn thời gian
+        U->>UI: Chọn ngày giờ
+        Note over U,UI: Bước 4: Xác nhận
+        U->>UI: Xác nhận đặt lịch
+        UI->>S: Tạo appointment
+        S->>DB: Save appointment
+        DB-->>S: Confirm saved
+        S-->>UI: Booking success
+        UI->>U: Hiển thị mã đặt lịch
+    else Customer not found
+        UI->>U: Thông báo cần đăng ký
+    end</pre>
+                        </div>
+                        
+                        <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-500">
+                            <h4 class="font-semibold text-red-800 mb-2">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>Kiểm tra những gì?
+                            </h4>
+                            <ul class="text-red-700 text-sm space-y-1">
+                                <li>✅ Có đủ 4 bước chính không?</li>
+                                <li>✅ Có xử lý trường hợp lỗi không?</li>
+                                <li>✅ Thứ tự logic có đúng không?</li>
+                                <li>✅ Có validation input không?</li>
+                                <li>✅ Có confirmation step không?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Steps -->
+                <div class="mt-8 bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">
+                        <i class="fas fa-tasks mr-2"></i>Các Bước Kiểm Tra:
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">1. Tạo Diagram</h4>
+                            <p class="text-sm text-gray-600">AI tạo Mermaid code</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-eye text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">2. Visualize</h4>
+                            <p class="text-sm text-gray-600">Xem sơ đồ trên MermaidChart</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-check-double text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">3. Verify</h4>
+                            <p class="text-sm text-gray-600">So sánh với yêu cầu gốc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-8 mb-12 shadow-lg">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-xl">3</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Tạo Prompt Chuẩn cho UXPilot</h2>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+                        <h3 class="text-xl font-semibold mb-4 text-purple-700">
+                            <i class="fas fa-magic mr-2"></i>Yêu cầu ChatGPT:
+                        </h3>
+                        <p class="text-gray-700 italic mb-4">
+                            "Dựa trên yêu cầu ban đầu và sơ đồ Mermaid, hãy tạo một prompt chi tiết cho AI UXPilot để tạo UI. 
+                            Kết hợp thêm JSON để mô tả chi tiết các thành phần UI."
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-purple-700 mb-3">
+                                <i class="fas fa-file-alt mr-2"></i>Template Prompt:
+                            </h4>
+                            <div class="code-block rounded-lg p-4 text-sm">
+                                <pre class="text-yellow-300">Tạo UI form đặt lịch khám bệnh với:
+
+**Workflow:** 4 bước theo sequenceDiagram
+**Framework:** HTML + Tailwind CSS
+**Responsive:** Mobile-first design
+**Components:** 
+- Progress indicator
+- Form validation
+- Step-by-step navigation
+- Success confirmation
+
+**Chi tiết JSON:** [xem bên phải]</pre>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-purple-700 mb-3">
+                                <i class="fas fa-code mr-2"></i>JSON Chi Tiết:
+                            </h4>
+                            <div class="code-block rounded-lg p-4 text-sm">
+                                <pre class="text-green-300">{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Nhập SĐT",
+      "components": ["input", "button", "validation"]
+    },
+    {
+      "id": 2, 
+      "title": "Chọn phòng khám",
+      "components": ["cards", "selection"]
+    }
+  ],
+  "colors": {
+    "primary": "#3B82F6",
+    "success": "#10B981"
+  }
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 mb-12 shadow-lg">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Sử Dụng UXPilot Tạo UI</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i class="fas fa-copy text-red-500 text-3xl mb-4"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">Copy Prompt</h3>
+                        <p class="text-gray-600 text-sm">Sao chép prompt đã tạo từ bước 3</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i class="fas fa-robot text-red-500 text-3xl mb-4"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">Paste vào UXPilot</h3>
+                        <p class="text-gray-600 text-sm">Dán prompt vào AI UXPilot</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i class="fas fa-magic text-red-500 text-3xl mb-4"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">Nhận UI</h3>
+                        <p class="text-gray-600 text-sm">AI sẽ tạo UI hoàn chỉnh</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-red-700">
+                        <i class="fas fa-tips mr-2"></i>Tips để có kết quả tốt nhất:
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Prompt càng chi tiết càng tốt</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Kèm theo JSON specifications</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Đề cập framework cụ thể</li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Yêu cầu responsive design</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Chỉ định color scheme</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Mô tả user interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Bắt Đầu Tạo UI Ngay!</h3>
+            <p class="text-lg opacity-90 mb-6">Áp dụng quy trình 4 bước để tạo UI chuyên nghiệp</p>
+            <button onclick="scrollToTop()" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                <i class="fas fa-arrow-up mr-2"></i>Về đầu trang
             </button>
         </div>
-        
-        <div class="game-area" id="gameArea">
-            <div class="timer" id="timer">⏰ 30s</div>
-            <div class="score-board" id="score">🦚 0/0</div>
-            <div id="gameInstructions" style="text-align: center; margin-top: 200px; font-size: 1.2rem; color: #666;">
-                Chọn độ khó và nhấn "Bắt đầu đếm công"!<br>
-                <small>Đếm tất cả con CÔNG thật 🦚, tránh con giả! 🕵️‍♂️</small><br>
-                <small style="color: #e74c3c;">⚠️ Có nhiều bẫy bất ngờ! ⚠️</small>
-            </div>
-        </div>
-    </div>
+    </footer>
 
     <script>
-        // Game variables
-        let gameActive = false;
-        let score = 0;
-        let totalPeacocks = 0;
-        let timeLeft = 30;
-        let difficulty = 'normal';
-        let gameTimer;
-        let countdownTimer;
-        let surpriseTimer;
-        
-        const difficulties = {
-            easy: { peacocks: 12, fakes: 3, time: 45, speed: 3500, surprises: 1 },
-            normal: { peacocks: 20, fakes: 8, time: 30, speed: 2500, surprises: 2 },
-            hard: { peacocks: 35, fakes: 15, time: 25, speed: 1500, surprises: 4 },
-            nightmare: { peacocks: 50, fakes: 25, time: 20, speed: 1000, surprises: 6 }
-        };
-        
-        const peacockEmojis = ['🦚'];
-        const fakeEmojis = ['🦆', '🦅', '🦉', '🐧', '🦜', '🐦', '🕊️', '🦢', '🦩', '🐔', '🐓', '🐣', '🐤', '🐥', '🦃'];
-        const surpriseEmojis = ['💥', '⚡', '🌟', '✨', '🎉', '🎊', '💫', '🌈', '🔥', '💎'];
-        
-        let surpriseEvents = [
-            { name: "🌪️ LỐC XOÁY!", effect: "tornado" },
-            { name: "🌙 TỐI ĐEN!", effect: "darkness" },
-            { name: "🔄 ĐẢO NGƯỢC!", effect: "flip" },
-            { name: "⚡ CHỚP NHÁY!", effect: "lightning" },
-            { name: "🎭 HÓA TRANG!", effect: "disguise" },
-            { name: "🏃‍♂️ CHẠY ĐI!", effect: "chaos" },
-            { name: "🎪 RỐI LOẠN!", effect: "spin" }
-        ];
-
-        function setDifficulty(level) {
-            difficulty = level;
-            document.querySelectorAll('.difficulty-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            const config = difficulties[level];
-            document.getElementById('timer').textContent = `⏰ ${config.time}s`;
-            document.getElementById('message').innerHTML = 
-                `Độ khó: ${level.toUpperCase()}<br>
-                ${config.peacocks} con công, ${config.fakes} con giả, ${config.time} giây!`;
-        }
-
-        function startGame() {
-            if (gameActive) return;
-            
-            gameActive = true;
-            score = 0;
-            const config = difficulties[difficulty];
-            totalPeacocks = config.peacocks;
-            timeLeft = config.time;
-            
-            document.getElementById('gameInstructions').style.display = 'none';
-            document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
-            document.getElementById('message').innerHTML = 
-                `🎮 GAME BẮT ĐẦU! 🎮<br>Tìm ${totalPeacocks} con CÔNG!`;
-            
-            // Start countdown
-            countdownTimer = setInterval(updateTimer, 1000);
-            
-            // Spawn peacocks and fakes
-            spawnAnimals();
-            
-            // Start surprise events
-            if (config.surprises > 0) {
-                scheduleSupriseEvents(config.surprises);
-            }
-        }
-
-        function updateTimer() {
-            timeLeft--;
-            document.getElementById('timer').textContent = `⏰ ${timeLeft}s`;
-            
-            if (timeLeft <= 0) {
-                endGame(false);
-            } else if (timeLeft <= 5) {
-                document.getElementById('timer').style.background = '#e74c3c';
-                document.getElementById('timer').style.animation = 'pulse 0.5s infinite';
-            }
-        }
-
-        function spawnAnimals() {
-            const gameArea = document.getElementById('gameArea');
-            const config = difficulties[difficulty];
-            
-            // Spawn peacocks
-            for (let i = 0; i < config.peacocks; i++) {
-                setTimeout(() => {
-                    if (gameActive) spawnPeacock();
-                }, Math.random() * config.speed * 2);
-            }
-            
-            // Spawn fakes
-            for (let i = 0; i < config.fakes; i++) {
-                setTimeout(() => {
-                    if (gameActive) spawnFake();
-                }, Math.random() * config.speed * 3);
-            }
-        }
-
-        function spawnPeacock() {
-            const gameArea = document.getElementById('gameArea');
-            const peacock = document.createElement('div');
-            peacock.className = 'peacock';
-            peacock.textContent = peacockEmojis[Math.floor(Math.random() * peacockEmojis.length)];
-            
-            // Random position
-            peacock.style.left = Math.random() * (gameArea.offsetWidth - 60) + 'px';
-            peacock.style.top = Math.random() * (gameArea.offsetHeight - 100) + 60 + 'px';
-            
-            peacock.onclick = function() {
-                if (!gameActive) return;
-                
-                score++;
-                document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
-                
-                this.classList.add('clicked');
-                playSound('success');
-                createParticles(this, '✨');
-                
-                setTimeout(() => this.remove(), 800);
-                
-                if (score >= totalPeacocks) {
-                    endGame(true);
-                }
-            };
-            
-            gameArea.appendChild(peacock);
-            
-            // Remove after some time if not clicked
-            setTimeout(() => {
-                if (peacock.parentNode && gameActive) {
-                    peacock.remove();
-                }
-            }, difficulties[difficulty].speed * 2);
-        }
-
-        function spawnFake() {
-            const gameArea = document.getElementById('gameArea');
-            const fake = document.createElement('div');
-            fake.className = 'fake-animal';
-            fake.textContent = fakeEmojis[Math.floor(Math.random() * fakeEmojis.length)];
-            
-            // Random position
-            fake.style.left = Math.random() * (gameArea.offsetWidth - 60) + 'px';
-            fake.style.top = Math.random() * (gameArea.offsetHeight - 100) + 60 + 'px';
-            
-            fake.onclick = function() {
-                if (!gameActive) return;
-                
-                // Penalty for clicking fake
-                score = Math.max(0, score - 1);
-                document.getElementById('score').textContent = `🦚 ${score}/${totalPeacocks}`;
-                document.getElementById('message').innerHTML = 
-                    `❌ SAI RỒI! -1 điểm! ❌<br>Đó không phải con CÔNG!`;
-                
-                this.style.animation = 'shake 0.5s ease-in-out';
-                playSound('error');
-                createParticles(this, '💥');
-                
-                setTimeout(() => this.remove(), 500);
-            };
-            
-            gameArea.appendChild(fake);
-            
-            // Remove after some time
-            setTimeout(() => {
-                if (fake.parentNode && gameActive) {
-                    fake.remove();
-                }
-            }, difficulties[difficulty].speed * 3);
-        }
-
-        function scheduleSupriseEvents(count) {
-            for (let i = 0; i < count; i++) {
-                setTimeout(() => {
-                    if (gameActive) triggerSurprise();
-                }, Math.random() * timeLeft * 1000);
-            }
-        }
-
-        function triggerSurprise() {
-            const surprise = surpriseEvents[Math.floor(Math.random() * surpriseEvents.length)];
-            
-            // Show surprise message
-            const surpriseEl = document.createElement('div');
-            surpriseEl.className = 'surprise-effect';
-            surpriseEl.textContent = surprise.name;
-            document.body.appendChild(surpriseEl);
-            
-            setTimeout(() => surpriseEl.remove(), 2000);
-            
-            // Apply effect
-            applySurpriseEffect(surprise.effect);
-            
-            document.getElementById('message').innerHTML = 
-                `${surprise.name}<br>Mọi thứ thay đổi! 😵‍💫`;
-        }
-
-        function applySurpriseEffect(effect) {
-            const gameArea = document.getElementById('gameArea');
-            
-            switch(effect) {
-                case 'tornado':
-                    // Remove all animals
-                    document.querySelectorAll('.peacock, .fake-animal').forEach(el => el.remove());
-                    setTimeout(() => spawnAnimals(), 1000);
-                    break;
-                    
-                case 'darkness':
-                    gameArea.classList.add('invisible');
-                    setTimeout(() => gameArea.classList.remove('invisible'), 3000);
-                    break;
-                    
-                case 'flip':
-                    gameArea.style.transform = 'scaleX(-1)';
-                    setTimeout(() => gameArea.style.transform = '', 4000);
-                    break;
-                    
-                case 'lightning':
-                    for (let i = 0; i < 10; i++) {
-                        setTimeout(() => spawnPeacock(), i * 200);
+        // Workflow data
+        const workflows = {
+            basic: {
+                title: "Quy Trình Cơ Bản",
+                description: "Phù hợp cho dự án đơn giản, cần tạo UI nhanh chóng",
+                steps: [
+                    {
+                        title: "Mô tả yêu cầu ngắn gọn",
+                        time: "5 phút",
+                        tools: ["ChatGPT"],
+                        content: "Viết 2-3 câu mô tả chức năng cần tạo"
+                    },
+                    {
+                        title: "Tạo prompt trực tiếp",
+                        time: "10 phút", 
+                        tools: ["Template có sẵn"],
+                        content: "Sử dụng template prompt đơn giản"
+                    },
+                    {
+                        title: "Generate UI",
+                        time: "5-10 phút",
+                        tools: ["UXPilot", "v0.dev"],
+                        content: "Tạo UI với prompt cơ bản"
                     }
-                    break;
-                    
-                case 'disguise':
-                    // Make some fakes look like peacocks temporarily
-                    document.querySelectorAll('.fake-animal').forEach(fake => {
-                        const original = fake.textContent;
-                        fake.textContent = '🦚';
-                        setTimeout(() => fake.textContent = original, 3000);
-                    });
-                    break;
-                    
-                case 'chaos':
-                    gameArea.classList.add('chaos-mode');
-                    setTimeout(() => gameArea.classList.remove('chaos-mode'), 5000);
-                    break;
-                    
-                case 'spin':
-                    gameArea.classList.add('spinning');
-                    setTimeout(() => gameArea.classList.remove('spinning'), 3000);
-                    break;
+                ]
+            },
+            standard: {
+                title: "Quy Trình Chuẩn",
+                description: "Quy trình đầy đủ 4 bước cho dự án chuyên nghiệp",
+                steps: [
+                    {
+                        title: "Phân tích yêu cầu chi tiết",
+                        time: "15 phút",
+                        tools: ["ChatGPT 4", "Claude"],
+                        content: "Mô tả đầy đủ user story, use cases"
+                    },
+                    {
+                        title: "Tạo sơ đồ Mermaid",
+                        time: "20 phút",
+                        tools: ["Mermaid", "ChatGPT"],
+                        content: "sequenceDiagram cho user flow"
+                    },
+                    {
+                        title: "Tạo prompt với JSON",
+                        time: "25 phút",
+                        tools: ["ChatGPT", "Template"],
+                        content: "Prompt chi tiết + JSON specifications"
+                    },
+                    {
+                        title: "Generate & refine UI",
+                        time: "15 phút",
+                        tools: ["UXPilot", "Cursor"],
+                        content: "Tạo UI và tinh chỉnh"
+                    }
+                ]
+            },
+            advanced: {
+                title: "Quy Trình Nâng Cao",
+                description: "Quy trình enterprise với research và multi-tool generation",
+                steps: [
+                    {
+                        title: "Research & Analysis",
+                        time: "45 phút",
+                        tools: ["ChatGPT", "Claude", "Perplexity"],
+                        content: "Nghiên cứu competitor, best practices"
+                    },
+                    {
+                        title: "Multi-diagram Design",
+                        time: "60 phút",
+                        tools: ["Mermaid", "Figma", "PlantUML"],
+                        content: "User journey, system architecture, wireframe"
+                    },
+                    {
+                        title: "Advanced Prompt Engineering",
+                        time: "45 phút",
+                        tools: ["Custom Tools", "JSON Schema"],
+                        content: "Prompt với context, constraints, examples"
+                    },
+                    {
+                        title: "Multi-tool Generation & Refinement",
+                        time: "60 phút",
+                        tools: ["UXPilot", "v0.dev", "Cursor", "GitHub Copilot"],
+                        content: "A/B testing với nhiều AI tools và tinh chỉnh"
+                    }
+                ]
             }
+        };
+
+        function selectWorkflow(type) {
+            const workflow = workflows[type];
+            const container = document.getElementById('selected-workflow');
+            const title = document.getElementById('workflow-title');
+            const description = document.getElementById('workflow-description');
+            const stepsContainer = document.getElementById('workflow-steps');
+            
+            // Update content
+            title.textContent = workflow.title;
+            description.textContent = workflow.description;
+            
+            // Generate steps HTML
+            let stepsHTML = '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
+            workflow.steps.forEach((step, index) => {
+                stepsHTML += `
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-l-4 border-${getStepColor(index)}">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-${getStepColor(index)} rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-sm font-bold">${index + 1}</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">${step.title}</h4>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-600">${step.content}</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-${getStepColor(index)} font-semibold">⏱️ ${step.time}</span>
+                                <div class="flex flex-wrap gap-1">
+                                    ${step.tools.map(tool => `<span class="bg-${getStepColor(index)} bg-opacity-20 text-${getStepColor(index)} px-2 py-1 rounded text-xs">${tool}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            stepsHTML += '</div>';
+            
+            stepsContainer.innerHTML = stepsHTML;
+            
+            // Show container with animation
+            container.classList.remove('hidden');
+            container.scrollIntoView({ behavior: 'smooth' });
+            
+            // Highlight selected workflow card
+            document.querySelectorAll('.workflow-card').forEach(card => {
+                card.classList.remove('ring-4', 'ring-white', 'ring-opacity-50');
+            });
+            event.target.closest('.workflow-card').classList.add('ring-4', 'ring-white', 'ring-opacity-50');
+        }
+        
+        function getStepColor(index) {
+            const colors = ['blue-500', 'green-500', 'purple-500', 'red-500', 'yellow-500'];
+            return colors[index % colors.length];
         }
 
-        function createParticles(element, emoji) {
-            for (let i = 0; i < 5; i++) {
-                const particle = document.createElement('div');
-                particle.textContent = emoji;
-                particle.style.position = 'absolute';
-                particle.style.left = element.offsetLeft + 'px';
-                particle.style.top = element.offsetTop + 'px';
-                particle.style.fontSize = '20px';
-                particle.style.pointerEvents = 'none';
-                particle.style.animation = `float 1s ease-out forwards`;
-                particle.style.animationDelay = i * 0.1 + 's';
-                
-                element.parentNode.appendChild(particle);
-                setTimeout(() => particle.remove(), 1000);
-            }
+        function scrollToSteps() {
+            document.getElementById('steps').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function playSound(type) {
-            try {
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(audioContext.destination);
-                
-                if (type === 'success') {
-                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-                    oscillator.frequency.setValueAtTime(1200, audioContext.currentTime + 0.1);
-                } else {
-                    oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
-                    oscillator.frequency.setValueAtTime(200, audioContext.currentTime + 0.2);
-                }
-                
-                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-                
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + 0.3);
-            } catch (error) {
-                console.log('Audio not supported');
-            }
+        // Copy to clipboard functionality
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Đã copy vào clipboard!');
+            });
         }
-
-        function endGame(won) {
-            gameActive = false;
-            clearInterval(countdownTimer);
-            clearInterval(gameTimer);
+        
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform';
+            notification.textContent = message;
+            document.body.appendChild(notification);
             
-            // Remove all animals
-            document.querySelectorAll('.peacock, .fake-animal').forEach(el => el.remove());
-            
-            if (won) {
-                document.getElementById('message').innerHTML = 
-                    `🎉 CHIẾN THẮNG! 🎉<br>Bạn đã đếm được ${score}/${totalPeacocks} con CÔNG!<br>⭐ Xuất sắc! ⭐`;
-                createCelebration();
-            } else {
-                document.getElementById('message').innerHTML = 
-                    `⏰ HẾT GIỜ! ⏰<br>Bạn chỉ đếm được ${score}/${totalPeacocks} con CÔNG!<br>😅 Thử lại nhé!`;
-            }
-            
-            // Reset timer display
-            document.getElementById('timer').style.background = '#2ecc71';
-            document.getElementById('timer').style.animation = '';
-            
-            // Show restart option
             setTimeout(() => {
-                document.getElementById('gameInstructions').style.display = 'block';
-                document.getElementById('gameInstructions').innerHTML = 
-                    `Game kết thúc!<br>
-                    <small>Nhấn "Bắt đầu đếm công" để chơi lại! 🎮</small>`;
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => notification.remove(), 300);
             }, 3000);
         }
 
-        function createCelebration() {
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    const celebration = document.createElement('div');
-                    celebration.className = 'surprise-effect';
-                    celebration.textContent = surpriseEmojis[Math.floor(Math.random() * surpriseEmojis.length)];
-                    celebration.style.left = Math.random() * 100 + '%';
-                    celebration.style.top = Math.random() * 100 + '%';
-                    document.body.appendChild(celebration);
-                    
-                    setTimeout(() => celebration.remove(), 2000);
-                }, i * 100);
+        // Add copy buttons to code blocks
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.code-block').forEach(block => {
+                const button = document.createElement('button');
+                button.className = 'absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors';
+                button.innerHTML = '<i class="fas fa-copy mr-1"></i>Copy';
+                button.onclick = () => copyToClipboard(block.textContent);
+                
+                block.style.position = 'relative';
+                block.appendChild(button);
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all step cards
+        document.querySelectorAll('.step-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // Add progress tracking
+        let currentStep = 0;
+        function nextStep() {
+            currentStep++;
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                const progress = (currentStep / 4) * 100;
+                progressBar.style.width = progress + '%';
             }
         }
-
-        // Initialize
-        setDifficulty('normal');
     </script>
 </body>
 </html>
