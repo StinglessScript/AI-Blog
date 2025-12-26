@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Giỏ Hàng - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-8">
+        <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+            <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                Trang chủ
+            </a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <span class="font-bold text-brand-dark">Giỏ hàng</span>
+        </nav>
+        <h1 class="text-2xl font-black text-brand-dark uppercase border-b-2 border-brand-dark/10 pb-4 mb-8">
+            Giỏ hàng của bạn (3 sản phẩm)
+        </h1>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Cart Items -->
+            <div class="flex-1 bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                <div
+                    class="hidden md:grid grid-cols-12 gap-4 text-sm font-bold text-gray-500 border-b border-gray-100 pb-4 mb-4 uppercase tracking-wider">
+                    <div class="col-span-6">Sản phẩm</div>
+                    <div class="col-span-2 text-center">Đơn giá</div>
+                    <div class="col-span-2 text-center">Số lượng</div>
+                    <div class="col-span-2 text-right">Thành tiền</div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center border-b border-gray-50 pb-6">
+                        <div class="col-span-6 flex gap-4">
+                            <div
+                                class="w-20 h-20 bg-gray-100 rounded border border-gray-200 overflow-hidden flex-shrink-0">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEKPg7BOnVLHiuVnHcAgBaJuBKniWpEKlP5F4eOnfLgTR0OM-P7RpjXV9B7P56jiNdwBgHLAOPKZRv-1D1bJNgWIk2fUYaXpG5K2KdWaBXkolS3PT0wyI8kzdm4C03whjP69zuYxFxVENiJKLpd25f7fdPWwOOkHJ6Q74CW6DsBaDAelF74enW9Xf8XVhQ0aKffDMueFFABHL7AGtk82gLaKr_bVvLUrhtOnVu0LljIAYTijDzmFw7cRnRmyP9fc21pXFcNdJLjA"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-bold text-[#111418] text-sm md:text-base line-clamp-1">Sofa Băng Da Bò Ý
+                                    Cao Cấp - SF001</h3>
+                                <p class="text-xs text-gray-500 mt-1">Màu sắc: Kem | Kích thước: 2m2</p>
+                                <div class="flex items-center gap-2 mt-2 md:hidden">
+                                    <div class="font-bold text-brand-dark">17.500.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-center hidden md:block font-medium text-gray-600">17.500.000đ</div>
+                        <div class="col-span-2 flex justify-center mt-2 md:mt-0">
+                            <div class="flex items-center border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 h-full flex items-center justify-center hover:bg-gray-100 transition-colors">-</button>
+                                <input type="text" value="1"
+                                    class="w-8 h-full text-center border-none text-xs font-bold" readonly />
+                                <button
+                                    class="w-8 h-full flex items-center justify-center hover:bg-gray-100 transition-colors">+</button>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-right hidden md:block font-bold text-brand-dark">17.500.000đ</div>
+                        <button class="md:hidden text-xs text-red-500 font-bold mt-2 hover:underline">Xóa</button>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center border-b border-gray-50 pb-6">
+                        <div class="col-span-6 flex gap-4">
+                            <div
+                                class="w-20 h-20 bg-gray-100 rounded border border-gray-200 overflow-hidden flex-shrink-0">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEWzPNlYlkwG4j-l892Avl4BMtiLActYaLwimt8hJ4OPBrnxuaNKXdSmZI8JUTMHmHywplvHKN8U6xPpYIzlOds2teFLYqerpt62Nk1YcgfAuy5rWovWPFgV7S668KRJ5KvreEkWWEhb--C5-l8RDulIe-vzRFBW0cyzR5jjcrd10GOkkD8uFb_VVOyF7MLD53PYroy5kXOKNeZ6LNNh_4qWl759nkwepk0eOkQzSPKGUjhAu5XeEPjcp8RvsAy3ixUqQ9eDIGw"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-bold text-[#111418] text-sm md:text-base line-clamp-1">Bàn Trà Gỗ Sồi
+                                    Hiện Đại - BT203</h3>
+                                <p class="text-xs text-gray-500 mt-1">Màu sắc: Tự nhiên</p>
+                                <div class="flex items-center gap-2 mt-2 md:hidden">
+                                    <div class="font-bold text-brand-dark">3.200.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-center hidden md:block font-medium text-gray-600">3.200.000đ</div>
+                        <div class="col-span-2 flex justify-center mt-2 md:mt-0">
+                            <div class="flex items-center border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 h-full flex items-center justify-center hover:bg-gray-100 transition-colors">-</button>
+                                <input type="text" value="1"
+                                    class="w-8 h-full text-center border-none text-xs font-bold" readonly />
+                                <button
+                                    class="w-8 h-full flex items-center justify-center hover:bg-gray-100 transition-colors">+</button>
+                            </div>
+                        </div>
+                        <div class="col-span-2 text-right hidden md:block font-bold text-brand-dark">3.200.000đ</div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-100 flex justify-between items-center">
+                    <a href="index.html"
+                        class="text-brand-dark font-bold text-sm flex items-center gap-2 hover:underline">
+                        <span class="material-symbols-outlined text-sm">arrow_back</span> Tiếp tục mua sắm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="w-full lg:w-1/3">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 sticky top-24">
+                    <!-- Customer Info Section -->
+                    <div class="mb-8 border-b border-gray-100 pb-8">
+                        <h3 class="font-bold text-lg text-brand-dark mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-brand-dark">account_circle</span>
+                            Thông tin nhận hàng
+                        </h3>
+
+                        <!-- Social Login -->
+                        <div class="grid grid-cols-2 gap-3 mb-5">
+                            <button
+                                class="flex items-center justify-center gap-2 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 bg-white shadow-sm">
+                                <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5"
+                                    alt="Google">
+                                Google
+                            </button>
+                            <button
+                                class="flex items-center justify-center gap-2 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 bg-white shadow-sm">
+                                <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" class="w-5 h-5"
+                                    alt="Facebook">
+                                Facebook
+                            </button>
+                        </div>
+
+                        <div class="relative flex py-2 items-center mb-5">
+                            <div class="flex-grow border-t border-gray-200"></div>
+                            <span
+                                class="flex-shrink-0 mx-4 text-gray-400 text-xs font-medium uppercase tracking-wider">Hoặc
+                                mua ngay</span>
+                            <div class="flex-grow border-t border-gray-200"></div>
+                        </div>
+
+                        <!-- Quick Info Inputs -->
+                        <div class="space-y-3">
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-[20px]">person</span>
+                                <input type="text" placeholder="Họ và tên người nhận"
+                                    class="w-full pl-10 border-gray-300 rounded-lg text-sm focus:ring-brand-dark focus:border-brand-dark py-2.5 shadow-sm">
+                            </div>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-[20px]">phone</span>
+                                <input type="tel" placeholder="Số điện thoại liên hệ"
+                                    class="w-full pl-10 border-gray-300 rounded-lg text-sm focus:ring-brand-dark focus:border-brand-dark py-2.5 shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg text-brand-dark mb-4 border-b border-gray-100 pb-4">Tổng quan đơn hàng
+                    </h3>
+                    <!-- Voucher Code -->
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <label class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-brand-red text-[18px]">sell</span>
+                            Mã ưu đãi / Voucher
+                        </label>
+                        <div class="flex gap-2 mb-3">
+                            <input type="text" placeholder="Nhập mã giảm giá"
+                                class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:border-brand-dark focus:ring-1 focus:ring-brand-dark uppercase placeholder:normal-case font-medium text-brand-dark">
+                            <button
+                                class="bg-gray-900 text-white text-sm font-bold px-4 rounded hover:bg-brand-dark transition-colors shadow-sm">Áp
+                                dụng</button>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 bg-orange-50 text-orange-700 text-xs font-bold border border-orange-200 rounded cursor-pointer hover:bg-orange-100 transition-colors border-dashed group">
+                                <span
+                                    class="material-symbols-outlined text-[14px] group-hover:rotate-12 transition-transform">local_activity</span>
+                                HELLO2024
+                            </div>
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 bg-green-50 text-green-700 text-xs font-bold border border-green-200 rounded cursor-pointer hover:bg-green-100 transition-colors border-dashed group">
+                                <span class="material-symbols-outlined text-[14px]">local_shipping</span>
+                                FREESHIP
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Tạm tính:</span>
+                            <span class="font-bold text-brand-dark">20.700.000đ</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Giảm giá:</span>
+                            <span class="font-bold text-brand-red">-0đ</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Vận chuyển:</span>
+                            <span class="font-bold text-green-600">Miễn phí</span>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3 flex justify-between items-center">
+                            <span class="font-black text-lg text-brand-dark">Tổng cộng:</span>
+                            <span class="font-black text-xl text-brand-red">20.700.000đ</span>
+                        </div>
+                        <p class="text-xs text-gray-400 text-right">(Đã bao gồm VAT)</p>
+                    </div>
+                    <a href="checkout.html"
+                        class="w-full bg-brand-dark text-white font-bold py-3 rounded hover:bg-[#002244] transition-all shadow-md block text-center">
+                        TIẾN HÀNH THANH TOÁN
+                    </a>
+                    <div class="mt-4 flex items-center gap-2 justify-center text-gray-400">
+                        <span class="material-symbols-outlined text-[16px]">lock</span>
+                        <span class="text-xs">Bảo mật thanh toán 100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>

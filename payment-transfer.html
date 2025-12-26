@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thanh toán Chuyển khoản - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow w-full py-8 md:py-12">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+            <!-- Breadcrumb Steps (Updated to match previous pages) -->
+            <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+                <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[18px]">home</span>
+                    Trang chủ
+                </a>
+                <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+                <a href="cart.html" class="hover:text-brand-dark transition-colors">Giỏ hàng</a>
+                <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+                <a href="checkout.html" class="hover:text-brand-dark transition-colors">Thanh toán</a>
+                <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+                <span class="font-bold text-brand-dark">Chuyển khoản</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- Left Column: Order Summary & Guide -->
+                <div class="lg:col-span-5 space-y-6 order-2 lg:order-1">
+                    <div class="bg-white rounded-xl shadow-sm border border-blue-100 overflow-hidden">
+                        <div class="bg-blue-50/50 p-6 border-b border-blue-100">
+                            <h2 class="font-bold text-brand-dark flex items-center gap-2">
+                                <span class="material-symbols-outlined">receipt_long</span>
+                                Tóm tắt đơn hàng
+                            </h2>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500">Mã đơn hàng:</span>
+                                <span class="font-bold text-gray-900">#PMG-2024888</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500">Khách hàng:</span>
+                                <span class="font-medium text-gray-900">Nguyễn Văn A</span>
+                            </div>
+                            <div class="w-full h-[1px] bg-gray-100 my-2"></div>
+                            <div class="flex justify-between items-center text-base">
+                                <span class="text-gray-600 font-medium">Tổng thanh toán:</span>
+                                <span class="font-black text-2xl text-brand-red">25.040.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">Hướng dẫn thanh toán</h3>
+                        <ol class="space-y-4 text-sm text-gray-600 relative pl-4 border-l-2 border-gray-100">
+                            <li class="relative pl-4">
+                                <span
+                                    class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">1</span>
+                                Mở ứng dụng ngân hàng trên điện thoại của bạn.
+                            </li>
+                            <li class="relative pl-4">
+                                <span
+                                    class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">2</span>
+                                Chọn tính năng <strong>Quét mã QR</strong> (QR Pay).
+                            </li>
+                            <li class="relative pl-4">
+                                <span
+                                    class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">3</span>
+                                Quét mã QR ở bên cạnh để tự động nhập thông tin.
+                            </li>
+                            <li class="relative pl-4">
+                                <span
+                                    class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">4</span>
+                                Kiểm tra lại số tiền <strong>25.040.000đ</strong> và nội dung chuyển khoản.
+                            </li>
+                            <li class="relative pl-4">
+                                <span
+                                    class="absolute -left-[21px] top-0 w-4 h-4 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">5</span>
+                                Hoàn tất giao dịch và bấm nút <strong>"Tôi đã chuyển khoản"</strong>.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <a href="checkout.html"
+                        class="inline-flex items-center gap-2 text-gray-500 hover:text-brand-dark font-medium transition-colors pl-2">
+                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+                        Quay lại trang thanh toán
+                    </a>
+                </div>
+
+                <!-- Right Column: Main Payment Card -->
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden relative">
+                        <!-- Header Background -->
+                        <div class="h-32 bg-gradient-to-r from-brand-dark to-blue-900 absolute top-0 inset-x-0 z-0">
+                            <div class="absolute inset-0 opacity-10"
+                                style="background-image: radial-gradient(white 1px, transparent 1px); background-size: 20px 20px;">
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 px-6 pt-10 pb-8 flex flex-col items-center">
+
+                            <!-- QR Code Box -->
+                            <div class="bg-white p-3 rounded-2xl shadow-lg mb-8 mx-auto -mt-2">
+                                <div class="bg-white rounded-xl border-2 border-dashed border-gray-200 p-2">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=00020101021238540010A00000072701240006970422011001234567890208QRIBFTTA53037045408250400005802VN62150811PMG202488863041234"
+                                        alt="QR Code Chuyển khoản"
+                                        class="w-[200px] h-[200px] md:w-[260px] md:h-[260px] object-contain">
+                                </div>
+                                <div class="text-center mt-3 mb-1">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">
+                                        <span class="material-symbols-outlined text-[14px]">qr_code_scanner</span>
+                                        Quét mã này để thanh toán
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h1 class="text-center text-xl font-bold text-gray-800 mb-6 uppercase tracking-tight">Thông
+                                tin tài khoản thụ hưởng</h1>
+
+                            <!-- Account Details Grid -->
+                            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                <div
+                                    class="col-span-1 md:col-span-2 bg-gray-50 rounded-xl p-4 border border-gray-100 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs text-gray-500 mb-1">Ngân hàng</p>
+                                        <p class="font-bold text-brand-dark flex items-center gap-2">
+                                            <span
+                                                class="w-8 h-8 rounded bg-white flex items-center justify-center shadow-sm border border-gray-100 text-green-600 font-black text-xs">VCB</span>
+                                            VIETCOMBANK
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-xs text-gray-500 mb-1">Chi nhánh</p>
+                                        <p class="font-semibold text-gray-800 text-sm">Hồ Chí Minh</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm relative group cursor-pointer hover:border-brand-dark transition-all"
+                                    onclick="copyToClipboard('101686868', 'stk')">
+                                    <p class="text-xs text-gray-500 mb-1">Số tài khoản</p>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-black text-brand-dark tracking-wider">1016 868 68</p>
+                                        <button
+                                            class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 group-hover:bg-brand-dark group-hover:text-white transition-colors">
+                                            <span class="material-symbols-outlined text-[18px]"
+                                                id="icon-stk">content_copy</span>
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-2 right-12 text-[10px] text-green-600 font-bold opacity-0 transition-opacity"
+                                        id="msg-stk">Đã sao chép!</div>
+                                </div>
+
+                                <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 shadow-sm relative group cursor-pointer hover:border-blue-500 transition-all"
+                                    onclick="copyToClipboard('PMG2024888', 'content')">
+                                    <p class="text-xs text-blue-600 font-bold mb-1">Nội dung chuyển khoản (Bắt buộc)</p>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xl font-black text-brand-dark">PMG 2024888</p>
+                                        <button
+                                            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                            <span class="material-symbols-outlined text-[18px]"
+                                                id="icon-content">content_copy</span>
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-2 right-12 text-[10px] text-green-600 font-bold opacity-0 transition-opacity"
+                                        id="msg-content">Đã sao chép!</div>
+                                </div>
+
+                                <div
+                                    class="col-span-1 md:col-span-2 bg-gray-50 rounded-xl p-4 border border-gray-100 text-center">
+                                    <p class="text-xs text-gray-500 mb-1">Chủ tài khoản</p>
+                                    <p class="font-bold text-gray-800 uppercase">CÔNG TY TNHH PHÚC MỸ GIA</p>
+                                </div>
+                            </div>
+
+                            <!-- Action Button -->
+                            <a href="order-success.html"
+                                class="w-full bg-gradient-to-r from-brand-dark to-blue-800 text-white font-bold text-lg py-4 rounded-xl shadow-xl shadow-brand-dark/20 hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
+                                <span>TÔI ĐÃ CHUYỂN KHOẢN</span>
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <div
+                            class="inline-flex items-center gap-2 text-green-600 bg-green-50 px-4 py-2 rounded-full border border-green-100">
+                            <span class="material-symbols-outlined text-[18px]">security</span>
+                            <span class="text-sm font-medium">Giao dịch được bảo mật an toàn 100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+    <script>
+        function copyToClipboard(text, id) {
+            navigator.clipboard.writeText(text).then(function () {
+                // Show copied message
+                var msg = document.getElementById('msg-' + id);
+                var icon = document.getElementById('icon-' + id);
+
+                msg.classList.remove('opacity-0');
+                icon.innerText = 'check';
+
+                setTimeout(function () {
+                    msg.classList.add('opacity-0');
+                    icon.innerText = 'content_copy';
+                }, 2000);
+            }, function (err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+
+</html>

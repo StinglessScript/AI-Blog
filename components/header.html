@@ -1,0 +1,148 @@
+<header class="bg-white shadow-md border-b border-gray-100">
+    <div class="layout-container max-w-[1280px] mx-auto px-4 md:px-8">
+        <div class="flex items-center justify-between h-20 gap-4 md:gap-8">
+            <div class="flex items-center gap-8 min-w-fit">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="size-8 text-brand-dark">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z"
+                                fill="#003366" fill-opacity="0.1"></path>
+                            <path d="M24 10L10 18V38H38V18L24 10Z" fill="#003366"></path>
+                        </svg>
+                    </div>
+                    <h1
+                        class="text-brand-dark text-2xl font-black tracking-tight leading-none uppercase hidden md:block">
+                        PHÚC MỸ GIA</h1>
+                    <h1 class="text-brand-dark text-xl font-black tracking-tight leading-none uppercase md:hidden">PMG
+                    </h1>
+                </a>
+
+                <!-- Category Button (Dropdown) -->
+                <div id="header-category-menu" class="relative group z-50 transition-all duration-300 transform">
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-brand-dark hover:shadow-sm transition-all h-10">
+                        <span class="material-symbols-outlined text-brand-dark">menu</span>
+                        <span class="font-bold text-brand-dark text-sm whitespace-nowrap">Danh mục</span>
+                    </button>
+
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute top-[calc(100%+8px)] left-0 w-[260px] bg-white shadow-xl rounded-lg border border-gray-100 hidden group-hover:block py-2 animate-fade-in">
+                        <a href="category.html"
+                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-gray-400">chair</span>
+                            <span class="text-sm font-medium">Phòng khách</span>
+                        </a>
+                        <a href="category.html"
+                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-gray-400">bed</span>
+                            <span class="text-sm font-medium">Phòng ngủ</span>
+                        </a>
+                        <a href="category.html"
+                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-gray-400">restaurant</span>
+                            <span class="text-sm font-medium">Phòng bếp</span>
+                        </a>
+                        <a href="category.html"
+                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-gray-400">desk</span>
+                            <span class="text-sm font-medium">Văn phòng</span>
+                        </a>
+                        <a href="category.html"
+                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-gray-400">child_care</span>
+                            <span class="text-sm font-medium">Trẻ em</span>
+                        </a>
+                        <div class="border-t border-gray-100 mt-1 pt-1">
+                            <a href="category.html"
+                                class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[20px] text-brand-red">local_fire_department</span>
+                                <span class="text-sm font-bold text-brand-red">Khuyến mãi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex-1 max-w-[500px] hidden lg:flex">
+                <div
+                    class="flex w-full h-11 items-center rounded-lg overflow-hidden bg-[#f3f4f6] border border-gray-200">
+                    <input
+                        class="flex-1 h-full px-4 text-sm text-[#111418] placeholder:text-[#617589] border-none focus:ring-0 bg-transparent"
+                        placeholder="Tìm kiếm sản phẩm, danh mục..." type="text" />
+                    <button
+                        class="bg-brand-dark h-full px-6 flex items-center justify-center hover:bg-[#002244] transition-colors">
+                        <span class="material-symbols-outlined text-white">search</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 lg:gap-6">
+
+                <div class="hidden xl:flex items-center gap-3">
+                    <span class="material-symbols-outlined text-brand-red text-3xl">call</span>
+                    <div class="flex flex-col items-start">
+                        <span class="text-sm font-bold text-brand-dark opacity-80 leading-none mb-1">Hotline tư
+                            vấn</span>
+                        <span class="font-black text-xl leading-none text-brand-red">1900 6868</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <button class="relative flex flex-col items-center justify-center text-brand-dark group">
+                        <span
+                            class="material-symbols-outlined text-[28px] group-hover:text-blue-700 transition-colors">person</span>
+                        <span class="text-[10px] mt-1 font-medium hidden sm:block">Tài khoản</span>
+                    </button>
+                    <a href="cart.html"
+                        class="relative flex flex-col items-center justify-center text-brand-dark group">
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined text-[28px] group-hover:text-blue-700 transition-colors">shopping_cart</span>
+                            <span
+                                class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-brand-red text-[10px] font-bold text-white">3</span>
+                        </div>
+                        <span class="text-[10px] mt-1 font-medium hidden sm:block">Giỏ hàng</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    (function () {
+        const categoryMenu = document.getElementById('header-category-menu');
+        if (!categoryMenu) return;
+
+        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+
+        // Helper classes for hidden state (ghost element)
+        const hiddenClasses = ['opacity-0', 'invisible', '-translate-x-2', 'pointer-events-none'];
+
+        // Initial State Setup
+        if (isHomePage) {
+            // Default hidden on homepage
+            categoryMenu.classList.add(...hiddenClasses);
+
+            // Check scroll immediately (in case of refresh)
+            if (window.scrollY > 450) {
+                categoryMenu.classList.remove(...hiddenClasses);
+            }
+
+            // Scroll Event
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 450) {
+                    categoryMenu.classList.remove(...hiddenClasses);
+                } else {
+                    categoryMenu.classList.add(...hiddenClasses);
+                }
+            });
+        } else {
+            // Always show on other pages
+            categoryMenu.classList.remove(...hiddenClasses);
+        }
+    })();
+</script>

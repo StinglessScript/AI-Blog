@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Đặt hàng thành công - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[800px] mx-auto w-full px-4 md:px-8 py-12">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12 text-center">
+            <!-- Success Icon -->
+            <div
+                class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce-slow">
+                <span class="material-symbols-outlined text-brand-green text-6xl">check_circle</span>
+            </div>
+
+            <!-- Main Message -->
+            <h1 class="text-3xl font-black text-brand-dark mb-2 uppercase">Đặt hàng thành công!</h1>
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto">
+                Cảm ơn bạn đã tin tưởng và lựa chọn Phúc Mỹ Gia. Đội ngũ CSKH sẽ liên hệ với bạn trong vòng 24h để xác
+                nhận đơn hàng.
+            </p>
+
+            <!-- Order Details Box -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-8 text-left max-w-md mx-auto border border-gray-100">
+                <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
+                    <span class="text-gray-600 text-sm">Mã đơn hàng:</span>
+                    <span class="text-brand-dark font-bold text-lg">#PMG-2024888</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-600 text-sm">Phương thức thanh toán:</span>
+                    <span class="text-[#111418] font-medium text-sm">COD - Thanh toán khi nhận hàng</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600 text-sm">Tổng thanh toán:</span>
+                    <span class="text-brand-red font-bold text-lg">25.040.000đ</span>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html"
+                    class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-[#002244] transition-colors shadow-lg shadow-brand-dark/20">
+                    <span class="material-symbols-outlined">home</span>
+                    Về trang chủ
+                </a>
+                <a href="products.html"
+                    class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-dark border border-brand-dark font-bold rounded-lg hover:bg-gray-50 transition-colors">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Tiếp tục mua sắm
+                </a>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-100">
+                <p class="text-sm text-gray-500">
+                    Mọi thắc mắc xin vui lòng liên hệ hotline <a href="tel:19006868"
+                        class="text-brand-dark font-bold hover:underline">1900 6868</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Liên Hệ & Đăng Ký Đối Tác - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-8">
+        <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+            <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                Trang chủ
+            </a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <span class="font-bold text-brand-dark">Liên hệ & Hợp tác</span>
+        </nav>
+        <!-- Hero Section -->
+        <div class="relative rounded-2xl overflow-hidden mb-12 h-64 md:h-80">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark to-blue-900"></div>
+            <div class="relative h-full flex flex-col justify-center items-center text-center p-8">
+                <h1 class="text-white text-4xl md:text-5xl font-black mb-4 uppercase">Liên hệ với chúng tôi</h1>
+                <p class="text-gray-200 text-lg max-w-2xl">
+                    Đội ngũ chuyên gia của chúng tôi sẵn sàng tư vấn và hỗ trợ bạn 24/7
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Contact Info Cards -->
+            <div
+                class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-brand-dark/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-brand-dark text-4xl">call</span>
+                </div>
+                <h3 class="font-bold text-lg text-brand-dark mb-2">Hotline</h3>
+                <p class="text-gray-600 text-sm mb-3">Gọi ngay để được tư vấn</p>
+                <a href="tel:19006868" class="text-2xl font-black text-brand-red hover:underline">1900 6868</a>
+            </div>
+
+            <div
+                class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-brand-dark/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-brand-dark text-4xl">mail</span>
+                </div>
+                <h3 class="font-bold text-lg text-brand-dark mb-2">Email</h3>
+                <p class="text-gray-600 text-sm mb-3">Gửi email cho chúng tôi</p>
+                <a href="mailto:info@phucmygia.vn"
+                    class="text-lg font-bold text-brand-dark hover:underline">info@phucmygia.vn</a>
+            </div>
+
+            <div
+                class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-brand-dark/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-brand-dark text-4xl">location_on</span>
+                </div>
+                <h3 class="font-bold text-lg text-brand-dark mb-2">Địa chỉ</h3>
+                <p class="text-gray-600 text-sm mb-3">Showroom chính</p>
+                <p class="text-sm font-medium text-brand-dark">123 Đường ABC, Quận 1, TP.HCM</p>
+            </div>
+        </div>
+
+
+
+        <!-- Branch System Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-black text-brand-dark mb-8 uppercase text-center">Hệ thống Chi nhánh & Showroom
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Branch List (Left) -->
+                <div class="space-y-6">
+                    <!-- Khu vực Miền Nam -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-lg text-brand-dark mb-4 border-l-4 border-brand-red pl-3 uppercase">
+                            Khu vực Miền Nam</h3>
+                        <div class="space-y-4">
+                            <!-- Branch Item 1 -->
+                            <div class="group branch-item cursor-pointer p-2 rounded hover:bg-gray-50 transition-colors"
+                                data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.023524698947!2d106.69752631533385!3d10.732668992351225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbd11082613%3A0x62916c5476722d9d!2sSC%20VivoCity!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s">
+                                <h4
+                                    class="font-bold text-[#111418] group-hover:text-brand-dark transition-colors flex items-center justify-between">
+                                    Showroom Quận 7 (Trụ sở chính)
+                                    <span
+                                        class="material-symbols-outlined text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">location_on</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Địa chỉ:</span> 123
+                                    Nguyễn Văn Linh, P. Tân Phong, Quận 7, TP.HCM</p>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Hotline:</span> 0909
+                                    123 456</p>
+                            </div>
+                            <hr class="border-gray-100">
+                            <!-- Branch Item 2 -->
+                            <div class="group branch-item cursor-pointer p-2 rounded hover:bg-gray-50 transition-colors"
+                                data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.454433722956!2d106.7145783153351!3d10.85299999227653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763f23c2d0f%3A0x286f212351555554!2sGigamall%20Vietnam!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s">
+                                <h4
+                                    class="font-bold text-[#111418] group-hover:text-brand-dark transition-colors flex items-center justify-between">
+                                    Chi nhánh Thủ Đức
+                                    <span
+                                        class="material-symbols-outlined text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">location_on</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Địa chỉ:</span> 256
+                                    Quốc Lộ 13, P. Hiệp Bình Phước, TP. Thủ Đức</p>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Hotline:</span> 0909
+                                    789 012</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực Miền Bắc -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-lg text-brand-dark mb-4 border-l-4 border-brand-red pl-3 uppercase">
+                            Khu vực Miền Bắc</h3>
+                        <div class="space-y-4">
+                            <div class="group branch-item cursor-pointer p-2 rounded hover:bg-gray-50 transition-colors"
+                                data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.309071060965!2d105.78099831548348!3d21.02031498600295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd0c66f71%3A0x65dc7b4759607623!2sKeangnam%20Hanoi%20Landmark%20Tower!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s">
+                                <h4
+                                    class="font-bold text-[#111418] group-hover:text-brand-dark transition-colors flex items-center justify-between">
+                                    Chi nhánh Hà Nội
+                                    <span
+                                        class="material-symbols-outlined text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">location_on</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Địa chỉ:</span> 88
+                                    Phạm Hùng, Q. Nam Từ Liêm, Hà Nội</p>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Hotline:</span> 0988
+                                    123 456</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực Miền Trung -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-lg text-brand-dark mb-4 border-l-4 border-brand-red pl-3 uppercase">
+                            Khu vực Miền Trung</h3>
+                        <div class="space-y-4">
+                            <div class="group branch-item cursor-pointer p-2 rounded hover:bg-gray-50 transition-colors"
+                                data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.834042859496!2d108.21040831535497!3d16.059434988886976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b5d7764d79%3A0x948332152062723c!2sDragon%20Bridge!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s">
+                                <h4
+                                    class="font-bold text-[#111418] group-hover:text-brand-dark transition-colors flex items-center justify-between">
+                                    Chi nhánh Đà Nẵng
+                                    <span
+                                        class="material-symbols-outlined text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">location_on</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Địa chỉ:</span> 142
+                                    Nguyễn Văn Linh, Q. Thanh Khê, Đà Nẵng</p>
+                                <p class="text-sm text-gray-600 mt-1"><span class="font-semibold">Hotline:</span> 0912
+                                    345 678</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map (Right) -->
+                <div
+                    class="bg-white rounded-lg shadow-sm border border-gray-100 p-2 h-full min-h-[500px] sticky top-24">
+                    <iframe id="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.023524698947!2d106.69752631533385!3d10.732668992351225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbd11082613%3A0x62916c5476722d9d!2sSC%20VivoCity!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                        width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const branchItems = document.querySelectorAll('.branch-item');
+                    const mapFrame = document.getElementById('map-frame');
+
+                    // Highlight first item
+                    if (branchItems.length > 0) {
+                        branchItems[0].classList.add('bg-blue-50', 'border-l-4', 'border-brand-dark');
+                        branchItems[0].classList.remove('p-2');
+                        branchItems[0].classList.add('p-3', 'pl-2'); // Adjust padding visually
+                    }
+
+                    branchItems.forEach(item => {
+                        item.addEventListener('click', () => {
+                            const mapSrc = item.getAttribute('data-map-src');
+                            if (mapSrc) {
+                                mapFrame.src = mapSrc;
+
+                                // Remove highlight from all
+                                branchItems.forEach(i => {
+                                    i.classList.remove('bg-blue-50', 'border-l-4', 'border-brand-dark');
+                                    i.classList.remove('p-3', 'pl-2');
+                                    i.classList.add('p-2');
+                                });
+
+                                // Add highlight to clicked
+                                item.classList.add('bg-blue-50', 'border-l-4', 'border-brand-dark');
+                                item.classList.remove('p-2');
+                                item.classList.add('p-3', 'pl-2');
+
+                                // Smooth scroll to map on mobile
+                                if (window.innerWidth < 1024) {
+                                    mapFrame.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            }
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>

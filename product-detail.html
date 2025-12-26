@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chi Tiết Sản Phẩm - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .thumbnail-active {
+            border-color: #003366;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-6">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+            <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                Trang chủ
+            </a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <a href="category.html" class="hover:text-brand-dark transition-colors">Phòng khách</a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <span class="font-bold text-brand-dark">Sofa Băng Da Bò Ý Cao Cấp</span>
+        </nav>
+
+        <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Product Images -->
+            <div class="space-y-4">
+                <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden border-2 border-gray-200">
+                    <img id="mainImage"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEKPg7BOnVLHiuVnHcAgBaJuBKniWpEKlP5F4eOnfLgTR0OM-P7RpjXV9B7P56jiNdwBgHLAOPKZRv-1D1bJNgWIk2fUYaXpG5K2KdWaBXkolS3PT0wyI8kzdm4C03whjP69zuYxFxVENiJKLpd25f7fdPWwOOkHJ6Q74CW6DsBaDAelF74enW9Xf8XVhQ0aKffDMueFFABHL7AGtk82gLaKr_bVvLUrhtOnVu0LljIAYTijDzmFw7cRnRmyP9fc21pXFcNdJLjA"
+                        class="w-full h-full object-cover" alt="Sofa Băng Da Bò Ý Cao Cấp" />
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <div
+                        class="aspect-square bg-gray-100 rounded border-2 border-brand-dark opacity-100 thumbnail-active cursor-pointer overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEKPg7BOnVLHiuVnHcAgBaJuBKniWpEKlP5F4eOnfLgTR0OM-P7RpjXV9B7P56jiNdwBgHLAOPKZRv-1D1bJNgWIk2fUYaXpG5K2KdWaBXkolS3PT0wyI8kzdm4C03whjP69zuYxFxVENiJKLpd25f7fdPWwOOkHJ6Q74CW6DsBaDAelF74enW9Xf8XVhQ0aKffDMueFFABHL7AGtk82gLaKr_bVvLUrhtOnVu0LljIAYTijDzmFw7cRnRmyP9fc21pXFcNdJLjA"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="aspect-square bg-gray-100 rounded border-2 border-gray-200 opacity-60 hover:opacity-100 cursor-pointer overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKGHbIzftDCytoGGgbLR5Tc1AgD7XGcwG9nm7yZlecNSm2Kn3DVfXdqtU__PVUiI8mTTTtOVHWOjbzuuWSJFr70aqxhfOjxPY9-VFWqlAeeRgpM-7DxznwwD0boNII7UlEMNq00CXZ0roIJsWKTFebfnhNeYailGDG1C3WkMZBKyXOwzt94DBuqxIkCKy7_J5V6WxmPA4rMteT3Sb8-DkWkP0sQLCJESCkplk2WTNB6y991ZinDRyFP5Xe1A4pJ5Q1lTZT6ZmHyQ"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="aspect-square bg-gray-100 rounded border-2 border-gray-200 opacity-60 hover:opacity-100 cursor-pointer overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FrdF-908miZBcC3VmysMtGELpK3LKhnJJZZbsZEQJhuUhv7_xk8g110-Pk759wBRD5hJBFuGen24CZK57r1BQkVtFExcNANTQ6zsVDU35pAdYScBreOUx3ckhyb5w_gqRAcoyS-w6EcvJKCifnCnvnR0w_5UYZF5JI80p3zXWaKmQ3KB0To9yqo_2RHcY9JD5vmP-FOQP0geFHPSRVp2YDrvk6m8fJoYkz4ruhPUh4Isr2KjoqUxATT5d2dsfIPeNPvbstEIxA"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="aspect-square bg-gray-100 rounded border-2 border-gray-200 opacity-60 hover:opacity-100 cursor-pointer overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEWzPNlYlkwG4j-l892Avl4BMtiLActYaLwimt8hJ4OPBrnxuaNKXdSmZI8JUTMHmHywplvHKN8U6xPpYIzlOds2teFLYqerpt62Nk1YcgfAuy5rWovWPFgV7S668KRJ5KvreEkWWEhb--C5-l8RDulIe-vzRFBW0cyzR5jjcrd10GOkkD8uFb_VVOyF7MLD53PYroy5kXOKNeZ6LNNh_4qWl759nkwepk0eOkQzSPKGUjhAu5XeEPjcp8RvsAy3ixUqQ9eDIGw"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[14px]">local_shipping</span>
+                            Sẵn kho - Giao ngay
+                        </span>
+                        <span class="bg-brand-dark text-white text-xs font-bold px-3 py-1 rounded-full">
+                            -30%
+                        </span>
+                    </div>
+                    <h1 class="text-3xl font-black text-brand-dark mb-3">Sofa Băng Da Bò Ý Cao Cấp - SF001</h1>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-brand-yellow fill-1">star</span>
+                            <span class="material-symbols-outlined text-brand-yellow fill-1">star</span>
+                            <span class="material-symbols-outlined text-brand-yellow fill-1">star</span>
+                            <span class="material-symbols-outlined text-brand-yellow fill-1">star</span>
+                            <span class="material-symbols-outlined text-brand-yellow fill-1">star_half</span>
+                        </div>
+                        <span class="text-sm text-gray-500">(4.5/5 - 128 đánh giá)</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-b border-gray-200 py-4">
+                    <div class="flex items-baseline gap-3">
+                        <span class="text-4xl font-black text-brand-red">17.500.000đ</span>
+                        <span class="text-xl text-gray-400 line-through">25.000.000đ</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Tiết kiệm: 7.500.000đ (30%)</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-brand-dark mb-2">Màu sắc:</label>
+                        <div class="flex gap-3">
+                            <button
+                                class="w-12 h-12 rounded-full bg-[#F5E6D3] border-2 border-brand-dark shadow-md"></button>
+                            <button
+                                class="w-12 h-12 rounded-full bg-[#8B4513] border-2 border-gray-300 hover:border-brand-dark"></button>
+                            <button
+                                class="w-12 h-12 rounded-full bg-[#2C2C2C] border-2 border-gray-300 hover:border-brand-dark"></button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-brand-dark mb-2">Kích thước:</label>
+                        <div class="flex gap-3">
+                            <button
+                                class="px-6 py-2 border-2 border-brand-dark bg-brand-dark text-white font-bold rounded">2m2</button>
+                            <button
+                                class="px-6 py-2 border-2 border-gray-300 hover:border-brand-dark font-bold rounded">2m5</button>
+                            <button
+                                class="px-6 py-2 border-2 border-gray-300 hover:border-brand-dark font-bold rounded">3m</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-brand-dark mb-2">Số lượng:</label>
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center border-2 border-gray-300 rounded overflow-hidden">
+                                <button
+                                    class="w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-colors font-bold text-lg">-</button>
+                                <input type="text" value="1" class="w-16 h-12 text-center border-none text-lg font-bold"
+                                    readonly />
+                                <button
+                                    class="w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-colors font-bold text-lg">+</button>
+                            </div>
+                            <span class="text-sm text-gray-500">Còn <span class="font-bold text-brand-green">24 sản
+                                    phẩm</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <button
+                        class="flex-1 bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-[#002244] transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">add_shopping_cart</span>
+                        THÊM VÀO GIỎ HÀNG
+                    </button>
+                    <button
+                        class="w-14 h-14 border-2 border-brand-dark text-brand-dark rounded-lg hover:bg-brand-dark hover:text-white transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined">favorite_border</span>
+                    </button>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2">
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined text-brand-dark">verified</span>
+                        <span class="font-medium">Bảo hành 24 tháng chính hãng</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined text-brand-dark">local_shipping</span>
+                        <span class="font-medium">Miễn phí vận chuyển toàn quốc</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined text-brand-dark">support_agent</span>
+                        <span class="font-medium">Hỗ trợ 24/7 - Hotline: <span class="font-bold text-brand-red">1900
+                                6868</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mb-12">
+            <div class="border-b border-gray-200 mb-6">
+                <div class="flex gap-8">
+                    <button class="pb-4 border-b-2 border-brand-dark text-brand-dark font-bold">Mô tả sản phẩm</button>
+                    <button class="pb-4 border-b-2 border-transparent text-gray-500 hover:text-brand-dark">Thông số kỹ
+                        thuật</button>
+                    <button class="pb-4 border-b-2 border-transparent text-gray-500 hover:text-brand-dark">Đánh giá
+                        (128)</button>
+                </div>
+            </div>
+            <div class="prose max-w-none">
+                <h3 class="text-xl font-bold text-brand-dark mb-4">Sofa Băng Da Bò Ý Cao Cấp - SF001</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Sofa băng da bò Ý cao cấp SF001 là sự kết hợp hoàn hảo giữa thiết kế hiện đại và chất liệu cao cấp.
+                    Sản phẩm được làm từ da bò thật nhập khẩu từ Ý, mang lại cảm giác sang trọng và bền bỉ theo thời
+                    gian.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Khung sofa được làm từ gỗ tự nhiên cao cấp, đảm bảo độ chắc chắn và tuổi thọ lâu dài.
+                    Đệm ngồi sử dụng mút cao su non cao cấp, mang lại sự êm ái và thoải mái tối đa.
+                </p>
+                <h4 class="text-lg font-bold text-brand-dark mt-6 mb-3">Đặc điểm nổi bật:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Chất liệu da bò thật 100% nhập khẩu từ Ý</li>
+                    <li>Khung gỗ tự nhiên cao cấp, chắc chắn</li>
+                    <li>Đệm mút cao su non cao cấp, êm ái</li>
+                    <li>Thiết kế hiện đại, sang trọng</li>
+                    <li>Dễ dàng vệ sinh và bảo quản</li>
+                    <li>Bảo hành 24 tháng chính hãng</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between border-b-2 border-brand-dark/10 pb-3 mb-6">
+                <h2 class="text-2xl font-bold text-brand-dark uppercase tracking-tight flex items-center gap-2">
+                    <span class="w-1 h-6 bg-brand-dark block rounded-full"></span>
+                    Sản phẩm liên quan
+                </h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product Card 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                    <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEWzPNlYlkwG4j-l892Avl4BMtiLActYaLwimt8hJ4OPBrnxuaNKXdSmZI8JUTMHmHywplvHKN8U6xPpYIzlOds2teFLYqerpt62Nk1YcgfAuy5rWovWPFgV7S668KRJ5KvreEkWWEhb--C5-l8RDulIe-vzRFBW0cyzR5jjcrd10GOkkD8uFb_VVOyF7MLD53PYroy5kXOKNeZ6LNNh_4qWl759nkwepk0eOkQzSPKGUjhAu5XeEPjcp8RvsAy3ixUqQ9eDIGw" />
+                    </div>
+                    <div class="p-3 flex flex-col flex-1 gap-1">
+                        <h3
+                            class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer">
+                            Bàn Trà Gỗ Sồi Hiện Đại - BT203</h3>
+                        <div class="mt-auto pt-2 flex flex-col items-start">
+                            <span class="text-brand-dark font-bold text-base">3.200.000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>

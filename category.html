@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Danh Mục Sản Phẩm - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-6">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+            <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                Trang chủ
+            </a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <span class="font-bold text-brand-dark">Nội thất phòng khách</span>
+        </nav>
+
+        <!-- Banner Category -->
+        <div class="relative h-[200px] md:h-[280px] rounded-2xl overflow-hidden mb-10 group shadow-md">
+            <div class="absolute inset-0 bg-gray-200">
+                <a href="product-detail.html" class="block w-full h-full"><img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2600&auto=format&fit=crop"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        alt="Nội thất phòng khách Banner"></a>
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-[#003366]/90 via-[#003366]/40 to-transparent flex flex-col justify-center px-8 md:px-12">
+                <span class="text-brand-yellow font-bold tracking-wider uppercase text-xs md:text-sm mb-2">Bộ sưu tập
+                    2024</span>
+                <h1 class="text-2xl md:text-4xl font-black text-white mb-3 tracking-tight">NỘI THẤT SANG TRỌNG</h1>
+                <p class="text-gray-100 max-w-lg text-sm md:text-base leading-relaxed opacity-90 hidden md:block">
+                    Kiến tạo không gian sống đẳng cấp với bộ sưu tập sofa, bàn trà mới nhất.<br>
+                    Ưu đãi <span class="text-brand-yellow font-bold">30%</span> cho khách hàng đặt mua online ngay hôm
+                    nay.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-1/4 flex-shrink-0 space-y-6">
+                <!-- Categories -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3
+                        class="font-bold text-brand-dark uppercase mb-4 text-sm tracking-wider border-b border-gray-100 pb-2">
+                        Danh mục
+                    </h3>
+                    <ul class="space-y-1">
+                        <!-- Parent Category: Active/Open -->
+                        <li>
+                            <div class="group">
+                                <a href="#"
+                                    class="text-brand-dark font-bold flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2 transition-colors">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                                        <span class="text-sm">Phòng khách</span>
+                                    </div>
+                                    <span class="text-xs text-white bg-brand-dark px-2 py-0.5 rounded-full">120</span>
+                                </a>
+                                <!-- Sub Categories -->
+                                <ul class="pl-8 space-y-1 mt-1 border-l border-gray-100 ml-3 mb-2">
+                                    <li>
+                                        <a href="#"
+                                            class="block text-brand-dark font-medium text-sm py-1.5 hover:text-brand-red transition-colors flex justify-between items-center group/sub">
+                                            <span>Sofa & Salon</span>
+                                            <span
+                                                class="text-[10px] text-gray-400 opacity-0 group-hover/sub:opacity-100 transition-opacity">45</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block text-gray-600 text-sm py-1.5 hover:text-brand-dark transition-colors flex justify-between items-center group/sub">
+                                            <span>Bàn trà</span>
+                                            <span
+                                                class="text-[10px] text-gray-400 opacity-0 group-hover/sub:opacity-100 transition-opacity">24</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block text-gray-600 text-sm py-1.5 hover:text-brand-dark transition-colors flex justify-between items-center group/sub">
+                                            <span>Kệ Tivi</span>
+                                            <span
+                                                class="text-[10px] text-gray-400 opacity-0 group-hover/sub:opacity-100 transition-opacity">18</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Parent Category: Closed -->
+                        <li>
+                            <a href="#"
+                                class="text-[#111418] font-medium flex items-center justify-between py-2 hover:text-brand-dark hover:bg-gray-50 rounded px-2 transition-colors group">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-brand-dark">chevron_right</span>
+                                    <span class="text-sm">Phòng ngủ</span>
+                                </div>
+                                <span
+                                    class="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full group-hover:bg-brand-dark/10 group-hover:text-brand-dark transition-colors">86</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#111418] font-medium flex items-center justify-between py-2 hover:text-brand-dark hover:bg-gray-50 rounded px-2 transition-colors group">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-brand-dark">chevron_right</span>
+                                    <span class="text-sm">Phòng bếp & Ăn</span>
+                                </div>
+                                <span
+                                    class="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full group-hover:bg-brand-dark/10 group-hover:text-brand-dark transition-colors">64</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#111418] hover:text-brand-dark hover:font-bold transition-all flex items-center justify-between group">
+                                <span class="text-sm">Văn phòng</span>
+                                <span
+                                    class="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full group-hover:bg-brand-dark/10 group-hover:text-brand-dark transition-colors">42</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#111418] hover:text-brand-dark hover:font-bold transition-all flex items-center justify-between group">
+                                <span class="text-sm">Trang trí</span>
+                                <span
+                                    class="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full group-hover:bg-brand-dark/10 group-hover:text-brand-dark transition-colors">156</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Filter by Price -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3
+                        class="font-bold text-brand-dark uppercase mb-4 text-sm tracking-wider border-b border-gray-100 pb-2">
+                        Khoảng giá
+                    </h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded border-gray-300 text-brand-dark focus:ring-brand-dark/20" />
+                            <span class="text-sm text-gray-600 group-hover:text-brand-dark">Dưới 5 triệu</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded border-gray-300 text-brand-dark focus:ring-brand-dark/20" />
+                            <span class="text-sm text-gray-600 group-hover:text-brand-dark">5 - 15 triệu</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded border-gray-300 text-brand-dark focus:ring-brand-dark/20" />
+                            <span class="text-sm text-gray-600 group-hover:text-brand-dark">Trên 15 triệu</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter by Stock -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3
+                        class="font-bold text-brand-dark uppercase mb-4 text-sm tracking-wider border-b border-gray-100 pb-2">
+                        Tình trạng
+                    </h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded border-gray-300 text-brand-dark focus:ring-brand-dark/20" />
+                            <span class="text-sm text-gray-600 group-hover:text-brand-dark">Sẵn kho</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded border-gray-300 text-brand-dark focus:ring-brand-dark/20" />
+                            <span class="text-sm text-gray-600 group-hover:text-brand-dark">Đặt hàng trước</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="flex-1">
+                <!-- Sort & Header -->
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                    <h1 class="text-xl font-bold text-brand-dark uppercase">Nội thất phòng khách</h1>
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm text-gray-500 whitespace-nowrap">Sắp xếp theo:</span>
+                        <select
+                            class="form-select border-gray-200 rounded-md text-sm text-gray-700 py-2 pl-3 pr-8 focus:border-brand-dark focus:ring-0 cursor-pointer hover:bg-gray-50 transition-colors">
+                            <option>Mới nhất</option>
+                            <option>Bán chạy nhất</option>
+                            <option>Giá: Thấp đến Cao</option>
+                            <option>Giá: Cao đến Thấp</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Product Card 1 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div
+                            class="absolute top-2 left-2 bg-brand-dark text-white text-xs font-bold px-2 py-1 rounded-sm z-10">
+                            -30%</div>
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEKPg7BOnVLHiuVnHcAgBaJuBKniWpEKlP5F4eOnfLgTR0OM-P7RpjXV9B7P56jiNdwBgHLAOPKZRv-1D1bJNgWIk2fUYaXpG5K2KdWaBXkolS3PT0wyI8kzdm4C03whjP69zuYxFxVENiJKLpd25f7fdPWwOOkHJ6Q74CW6DsBaDAelF74enW9Xf8XVhQ0aKffDMueFFABHL7AGtk82gLaKr_bVvLUrhtOnVu0LljIAYTijDzmFw7cRnRmyP9fc21pXFcNdJLjA" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Sofa Băng Da Bò Ý Cao Cấp - SF001</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-xs text-gray-400 line-through">25.000.000đ</span>
+                                <span class="text-brand-dark font-bold text-base">17.500.000đ</span>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    <span class="text-[10px] text-green-600 font-semibold uppercase">Còn hàng</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEWzPNlYlkwG4j-l892Avl4BMtiLActYaLwimt8hJ4OPBrnxuaNKXdSmZI8JUTMHmHywplvHKN8U6xPpYIzlOds2teFLYqerpt62Nk1YcgfAuy5rWovWPFgV7S668KRJ5KvreEkWWEhb--C5-l8RDulIe-vzRFBW0cyzR5jjcrd10GOkkD8uFb_VVOyF7MLD53PYroy5kXOKNeZ6LNNh_4qWl759nkwepk0eOkQzSPKGUjhAu5XeEPjcp8RvsAy3ixUqQ9eDIGw" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Bàn Trà Gỗ Sồi Hiện Đại - BT203</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-brand-dark font-bold text-base">3.200.000đ</span>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    <span class="text-[10px] text-green-600 font-semibold uppercase">Còn hàng</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div
+                            class="absolute top-2 left-2 bg-brand-dark text-white text-xs font-bold px-2 py-1 rounded-sm z-10">
+                            -15%</div>
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FrdF-908miZBcC3VmysMtGELpK3LKhnJJZZbsZEQJhuUhv7_xk8g110-Pk759wBRD5hJBFuGen24CZK57r1BQkVtFExcNANTQ6zsVDU35pAdYScBreOUx3ckhyb5w_gqRAcoyS-w6EcvJKCifnCnvnR0w_5UYZF5JI80p3zXWaKmQ3KB0To9yqo_2RHcY9JD5vmP-FOQP0geFHPSRVp2YDrvk6m8fJoYkz4ruhPUh4Isr2KjoqUxATT5d2dsfIPeNPvbstEIxA" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Ghế Armchair Thư Giãn Bắc Âu</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-xs text-gray-400 line-through">5.000.000đ</span>
+                                <span class="text-brand-dark font-bold text-base">4.250.000đ</span>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    <span class="text-[10px] text-green-600 font-semibold uppercase">Sẵn kho</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmupqbyc4mccihboaFikAmTJ9X4xwEM_N9G1pTxNrTG8yApT7GXabMbVVehlmxBGLXHMAZ4RsBu6Z4LND7C5xDUARDQdf0bj7DRx7Y5JEaKVg_G9zuWOFQGEY5MUmUU7C3YXkABPtAIX0blPQGY_16keiR-rGX3JWBrphsX5MTEvwZrFN_jjeVEGMrv3LoROIzfXjKfCQpJlYB-o5MrqOXaCJQszl_1NK5AIygXVVl99bFXXIpHyDWVB4NGCoBQvKUvnZsjhvTgw" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Kệ Tivi Gỗ Công Nghiệp An Cường</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-brand-dark font-bold text-base">5.500.000đ</span>
+                                <div class="flex items-center gap-1 mt-1 text-gray-500">
+                                    <span class="text-[10px] font-medium border border-gray-200 px-1 rounded">Đặt hàng
+                                        trước</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div
+                            class="absolute top-2 left-2 bg-brand-dark text-white text-xs font-bold px-2 py-1 rounded-sm z-10">
+                            -10%</div>
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKGHbIzftDCytoGGgbLR5Tc1AgD7XGcwG9nm7yZlecNSm2Kn3DVfXdqtU__PVUiI8mTTTtOVHWOjbzuuWSJFr70aqxhfOjxPY9-VFWqlAeeRgpM-7DxznwwD0boNII7UlEMNq00CXZ0roIJsWKTFebfnhNeYailGDG1C3WkMZBKyXOwzt94DBuqxIkCKy7_J5V6WxmPA4rMteT3Sb8-DkWkP0sQLCJESCkplk2WTNB6y991ZinDRyFP5Xe1A4pJ5Q1lTZT6ZmHyQ" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Sofa Góc Chữ L Da Hàn Quốc</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-xs text-gray-400 line-through">12.000.000đ</span>
+                                <span class="text-brand-dark font-bold text-base">10.800.000đ</span>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    <span class="text-[10px] text-green-600 font-semibold uppercase">Sẵn kho</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col h-full border border-gray-100 overflow-hidden relative">
+                        <div
+                            class="absolute top-2 left-2 bg-brand-dark text-white text-xs font-bold px-2 py-1 rounded-sm z-10">
+                            -20%</div>
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <a href="product-detail.html" class="block w-full h-full"><img
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBioWRQcXNQxkpRmyMEWyrJCMiaOScPcpzBjB82gaynKbjfy6bP3wdyjsWoe8XADtkRV91xfM7LJsPPx2YMCqlcDT6SS08BNWMLEhwZNyhPFtndZd742VmC0cXFG0gYZMFyHPm4Shtm6-VdDIjjE9cy4eUCy1vnoY9AW9DbqmFlTDm5O_6vgvaQZiZZ_qHUlumNKXJBWPfKrEg-pq7dIM2wuDHMWZ89NlQFoEQCOHNV89WOS1tyeAi_IpUj_tehmjWdrmZsIvdUgQ" /></a>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="w-full bg-brand-dark text-white font-bold text-sm py-2.5 rounded shadow-lg hover:bg-opacity-90 flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 flex flex-col flex-1 gap-1">
+                            <a href="product-detail.html"
+                                class="text-[#111418] font-medium text-sm leading-snug line-clamp-2 hover:text-brand-dark cursor-pointer block">
+                                Giường Ngủ Bọc Nỉ Nhung Cao Cấp 1m8</a>
+                            <div class="mt-auto pt-2 flex flex-col items-start">
+                                <span class="text-xs text-gray-400 line-through">18.000.000đ</span>
+                                <span class="text-brand-dark font-bold text-base">14.400.000đ</span>
+                                <div class="flex items-center gap-1 mt-1 text-gray-500">
+                                    <span class="text-[10px] font-medium border border-gray-200 px-1 rounded">Đặt hàng
+                                        trước</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12 gap-2">
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 hover:bg-brand-dark hover:text-white transition-colors disabled:opacity-50">
+                        <span class="material-symbols-outlined text-sm">chevron_left</span>
+                    </button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded border border-brand-dark bg-brand-dark text-white font-bold transition-colors">1</button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 hover:bg-brand-dark hover:text-white transition-colors">2</button>
+                    <span class="w-10 h-10 flex items-center justify-center text-gray-400">...</span>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 hover:bg-brand-dark hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>

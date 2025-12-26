@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chính sách mua hàng - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Active nav item style */
+        .policy-nav-item.active {
+            background-color: #eff6ff;
+            color: #003366;
+            font-weight: 600;
+            border-left: 3px solid #003366;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-6">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm mb-8 text-gray-500">
+            <a href="index.html" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                Trang chủ
+            </a>
+            <span class="material-symbols-outlined text-[16px] text-gray-400">chevron_right</span>
+            <span class="font-bold text-brand-dark">Chính sách & Quy định</span>
+        </nav>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation (Left) -->
+            <aside class="w-full lg:w-1/4">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden sticky top-24">
+                    <div class="p-4 bg-gray-50 border-b border-gray-100">
+                        <h3 class="font-bold text-brand-dark uppercase text-sm">Danh mục chính sách</h3>
+                    </div>
+                    <nav class="flex flex-col">
+                        <a href="#"
+                            class="policy-nav-item active px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Chính sách mua hàng
+                        </a>
+                        <a href="#"
+                            class="policy-nav-item px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Chính sách thanh toán
+                        </a>
+                        <a href="#"
+                            class="policy-nav-item px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Chính sách vận chuyển
+                        </a>
+                        <a href="#"
+                            class="policy-nav-item px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Chính sách bảo hành
+                        </a>
+                        <a href="#"
+                            class="policy-nav-item px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Chính sách đổi trả
+                        </a>
+                        <a href="#"
+                            class="policy-nav-item px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-dark transition-colors border-l-3 border-transparent">
+                            Bảo mật thông tin
+                        </a>
+                    </nav>
+                    <div class="p-4 border-t border-gray-100 bg-blue-50">
+                        <p class="text-xs text-brand-dark font-medium mb-2">Cần hỗ trợ trực tiếp?</p>
+                        <a href="tel:19006868" class="flex items-center gap-2 text-brand-red font-bold text-lg">
+                            <span class="material-symbols-outlined">call</span> 1900 6868
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content (Right) -->
+            <article class="w-full lg:w-3/4">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 md:p-10 min-h-[600px]">
+                    <h1 class="text-2xl md:text-3xl font-black text-brand-dark mb-6 pb-4 border-b border-gray-100">
+                        Chính sách mua hàng
+                    </h1>
+
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="mb-4">
+                            Chào mừng Quý khách đến với Phúc Mỹ Gia. Khi quý khách mua hàng tại hệ thống Website hoặc
+                            Showroom của chúng tôi, quý khách vui lòng tham khảo các quy định dưới đây để đảm bảo quyền
+                            lợi của chính mình.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-brand-dark mt-6 mb-3">1. Quy trình đặt hàng</h3>
+                        <ul class="list-disc pl-6 space-y-2 mb-4">
+                            <li><strong>Bước 1:</strong> Tìm kiếm sản phẩm trên website hoặc nhận tư vấn trực tiếp.</li>
+                            <li><strong>Bước 2:</strong> Thêm sản phẩm vào giỏ hàng và kiểm tra thông tin đơn hàng.</li>
+                            <li><strong>Bước 3:</strong> Cung cấp thông tin giao hàng và chọn phương thức thanh toán.
+                            </li>
+                            <li><strong>Bước 4:</strong> Xác nhận đơn hàng. Hệ thống sẽ gửi email hoặc nhân viên sẽ gọi
+                                điện xác nhận trong vòng 24h.</li>
+                        </ul>
+
+                        <h3 class="text-lg font-bold text-brand-dark mt-6 mb-3">2. Giá cả và Hóa đơn</h3>
+                        <p class="mb-4">
+                            Giá bán niêm yết trên website đã bao gồm thuế GTGT (VAT). Khách hàng doanh nghiệp cần xuất
+                            hóa đơn đỏ vui lòng cung cấp thông tin xuất hóa đơn ngay tại bước thanh toán hoặc liên hệ bộ
+                            phận CSKH trong vòng 24h kể từ khi đặt hàng.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-brand-dark mt-6 mb-3">3. Thay đổi hoặc Hủy đơn hàng</h3>
+                        <p class="mb-4">
+                            Quý khách có thể thay đổi hoặc hủy đơn hàng mà không chịu phí nếu đơn hàng chưa chuyển sang
+                            trạng thái "Đang giao hàng".
+                        </p>
+                        <div class="bg-yellow-50 p-4 rounded border-l-4 border-brand-yellow text-sm text-yellow-800">
+                            <strong>Lưu ý:</strong> Đối với các sản phẩm đặt đóng theo yêu cầu (Custom), đơn hàng không
+                            thể hủy sau khi đã xác nhận đặt cọc sản xuất.
+                        </div>
+
+                        <h3 class="text-lg font-bold text-brand-dark mt-6 mb-3">4. Cam kết chất lượng</h3>
+                        <p>
+                            Phúc Mỹ Gia cam kết tất cả sản phẩm đều là hàng chính hãng, mới 100%, đúng theo mô tả và
+                            hình ảnh trên website. Nếu phát hiện hàng giả, hàng kém chất lượng, chúng tôi cam kết hoàn
+                            tiền 200%.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+    <!-- Script for active state simulation -->
+    <script>
+        document.querySelectorAll('.policy-nav-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Remove active class from all
+                document.querySelectorAll('.policy-nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                    nav.classList.remove('bg-blue-50');
+                    nav.classList.remove('text-brand-dark');
+                    nav.classList.remove('font-semibold');
+                    nav.classList.remove('border-brand-dark');
+                    nav.classList.add('border-transparent');
+                });
+
+                // Add active class to clicked
+                this.classList.add('active');
+
+                // Update title (Simulation)
+                const title = this.innerText.trim();
+                document.querySelector('h1').innerText = title;
+
+                // Scroll to top of content
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>

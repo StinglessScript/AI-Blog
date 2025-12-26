@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trang Mẫu Component - PHÚC MỸ GIA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "brand-dark": "#003366",
+                        "brand-red": "#E31B23",
+                        "brand-yellow": "#FFC107",
+                        "brand-green": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-[#111418] overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- 1. Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- 2. Main Content -->
+    <main class="flex-grow layout-container max-w-[1280px] mx-auto w-full px-4 md:px-8 py-12">
+        <div class="bg-white p-12 rounded-lg shadow-sm border border-gray-100 text-center max-w-2xl mx-auto">
+            <div
+                class="w-20 h-20 bg-blue-50 text-brand-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="material-symbols-outlined text-4xl">extension</span>
+            </div>
+
+            <h1 class="text-3xl font-black text-brand-dark mb-4 uppercase">Demo Component System</h1>
+
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Trang này không chứa code Header và Footer trực tiếp.<br>
+                Thay vào đó, nó sử dụng <strong>JavaScript</strong> để kéo nội dung từ file <code
+                    class="bg-gray-100 px-2 py-1 rounded text-sm text-red-500">header.html</code> và <code
+                    class="bg-gray-100 px-2 py-1 rounded text-sm text-red-500">footer.html</code>.
+            </p>
+
+            <div
+                class="bg-gray-900 text-gray-300 text-left p-6 rounded-lg font-mono text-sm overflow-x-auto shadow-inner mb-8">
+                <div class="mb-2 text-gray-500">// Cấu trúc HTML của trang này</div>
+                <div>&lt;body&gt;</div>
+                <div class="pl-4 text-green-400">&lt;!-- Header Here --&gt;</div>
+                <div class="pl-4 text-green-400">&lt;div id="header-placeholder"&gt;&lt;/div&gt;</div>
+                <br>
+                <div class="pl-4 text-white">&lt;main&gt; ... Nội dung ... &lt;/main&gt;</div>
+                <br>
+                <div class="pl-4 text-green-400">&lt;!-- Footer Here --&gt;</div>
+                <div class="pl-4 text-green-400">&lt;div id="footer-placeholder"&gt;&lt;/div&gt;</div>
+                <br>
+                <div class="pl-4 text-yellow-400">&lt;!-- Script Loader --&gt;</div>
+                <div class="pl-4 text-yellow-400">&lt;script src="components/loader.js"&gt;&lt;/script&gt;</div>
+                <div>&lt;/body&gt;</div>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <a href="index.html"
+                    class="flex items-center gap-2 text-brand-dark font-bold hover:underline transition-all">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Quay lại Trang chủ HTML
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- 4. Component Loader Script -->
+    <script src="components/loader.js"></script>
+</body>
+
+</html>
