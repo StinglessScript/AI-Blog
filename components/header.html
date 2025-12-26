@@ -29,39 +29,171 @@
 
                     <!-- Dropdown Content -->
                     <div
-                        class="absolute top-[calc(100%+8px)] left-0 w-[260px] bg-white shadow-xl rounded-lg border border-gray-100 hidden group-hover:block py-2 animate-fade-in">
-                        <a href="category.html"
-                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
-                            <span class="material-symbols-outlined text-[20px] text-gray-400">chair</span>
-                            <span class="text-sm font-medium">Phòng khách</span>
-                        </a>
-                        <a href="category.html"
-                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
-                            <span class="material-symbols-outlined text-[20px] text-gray-400">bed</span>
-                            <span class="text-sm font-medium">Phòng ngủ</span>
-                        </a>
-                        <a href="category.html"
-                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
-                            <span class="material-symbols-outlined text-[20px] text-gray-400">restaurant</span>
-                            <span class="text-sm font-medium">Phòng bếp</span>
-                        </a>
-                        <a href="category.html"
-                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
-                            <span class="material-symbols-outlined text-[20px] text-gray-400">desk</span>
-                            <span class="text-sm font-medium">Văn phòng</span>
-                        </a>
-                        <a href="category.html"
-                            class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
-                            <span class="material-symbols-outlined text-[20px] text-gray-400">child_care</span>
-                            <span class="text-sm font-medium">Trẻ em</span>
-                        </a>
-                        <div class="border-t border-gray-100 mt-1 pt-1">
-                            <a href="category.html"
-                                class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 text-brand-dark transition-colors">
+                        class="absolute top-[calc(100%+8px)] left-0 w-[260px] bg-white shadow-xl rounded-lg border border-gray-100 hidden group-hover:block py-2 animate-fade-in custom-scrollbar overflow-visible">
+                        <div class="flex flex-col py-0">
+                            <!-- Mega Menu Item (Nested Group) -->
+                            <div class="group/item">
+                                <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors relative z-20"
+                                    href="category.html">
+                                    <span
+                                        class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">chair</span>
+                                    <span class="text-sm font-medium flex-1">Nội thất phòng khách</span>
+                                    <span
+                                        class="material-symbols-outlined text-gray-400 text-[18px] opacity-0 group-hover/item:opacity-100 transition-opacity">chevron_right</span>
+                                </a>
+
+                                <!-- Mega Menu Overlay -->
+                                <div
+                                    class="hidden group-hover/item:flex flex-row absolute left-full top-0 w-[calc(300%+3.5rem)] min-h-[460px] h-[calc(100%)] bg-white shadow-xl z-50 border border-gray-200 border-l-0 rounded-r-lg rounded-bl-lg overflow-hidden">
+                                    <!-- Menu Links Column -->
+                                    <div class="w-3/4 p-8 grid grid-cols-3 gap-8 bg-white overflow-y-auto">
+                                        <div>
+                                            <h4
+                                                class="font-bold text-brand-dark mb-4 text-sm uppercase tracking-wide border-b border-gray-200 pb-2">
+                                                Sofa & Salon</h4>
+                                            <ul class="space-y-2.5">
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Sofa
+                                                        Băng</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Sofa
+                                                        Góc L</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Sofa
+                                                        Da Bò Ý</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Sofa
+                                                        Thư Giãn</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block font-bold text-brand-orange">Sofa
+                                                        Khuyến Mãi (Hot)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="font-bold text-brand-dark mb-4 text-sm uppercase tracking-wide border-b border-gray-200 pb-2">
+                                                Bàn & Kệ</h4>
+                                            <ul class="space-y-2.5">
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Bàn
+                                                        Trà Mặt Đá</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Bàn
+                                                        Trà Gỗ</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Kệ
+                                                        Tivi Treo Tường</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Tủ
+                                                        Giày Thông Minh</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4
+                                                class="font-bold text-brand-dark mb-4 text-sm uppercase tracking-wide border-b border-gray-200 pb-2">
+                                                Phòng khách khác</h4>
+                                            <ul class="space-y-2.5">
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Ghế
+                                                        Thư Giãn</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Tủ
+                                                        Rượu & Bar</a></li>
+                                                <li><a href="product-detail.html"
+                                                        class="text-sm text-gray-600 hover:text-brand-red hover:translate-x-1 transition-all inline-block">Vách
+                                                        Ngăn CNC</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-span-3 mt-auto pt-4 border-t border-gray-50">
+                                            <h4 class="font-bold text-gray-400 mb-3 text-xs uppercase tracking-wide">Gợi
+                                                ý phong
+                                                cách</h4>
+                                            <div class="flex gap-3">
+                                                <a href="category.html"
+                                                    class="text-xs font-bold bg-gray-50 text-gray-600 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded transition-colors border border-gray-200">Hiện
+                                                    đại</a>
+                                                <a href="category.html"
+                                                    class="text-xs font-bold bg-gray-50 text-gray-600 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded transition-colors border border-gray-200">Bắc
+                                                    Âu (Scandal)</a>
+                                                <a href="category.html"
+                                                    class="text-xs font-bold bg-gray-50 text-gray-600 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded transition-colors border border-gray-200">Luxury</a>
+                                                <a href="category.html"
+                                                    class="text-xs font-bold bg-gray-50 text-gray-600 hover:bg-brand-dark hover:text-white px-3 py-1.5 rounded transition-colors border border-gray-200">Indochine</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Featured Image Column -->
+                                    <div class="w-1/4 relative group/image">
+                                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop"
+                                            class="w-full h-full object-cover" alt="Living Room Collection">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                            <div
+                                                class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg animate-bounce">
+                                                -30%</div>
+                                            <h3 class="font-black text-2xl mb-2 leading-none">BST<br>GREEN LIVING</h3>
+                                            <p class="text-gray-200 text-xs mb-4 line-clamp-2 opacity-90">Xu hướng nội
+                                                thất xanh
+                                                cho không gian sống hiện đại 2024.</p>
+                                            <a href="category.html"
+                                                class="inline-flex items-center gap-2 text-sm font-bold bg-white text-brand-dark px-4 py-2 rounded hover:bg-brand-yellow transition-colors w-fit shadow-lg">
+                                                Xem ngay <span
+                                                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
                                 <span
-                                    class="material-symbols-outlined text-[20px] text-brand-red">local_fire_department</span>
-                                <span class="text-sm font-bold text-brand-red">Khuyến mãi</span>
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">bed</span>
+                                <span class="text-sm font-medium">Phòng ngủ</span>
                             </a>
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">restaurant</span>
+                                <span class="text-sm font-medium">Phòng bếp &amp; Ăn</span>
+                            </a>
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">desk</span>
+                                <span class="text-sm font-medium">Văn phòng</span>
+                            </a>
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">child_care</span>
+                                <span class="text-sm font-medium">Phòng trẻ em</span>
+                            </a>
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">lightbulb</span>
+                                <span class="text-sm font-medium">Đèn &amp; Ánh sáng</span>
+                            </a>
+                            <a class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 text-brand-dark transition-colors group/item"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-brand-dark/70 group-hover/item:text-brand-dark text-[20px]">potted_plant</span>
+                                <span class="text-sm font-medium">Đồ trang trí</span>
+                            </a>
+                            <div class="px-4 pt-2 mt-auto border-t border-gray-200 pb-2 space-y-1">
+                                <a class="flex items-center gap-3 px-2 py-2 text-brand-red bg-red-50 rounded hover:bg-red-100 transition-colors group/item"
+                                    href="#">
+                                    <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                                    <span class="text-sm font-bold">Đăng ký Đại lý B2B</span>
+                                </a>
+                                <a class="text-xs text-brand-dark/80 font-semibold flex items-center gap-1 hover:text-blue-700 hover:underline pt-1"
+                                    href="#">
+                                    Xem tất cả danh mục
+                                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
